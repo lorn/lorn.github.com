@@ -23,13 +23,13 @@ $ curl "https://api.github.com/repos1/lorn/lwp-curl/commits1"
 }
 ```
 
-é claro que nem sempre o erro será tão claro, e principalmente quando você está fazendo POST/PUT com arquivos então, como debugar? porque funciona no curl e não funciona na minha linguagem preferida?
+é claro que nem sempre o erro será tão claro, e principalmente quando você está fazendo POST/PUT com arquivos, como debugar? porque funciona no curl e não funciona na minha linguagem preferida?
 
 {% blockquote %}
 Netcat for the rescue!
 {% endblockquote %}
 
-Netcat é o canivete suiço do mundo unix, se você nunca ouviu falar e quer aprender até a transferir arquivos via Netcat (!!) veja esse post do [pkrumins](http://www.catonmat.net/blog/unix-utilities-netcat/) nesse caso especifico, vamos usar Netcat para debugar e isso ele não mostra lá ;)
+Netcat é o canivete suiço do mundo unix, se você nunca ouviu falar e quer aprender até a transferir arquivos via Netcat (!!) veja esse post do [pkrumins](http://www.catonmat.net/blog/unix-utilities-netcat/) nesse caso especifico, vamos usar Netcat para debugar requisições HTTP e isso ele não mostra lá ;)
 
 ```
 $ curl "localhost:9999/repos/lorn/lwp-curl/commits"
@@ -45,7 +45,7 @@ Host: localhost:9999
 Accept: */*
 ```
 
-Agora ao invés de usar o curl, manda sua aplicação fazer o POST/PUT para o Netcat e vê o que o curl tem que o sua aplicação não tem, no meu caso eu tinha esquecido de enviar o arquivo usando [HTTP Multipart](http://www.w3.org/Protocols/rfc1341/7_2_Multipart.html).
+Agora ao invés de usar o curl, manda sua aplicação fazer o POST/PUT para o Netcat ( localhost:9999 nesse exemplo ) e vê o que o curl manda o sua aplicação não manda, no meu caso eu tinha esquecido de enviar o arquivo usando [HTTP Multipart](http://www.w3.org/Protocols/rfc1341/7_2_Multipart.html).
 
 Para usar o Netcat no Mac:
 
@@ -58,4 +58,6 @@ Linux:
 ```
 nc -l -p 9999
 ```
+
+Dica do [dsouza](http://dsouza.github.com/b/)
     
