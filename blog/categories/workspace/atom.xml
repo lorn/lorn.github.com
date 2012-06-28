@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: workspace | lornlab.]]></title>
+  <link href="http://lornlab.org/blog/categories/workspace/atom.xml" rel="self"/>
+  <link href="http://lornlab.org/"/>
+  <updated>2012-06-28T00:37:04-03:00</updated>
+  <id>http://lornlab.org/</id>
+  <author>
+    <name><![CDATA[Lindolfo 'Lorn' Rodrigues]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[A Biblioteca Pessoal De Neil Gaiman]]></title>
+    <link href="http://lornlab.org/blog/2011/05/19/a-biblioteca-pessoal-de-neil-gaiman/"/>
+    <updated>2011-05-19T00:03:00-03:00</updated>
+    <id>http://lornlab.org/blog/2011/05/19/a-biblioteca-pessoal-de-neil-gaiman</id>
+    <content type="html"><![CDATA[<p>Quando vi esse site pela primeira vez, e como eu já tinha lido alguma entrevista do Donald Knuth em que ele falava que tinha
+a mesma poltrona desde 1960 e só trocava o forro externo, eu percebi que precisava comprar uma poltrona para ler livros  :)</p>
+
+<p>Ainda estou a procura, aquelas que tem na Starbucks é tudo importada :/ estou procurando algum clone brasileiro delas, mas acho que não vai ser fácil achar.</p>
+
+<p>Bom, voltando ao título olha como é a biblioteca pessoal do Neil Gaiman! para quem não conhece Neil Gaiman é o criador do Sandman e
+outras livros/quadrinhos famosos, mas o que eu mais gosto e li foi Sandman, e só pelo Sandman ele já merece algum respeito.</p>
+
+<p><a href="http://blog.shelfari.com/my_weblog/2009/09/neil.html">http://blog.shelfari.com/my_weblog/2009/09/neil.html</a></p>
+
+<p><img class="center" src="http://blog.shelfari.com/.a/6a00d8341e478253ef0120a53fe68a970c-800wi"></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Meu Ambiente De Trabalho Em N Itens]]></title>
+    <link href="http://lornlab.org/blog/2011/04/12/meu-ambiente-de-trabalho-em-n-itens/"/>
+    <updated>2011-04-12T14:59:00-03:00</updated>
+    <id>http://lornlab.org/blog/2011/04/12/meu-ambiente-de-trabalho-em-n-itens</id>
+    <content type="html"><![CDATA[<p>O peka me convidou para a correntinha do bem, e ainda me intimou pelo twitter :/ aqui está como é meu ambiente de trabalho.</p>
+
+<ul>
+<li><p><a href="http://lornlab.org/blog/2011/04/12/usando-zsh/">ZSH</a>, o cara é tão bom que tem um post só para ele :)</p></li>
+<li><p><a href="http://code.google.com/p/iterm2/">iTerm2</a> - Eu sempre usei o Terminal.App padrão do MacOSX, há um tempo atrás ouvi falar do iTerm, mas
+dado a minha pessima organização, acabei me esquecendo. Por causa dessa foto no twitter/facebook recebi a dica do
+iTerm2 e vou dizer, deixa o Terminal.App no chinelo tem fullscreen, 256 cores, busca, histórico propia, só instalando para
+você ver o que eu estou falando pena que está em alpha, mas estou atualizando a cada relase.</p></li>
+<li><p>Git - No trabalho apenas o git, em casa git e github.com/lorn onde faço minhas brincadeiras</p></li>
+<li><p><a href="http://www.virtualbox.org/">Virtualbox</a> - Para emular um Linux ou Windows quando preciso</p></li>
+<li><p><a href="http://www.irssi.org/">Irssi</a> - irc remoto ( via ssh ) 24/7 na irc.freenode.net e irc.perl.org :)</p></li>
+<li><p><a href="http://sites.google.com/site/yorufukurou/">Yorufukoru</a> - Cliente de twitter, vejo pouco o twitter, mas quando vejo é com ele.</p></li>
+<li><p>Musica - Tudo o que eu preciso/quero ouvir está no iPhone então ligo o fone de ouvido nele e já era, de vez em quando ouço uma
+coisa ou outra do youtube.</p></li>
+<li><p><a href="http://www.vim.org/">Vim</a> - Por ultimo, mas não menos importante "O Editor", minhas configurações estão <a href="https://github.com/lorn/vim_confs">aqui</a>.</p></li>
+</ul>
+
+
+<p>Passo a bola agora para o <a href="http://bitforest.org/">@dsouza</a>, @pahagon, @ldaugusto e 2 hit combo no @wendelscardua</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Usando ZSH]]></title>
+    <link href="http://lornlab.org/blog/2011/04/12/usando-zsh/"/>
+    <updated>2011-04-12T13:31:00-03:00</updated>
+    <id>http://lornlab.org/blog/2011/04/12/usando-zsh</id>
+    <content type="html"><![CDATA[<p>Esses dias re-descobri o zsh, já havia testado a um tempo atrás mas agora foi pra valer :)</p>
+
+<p>E vou dizer, não há shell melhor :) muito melhor que o Bash</p>
+
+<ul>
+<li><p>O historico do ZSH é compartilhado por <em>TODAS</em> sessões dele, diferente do bash que cada sessão tem seu histórico
+( e você tem que ficar procurando onde foi que digitou aquele comando para recuperar ele do histórico ).</p></li>
+<li><p>ZSH tem autocomplete para tudo, ok bash também, mas o ZSH é bem mágico ele tem autocomplete para o kill, listando os
+processos que estão rolando e você digita o nome ele já tras o pid para você, ps -aux? nunca mais.</p></li>
+<li><p>Autocomplete do ssh baseado no seu ~/.ssh/know_hosts ou seja, acessou a maquina, ssh ma<tab> autocomplete :D</p></li>
+<li><p>Continuando o autocomplete, no MacOSX temos um instalado de pacote chamado brew para instalar pacotes nele é
+mais ou menos como no apt-get, busca e depois install então: brew seach xyz, brew install xyz. Com o zsh ele irá fazer
+a busca no install então brew install x<tab> pronto, já mostra para você todos os pacotes que casam com aquela string.</p></li>
+<li><p>E bem compativell com o bash, eu não tive nenhum problema em fazer: cat ~/.bashrc >> ~/.zshrc e tudo que eu tinha configurado no bash funciona no zsh</p></li>
+</ul>
+
+
+<p>Comece usando agora é só seguir a receita de bolo desse repositorio <a href="https://github.com/robbyrussell/oh-my-zsh/">https://github.com/robbyrussell/oh-my-zsh/</a> ele deixou
+ o zsh bem bonito, com suporte a temas e plugins ( e você verá como é facil fazer temas e plugins ) o meu fork desse repositorio você acha aqui.</p>
+
+<p>Esse são os motivos básicos, caso eu lembro de mais algum matador eu coloco aqui. Mas fica a dica, use zsh e <a href="http://www.youtube.com/watch?v=3oB2rMaY0ho&amp;feature=related">filtro solar</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>

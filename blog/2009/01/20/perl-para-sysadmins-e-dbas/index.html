@@ -5,13 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - lornlab.</title>
+  <title>Perl Para Sysadmins E DBAs - lornlab.</title>
   <meta name="author" content="Lindolfo 'Lorn' Rodrigues">
 
   
-  <meta name="description" content="Blog Archive 2011 A Busca Pelo Deploy Contínuo - Parte 3
-Dec 03 2011 posted in deploy, perl, talk, yapc A Busca Pelo Deploy Contínuo - Parte 2
-Dec &hellip;">
+  <meta name="description" content="Rau! Depois de séculos sem posts, apenas um post para linkar para o material da minha palestra no fisl ( que não foi das melhores porque não terminei &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +18,7 @@ Dec &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://lornlab.org/blog/archives/">
+  <link rel="canonical" href="http://lornlab.org/blog/2009/01/20/perl-para-sysadmins-e-dbas/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -77,207 +75,215 @@ Dec &hellip;">
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Blog Archive</h1>
+    
+      <h1 class="entry-title">Perl Para Sysadmins E DBAs</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-01-20T15:08:00-02:00" pubdate data-updated="true">Jan 20<span>th</span>, 2009</time>
+        
+      </p>
     
   </header>
+
+
+<div class="entry-content"><p>Rau!</p>
+
+<p>Depois de séculos sem posts, apenas um post para linkar para o material da minha palestra no fisl ( que não foi das melhores porque não terminei a palestra antes e fiquei BEM doente em POA :/ )</p>
+
+<p><a href="http://lornlab.org/palestra_fisl">http://lornlab.org/palestra_fisl/</a></p>
+
+<p>Agradecimentos para o Claudemir Ivan, que disse que não estava conseguindo acessar os arquivos.</p>
+
+<p>Falow, algum dia meu blog em Catalyst sai</p>
+
+<p>Update: O problema era que o Dreamhost estava interpretando os .pl :/ coloquei as extensões em .txt e tudo</p>
+
+<p>funcionou.</p>
+
+<p>Update 2: Agora com o plugin de gist do github.com o código fica bonito e indentado</p>
+
+<p>Update 3: Agora quem trata o gist é o octopress \,,/</p>
+
+<div><script src='https://gist.github.com/760136.js?file='></script>
+<noscript><pre><code>#!/usr/bin/perl
+
+=head1 NAME
+
+    conta_acessos 
+    
+=head1 DESCRIPTION
+
+=head1 AUTHOR
+
+    Renan Rangel &lt;rvr777 at gmail dot com&gt;
+    Lorn &lt;lorn at lornlab dot org&gt;
+
+=head1 COPYRIGHT 
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+    
+=cut
+
+use strict;
+use Data::Dumper;
+
+die &lt;DATA&gt;
+  unless scalar @ARGV;
   
-  <div id="blog-archives">
+our $VERSION = '0.1';
 
+my ($c, @p, %option) = 0;
+my %hash_count = ();
+# look for options and patterns
+my $ip = 0;
+foreach (@ARGV) {
+  if (/^-(.+)$/) {
+      my $arg = $1;
+    if($arg eq 'ip'){
+        $ip = 1;
+    }elsif ($arg eq 'h'){
+        do { 
+            print &lt;DATA&gt;;
+            exit(0);
+        };
+    }elsif ($arg eq 'i'){
+        do {
+            $option{i} = 1;
+            next;
+        };
+    }elsif ($arg eq 'v'){
+        do {
+            print &quot;conta_acessos $VERSION\nAuthor: Renan Rangel &lt;rvr777\@gmail.com&gt;\n        Lorn &lt;lorn.br\@gmail.com.br&gt;\n&quot;;
+            exit(0)
+        };
+    }else{
+        die &lt;DATA&gt;;
+    }
+  }else{
+      die &lt;DATA&gt;;
+  }
+}
 
+# search and replace the pattern with the colored text
+my $found = 0;
+while (my $line = &lt;STDIN&gt;) {
+    my ($ip) = split(/\s/,$line);
+    $hash_count{$ip} = $hash_count{$ip} + 1;
+}
 
+print Dumper \%hash_count;    
+foreach my $line ( sort { $hash_count{$b} &lt;=&gt; $hash_count{$a} } keys
+%hash_count) {
+    my $acessos = $hash_count{$line};
+    print &quot;ip: $line\tacessos:\t$acessos\n&quot;;
+}
+
+exit(0);
+
+__DATA__
+Usage: 
+  tail -1000 /var/log/apache2/access.log | perl conta_acessos.pl -ip 
   
-  <h2>2011</h2>
+Options:
+  -h = Print help message
+  -i = Case insensitive
+  -v = Show version</code></pre></noscript></div>
 
-<article>
-  
-<h1><a href="/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/">A Busca Pelo Deploy Contínuo - Parte 3</a></h1>
-<time datetime="2011-12-03T10:03:00-02:00" pubdate><span class='month'>Dec</span> <span class='day'>03</span> <span class='year'>2011</span></time>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/deploy/'>deploy</a>, <a class='category' href='/blog/categories/perl/'>perl</a>, <a class='category' href='/blog/categories/talk/'>talk</a>, <a class='category' href='/blog/categories/yapc/'>yapc</a></span>
-</footer>
 
 
-</article>
+<iframe scrolling="no" marginheight="0" marginwidth="0" frameborder="0" height="355" width="425" src="http://www.slideshare.net/slideshow/embed_code/7618654"></iframe>
 
 
-
-<article>
-  
-<h1><a href="/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/">A Busca Pelo Deploy Contínuo - Parte 2</a></h1>
-<time datetime="2011-12-02T11:23:00-02:00" pubdate><span class='month'>Dec</span> <span class='day'>02</span> <span class='year'>2011</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/deploy/'>deploy</a>, <a class='category' href='/blog/categories/perl/'>perl</a>, <a class='category' href='/blog/categories/talk/'>talk</a>, <a class='category' href='/blog/categories/yapc/'>yapc</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/">A Busca Pelo Deploy Contínuo - Parte 1</a></h1>
-<time datetime="2011-12-02T11:23:00-02:00" pubdate><span class='month'>Dec</span> <span class='day'>02</span> <span class='year'>2011</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/deploy/'>deploy</a>, <a class='category' href='/blog/categories/perl/'>perl</a>, <a class='category' href='/blog/categories/talk/'>talk</a>, <a class='category' href='/blog/categories/yapc/'>yapc</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2011/09/26/la-e-devolta-outra-vez/">Lá E Devolta Outra Vez</a></h1>
-<time datetime="2011-09-26T15:05:00-03:00" pubdate><span class='month'>Sep</span> <span class='day'>26</span> <span class='year'>2011</span></time>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2011/05/19/a-biblioteca-pessoal-de-neil-gaiman/">A Biblioteca Pessoal De Neil Gaiman</a></h1>
-<time datetime="2011-05-19T00:03:00-03:00" pubdate><span class='month'>May</span> <span class='day'>19</span> <span class='year'>2011</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/livros/'>livros</a>, <a class='category' href='/blog/categories/workspace/'>workspace</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2011/05/17/hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick/">Hackers Que Você Deveria Conhecer (1): Brad Fitzpatrick</a></h1>
-<time datetime="2011-05-17T22:45:00-03:00" pubdate><span class='month'>May</span> <span class='day'>17</span> <span class='year'>2011</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/dev/'>dev</a>, <a class='category' href='/blog/categories/hackers/'>hackers</a>, <a class='category' href='/blog/categories/perl/'>perl</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2011/04/15/como-funciona-a-escala-pentatonica/">Como Funciona a Escala Pentatonica</a></h1>
-<time datetime="2011-04-15T23:59:00-03:00" pubdate><span class='month'>Apr</span> <span class='day'>15</span> <span class='year'>2011</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/music/'>music</a>, <a class='category' href='/blog/categories/science/'>science</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2011/04/12/meu-ambiente-de-trabalho-em-n-itens/">Meu Ambiente De Trabalho Em N Itens</a></h1>
-<time datetime="2011-04-12T14:59:00-03:00" pubdate><span class='month'>Apr</span> <span class='day'>12</span> <span class='year'>2011</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/dev/'>dev</a>, <a class='category' href='/blog/categories/workspace/'>workspace</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2011/04/12/usando-zsh/">Usando ZSH</a></h1>
-<time datetime="2011-04-12T13:31:00-03:00" pubdate><span class='month'>Apr</span> <span class='day'>12</span> <span class='year'>2011</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/dev/'>dev</a>, <a class='category' href='/blog/categories/workspace/'>workspace</a>, <a class='category' href='/blog/categories/zsh/'>zsh</a></span>
-</footer>
-
-
-</article>
-
-
-
-  
-  <h2>2009</h2>
-
-<article>
-  
-<h1><a href="/blog/2009/01/20/perl-para-sysadmins-e-dbas/">Perl Para Sysadmins E DBAs</a></h1>
-<time datetime="2009-01-20T15:08:00-02:00" pubdate><span class='month'>Jan</span> <span class='day'>20</span> <span class='year'>2009</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/fisl/'>fisl</a>, <a class='category' href='/blog/categories/perl/'>perl</a>, <a class='category' href='/blog/categories/talk/'>talk</a></span>
-</footer>
-
-
-</article>
-
-
-
-  
-  <h2>2007</h2>
-
-<article>
-  
-<h1><a href="/blog/2007/02/17/sandman-casa-de-bonecas/">Sandman - Casa De Bonecas</a></h1>
-<time datetime="2007-02-17T13:06:00-02:00" pubdate><span class='month'>Feb</span> <span class='day'>17</span> <span class='year'>2007</span></time>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2007/01/23/livro-minority-report/">Livro Minority Report</a></h1>
-<time datetime="2007-01-23T12:11:00-02:00" pubdate><span class='month'>Jan</span> <span class='day'>23</span> <span class='year'>2007</span></time>
-
-
-</article>
-
-
-
-  
-  <h2>2006</h2>
-
-<article>
-  
-<h1><a href="/blog/2006/11/21/relato-conilsi-yapc-sa-2006/">Relato Conilsi - YAPC::SA::2006</a></h1>
-<time datetime="2006-11-21T13:21:00-02:00" pubdate><span class='month'>Nov</span> <span class='day'>21</span> <span class='year'>2006</span></time>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2006/04/19/fisl-7-0/">FISL 7.0</a></h1>
-<time datetime="2006-04-19T13:27:00-03:00" pubdate><span class='month'>Apr</span> <span class='day'>19</span> <span class='year'>2006</span></time>
-
-
-</article>
-
+<p><a href="http://www.slideshare.net/lornlab/perl-sysadmin-dba-7618654">Link slideshare</a></p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Lindolfo 'Lorn' Rodrigues</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-01-20T15:08:00-02:00" pubdate data-updated="true">Jan 20<span>th</span>, 2009</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/fisl/'>fisl</a>, <a class='category' href='/blog/categories/perl/'>perl</a>, <a class='category' href='/blog/categories/talk/'>talk</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://lornlab.org/blog/2009/01/20/perl-para-sysadmins-e-dbas/" data-via="lornlab" data-counturl="http://lornlab.org/blog/2009/01/20/perl-para-sysadmins-e-dbas/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2007/02/17/sandman-casa-de-bonecas/" title="Previous Post: Sandman - Casa De Bonecas">&laquo; Sandman - Casa De Bonecas</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2011/04/12/usando-zsh/" title="Next Post: Usando ZSH">Usando ZSH &raquo;</a>
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -396,7 +402,10 @@ Dec &hellip;">
       var disqus_shortname = 'blogdolorn';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://lornlab.org/blog/2009/01/20/perl-para-sysadmins-e-dbas/';
+        var disqus_url = 'http://lornlab.org/blog/2009/01/20/perl-para-sysadmins-e-dbas/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: hackers | lornlab.]]></title>
+  <link href="http://lornlab.org/blog/categories/hackers/atom.xml" rel="self"/>
+  <link href="http://lornlab.org/"/>
+  <updated>2012-06-28T00:37:04-03:00</updated>
+  <id>http://lornlab.org/</id>
+  <author>
+    <name><![CDATA[Lindolfo 'Lorn' Rodrigues]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Hackers Que Você Deveria Conhecer (1): Brad Fitzpatrick]]></title>
+    <link href="http://lornlab.org/blog/2011/05/17/hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick/"/>
+    <updated>2011-05-17T22:45:00-03:00</updated>
+    <id>http://lornlab.org/blog/2011/05/17/hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick</id>
+    <content type="html"><![CDATA[<p>Esta série de posts é baseada na idéia do site  <a href="http://papodehomem.com.br/homens-que-voce-deveria-conhecer-homem-da-capa-preta-tenorio-cavalcante/">Papodehomem</a>
+que tem uma série parecida chamada "Homens que você devia conhecer".</p>
+
+<p>A ideia é falar de hackers em geral, tipo algum dia pode ter uma história de um cortador de lenha que fez uma mesa só com seu machado
+por exemplo :) Esse é um exemplo clássico de hacker.</p>
+
+<p><img class="center" src="http://media.tumblr.com/tumblr_ljiu9qSdTJ1qhdaqj.png"></p>
+
+<p>Brad Fitzpatrick é um dos muitos hackers programadores que você deveria conhecer ou ao menos saber o que ele já fez.</p>
+
+<p>Ele é o criador do Memcached e do OpenID.</p>
+
+<p>Lá nos meados de 1999 ele começou um projeto pessoal para manter o pessoal do colegio informado, algo parecido com o
+que fazemos na lista de discussões da faculdade ele chamou esse projetinho de Live Journal, que até pouco tempo [citation needed] era o maior serviço de blogs do mundo.</p>
+
+<p>Essa empresa não foi só importante para o Brad Fitzpatrick mas também para a internet como um todo pois, com o sucesso dela,
+foi necessário criar coisas como Memcached e OpenID, dentre outros excelentes <a href="http://www.danga.com/">Software</a> Livres que foram criados baseados na demanda do LiveJornal.</p>
+
+<p>No evento <a href="http://www.perlworkshop.com.br/">Perl Workshop</a> , ele contou que teve a ideia do Memcached quando o LiveJornal estava crescendo e ia demorar 2 semanas para chegar
+os novos servidores, em 12h ele fez a primeira versão do Memcached.</p>
+
+<p>Outra coisa engraçada que ele contou no evento foi dizer que <a href="http://www.danga.com/mogilefs/">MogileFS</a>  é um anagrama para OMG files :)</p>
+
+<p>Em 2005 o <a href="http://news.livejournal.com/82926.html">LiveJornal foi comprado pela Sixapart</a>, e em 2008 ele foi trabalhar no Google.</p>
+
+<p>Ele também é contribuidor ativo no <a href="http://search.cpan.org/~bradfitz/">CPAN</a> , apesar de estar trabalhando no Google focando na linguagem de programação Go, o ultimo projeto que ele
+está trabalhando é o <a href="http://camlistore.org/">Camlistore</a> - escrito em Go, que vale um post só pra ele porque é um proejto bem interessante.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: dev | lornlab.]]></title>
+  <link href="http://lornlab.org/blog/categories/dev/atom.xml" rel="self"/>
+  <link href="http://lornlab.org/"/>
+  <updated>2012-06-28T00:37:04-03:00</updated>
+  <id>http://lornlab.org/</id>
+  <author>
+    <name><![CDATA[Lindolfo 'Lorn' Rodrigues]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Hackers Que Você Deveria Conhecer (1): Brad Fitzpatrick]]></title>
+    <link href="http://lornlab.org/blog/2011/05/17/hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick/"/>
+    <updated>2011-05-17T22:45:00-03:00</updated>
+    <id>http://lornlab.org/blog/2011/05/17/hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick</id>
+    <content type="html"><![CDATA[<p>Esta série de posts é baseada na idéia do site  <a href="http://papodehomem.com.br/homens-que-voce-deveria-conhecer-homem-da-capa-preta-tenorio-cavalcante/">Papodehomem</a>
+que tem uma série parecida chamada "Homens que você devia conhecer".</p>
+
+<p>A ideia é falar de hackers em geral, tipo algum dia pode ter uma história de um cortador de lenha que fez uma mesa só com seu machado
+por exemplo :) Esse é um exemplo clássico de hacker.</p>
+
+<p><img class="center" src="http://media.tumblr.com/tumblr_ljiu9qSdTJ1qhdaqj.png"></p>
+
+<p>Brad Fitzpatrick é um dos muitos hackers programadores que você deveria conhecer ou ao menos saber o que ele já fez.</p>
+
+<p>Ele é o criador do Memcached e do OpenID.</p>
+
+<p>Lá nos meados de 1999 ele começou um projeto pessoal para manter o pessoal do colegio informado, algo parecido com o
+que fazemos na lista de discussões da faculdade ele chamou esse projetinho de Live Journal, que até pouco tempo [citation needed] era o maior serviço de blogs do mundo.</p>
+
+<p>Essa empresa não foi só importante para o Brad Fitzpatrick mas também para a internet como um todo pois, com o sucesso dela,
+foi necessário criar coisas como Memcached e OpenID, dentre outros excelentes <a href="http://www.danga.com/">Software</a> Livres que foram criados baseados na demanda do LiveJornal.</p>
+
+<p>No evento <a href="http://www.perlworkshop.com.br/">Perl Workshop</a> , ele contou que teve a ideia do Memcached quando o LiveJornal estava crescendo e ia demorar 2 semanas para chegar
+os novos servidores, em 12h ele fez a primeira versão do Memcached.</p>
+
+<p>Outra coisa engraçada que ele contou no evento foi dizer que <a href="http://www.danga.com/mogilefs/">MogileFS</a>  é um anagrama para OMG files :)</p>
+
+<p>Em 2005 o <a href="http://news.livejournal.com/82926.html">LiveJornal foi comprado pela Sixapart</a>, e em 2008 ele foi trabalhar no Google.</p>
+
+<p>Ele também é contribuidor ativo no <a href="http://search.cpan.org/~bradfitz/">CPAN</a> , apesar de estar trabalhando no Google focando na linguagem de programação Go, o ultimo projeto que ele
+está trabalhando é o <a href="http://camlistore.org/">Camlistore</a> - escrito em Go, que vale um post só pra ele porque é um proejto bem interessante.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Meu Ambiente De Trabalho Em N Itens]]></title>
+    <link href="http://lornlab.org/blog/2011/04/12/meu-ambiente-de-trabalho-em-n-itens/"/>
+    <updated>2011-04-12T14:59:00-03:00</updated>
+    <id>http://lornlab.org/blog/2011/04/12/meu-ambiente-de-trabalho-em-n-itens</id>
+    <content type="html"><![CDATA[<p>O peka me convidou para a correntinha do bem, e ainda me intimou pelo twitter :/ aqui está como é meu ambiente de trabalho.</p>
+
+<ul>
+<li><p><a href="http://lornlab.org/blog/2011/04/12/usando-zsh/">ZSH</a>, o cara é tão bom que tem um post só para ele :)</p></li>
+<li><p><a href="http://code.google.com/p/iterm2/">iTerm2</a> - Eu sempre usei o Terminal.App padrão do MacOSX, há um tempo atrás ouvi falar do iTerm, mas
+dado a minha pessima organização, acabei me esquecendo. Por causa dessa foto no twitter/facebook recebi a dica do
+iTerm2 e vou dizer, deixa o Terminal.App no chinelo tem fullscreen, 256 cores, busca, histórico propia, só instalando para
+você ver o que eu estou falando pena que está em alpha, mas estou atualizando a cada relase.</p></li>
+<li><p>Git - No trabalho apenas o git, em casa git e github.com/lorn onde faço minhas brincadeiras</p></li>
+<li><p><a href="http://www.virtualbox.org/">Virtualbox</a> - Para emular um Linux ou Windows quando preciso</p></li>
+<li><p><a href="http://www.irssi.org/">Irssi</a> - irc remoto ( via ssh ) 24/7 na irc.freenode.net e irc.perl.org :)</p></li>
+<li><p><a href="http://sites.google.com/site/yorufukurou/">Yorufukoru</a> - Cliente de twitter, vejo pouco o twitter, mas quando vejo é com ele.</p></li>
+<li><p>Musica - Tudo o que eu preciso/quero ouvir está no iPhone então ligo o fone de ouvido nele e já era, de vez em quando ouço uma
+coisa ou outra do youtube.</p></li>
+<li><p><a href="http://www.vim.org/">Vim</a> - Por ultimo, mas não menos importante "O Editor", minhas configurações estão <a href="https://github.com/lorn/vim_confs">aqui</a>.</p></li>
+</ul>
+
+
+<p>Passo a bola agora para o <a href="http://bitforest.org/">@dsouza</a>, @pahagon, @ldaugusto e 2 hit combo no @wendelscardua</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Usando ZSH]]></title>
+    <link href="http://lornlab.org/blog/2011/04/12/usando-zsh/"/>
+    <updated>2011-04-12T13:31:00-03:00</updated>
+    <id>http://lornlab.org/blog/2011/04/12/usando-zsh</id>
+    <content type="html"><![CDATA[<p>Esses dias re-descobri o zsh, já havia testado a um tempo atrás mas agora foi pra valer :)</p>
+
+<p>E vou dizer, não há shell melhor :) muito melhor que o Bash</p>
+
+<ul>
+<li><p>O historico do ZSH é compartilhado por <em>TODAS</em> sessões dele, diferente do bash que cada sessão tem seu histórico
+( e você tem que ficar procurando onde foi que digitou aquele comando para recuperar ele do histórico ).</p></li>
+<li><p>ZSH tem autocomplete para tudo, ok bash também, mas o ZSH é bem mágico ele tem autocomplete para o kill, listando os
+processos que estão rolando e você digita o nome ele já tras o pid para você, ps -aux? nunca mais.</p></li>
+<li><p>Autocomplete do ssh baseado no seu ~/.ssh/know_hosts ou seja, acessou a maquina, ssh ma<tab> autocomplete :D</p></li>
+<li><p>Continuando o autocomplete, no MacOSX temos um instalado de pacote chamado brew para instalar pacotes nele é
+mais ou menos como no apt-get, busca e depois install então: brew seach xyz, brew install xyz. Com o zsh ele irá fazer
+a busca no install então brew install x<tab> pronto, já mostra para você todos os pacotes que casam com aquela string.</p></li>
+<li><p>E bem compativell com o bash, eu não tive nenhum problema em fazer: cat ~/.bashrc >> ~/.zshrc e tudo que eu tinha configurado no bash funciona no zsh</p></li>
+</ul>
+
+
+<p>Comece usando agora é só seguir a receita de bolo desse repositorio <a href="https://github.com/robbyrussell/oh-my-zsh/">https://github.com/robbyrussell/oh-my-zsh/</a> ele deixou
+ o zsh bem bonito, com suporte a temas e plugins ( e você verá como é facil fazer temas e plugins ) o meu fork desse repositorio você acha aqui.</p>
+
+<p>Esse são os motivos básicos, caso eu lembro de mais algum matador eu coloco aqui. Mas fica a dica, use zsh e <a href="http://www.youtube.com/watch?v=3oB2rMaY0ho&amp;feature=related">filtro solar</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>

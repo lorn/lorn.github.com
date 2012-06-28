@@ -1,11 +1,69 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
+        <loc>http://lornlab.org/blog/2006/04/19/fisl-7-0/</loc>
+        <lastmod>2012-06-28T00:36:43-03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://lornlab.org/blog/2006/11/21/relato-conilsi-yapc-sa-2006/</loc>
+        <lastmod>2012-06-28T00:36:43-03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://lornlab.org/blog/2007/01/23/livro-minority-report/</loc>
+        <lastmod>2012-06-28T00:36:43-03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://lornlab.org/blog/2007/02/17/sandman-casa-de-bonecas/</loc>
+        <lastmod>2012-06-28T00:36:43-03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://lornlab.org/blog/2009/01/20/perl-para-sysadmins-e-dbas/</loc>
+        <lastmod>2012-06-28T00:36:43-03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://lornlab.org/blog/2011/04/12/usando-zsh/</loc>
+        <lastmod>2012-06-28T00:36:43-03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://lornlab.org/blog/2011/04/12/meu-ambiente-de-trabalho-em-n-itens/</loc>
+        <lastmod>2012-06-28T00:36:43-03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://lornlab.org/blog/2011/04/15/como-funciona-a-escala-pentatonica/</loc>
+        <lastmod>2012-06-28T00:36:43-03:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://lornlab.org/blog/2011/05/17/hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick/
+        </loc>
+        <lastmod>2012-06-28T00:36:43-03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://lornlab.org/blog/2011/05/19/a-biblioteca-pessoal-de-neil-gaiman/</loc>
+        <lastmod>2012-06-28T00:36:43-03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://lornlab.org/blog/2011/09/26/la-e-devolta-outra-vez/</loc>
+        <lastmod>2012-06-28T00:36:43-03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/</loc>
+        <lastmod>2012-06-28T00:36:43-03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/</loc>
+        <lastmod>2012-06-28T00:36:43-03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://lornlab.org/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/</loc>
+        <lastmod>2012-06-28T00:36:43-03:00</lastmod>
+    </url>
+    <url>
         <loc>http://lornlab.org/blog/archives/</loc>
-        <lastmod>2012-06-28T00:14:09-03:00</lastmod>
+        <lastmod>2012-06-28T00:36:43-03:00</lastmod>
     </url>
     <url>
         <loc>http://lornlab.org/</loc>
-        <lastmod>2012-06-28T00:14:09-03:00</lastmod>
+        <lastmod>2012-06-28T00:36:43-03:00</lastmod>
     </url>
 </urlset>
