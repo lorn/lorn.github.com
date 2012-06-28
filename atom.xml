@@ -4,7 +4,7 @@
   <title><![CDATA[lornlab.]]></title>
   <link href="http://lornlab.org/atom.xml" rel="self"/>
   <link href="http://lornlab.org/"/>
-  <updated>2012-06-28T00:37:04-03:00</updated>
+  <updated>2012-06-28T20:50:43-03:00</updated>
   <id>http://lornlab.org/</id>
   <author>
     <name><![CDATA[Lindolfo 'Lorn' Rodrigues]]></name>
@@ -12,6 +12,74 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Debugging HTTP Request With Netcat]]></title>
+    <link href="http://lornlab.org/blog/2012/06/28/debugging-http-request-with-netcat/"/>
+    <updated>2012-06-28T20:45:00-03:00</updated>
+    <id>http://lornlab.org/blog/2012/06/28/debugging-http-request-with-netcat</id>
+    <content type="html"><![CDATA[<p>O que fazer quando você precisa usar uma API de terceiros e tudo funciona bem quando você está fazendo seus testes com curl.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ curl https://api.github.com/repos/lorn/lwp-curl/commits</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Mas quando você vai para sua linguagem botar a mão na massa, dá erro:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ curl "https://api.github.com/repos1/lorn/lwp-curl/commits1"
+</span><span class='line'>
+</span><span class='line'>{
+</span><span class='line'>  "message": "Not Found"
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>é claro que nem sempre o erro será tão claro, e principalmente quando você está fazendo POST/PUT com arquivos, como debugar? porque funciona no curl e não funciona na minha linguagem preferida?</p>
+
+<blockquote><p>Netcat for the rescue!</p></blockquote>
+
+
+<p>Netcat é o canivete suiço do mundo unix, se você nunca ouviu falar e quer aprender até a transferir arquivos via Netcat (!!) veja esse post do <a href="http://www.catonmat.net/blog/unix-utilities-netcat/">pkrumins</a> nesse caso especifico, vamos usar Netcat para debugar requisições HTTP e isso ele não mostra lá ;)</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ curl "localhost:9999/repos/lorn/lwp-curl/commits"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Aparece assim no Netcat</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ nc -l localhost 9999
+</span><span class='line'>GET /repos/lorn/lwp-curl/commits HTTP/1.1
+</span><span class='line'>User-Agent: curl/7.21.4 (universal-apple-darwin11.0) libcurl/7.21.4 OpenSSL/0.9.8r zlib/1.2.5
+</span><span class='line'>Host: localhost:9999
+</span><span class='line'>Accept: */*</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Agora ao invés de usar o curl, manda sua aplicação fazer o POST/PUT para o Netcat ( localhost:9999 nesse exemplo ) e vê o que o curl manda o sua aplicação não manda, no meu caso eu tinha esquecido de enviar o arquivo usando <a href="http://www.w3.org/Protocols/rfc1341/7_2_Multipart.html">HTTP Multipart</a>.</p>
+
+<p>Para usar o Netcat no Mac:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ nc -l localhost 9999</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Linux:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>nc -l -p 9999</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Dica do <a href="http://dsouza.github.com/b/">dsouza</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[A Busca Pelo Deploy Contínuo - Parte 3]]></title>
@@ -40,15 +108,249 @@ Você está lendo a Parte 3 sobre &#8220;A Busca pelo deploy contínuo&#8221; eu
 
 <p>O seu deploy consistiria em copiar os arquivos novos e mandar um sinal de reset para o pid do Starman:</p>
 
-<p>{% codeblock %}
-$ kill -s USR2 1337
-{% endcodeblock %}</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ kill -s USR2 1337</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Ele vai recarregar o código, e vai reiniciar todos os seus fork assim que eles forem ficando sem conexões ou seja para seus usuários a percepção de downtime será <strong>ZERO!</strong></p>
 
 <p>Abaixo uma conf de exemplo para se usar no Nginx para se conectar a um socket gerado pelo Starman:</p>
 
-<p>{% gist 1126172 %}</p>
+<div><script src='https://gist.github.com/1126172.js?file='></script>
+<noscript><pre><code>=pod
+
+=encoding utf8
+
+=head1 Uma arquitetura de alta disponibilidade usando Starman
+
+Continuando a introdução dada pelo L&lt;nosso amigo que vence guerras|http://sao-paulo.pm.org/equinocio/2012/mar/13&gt;, falarei um pouco mais sobre o Starman e, como ele, não falarei sobre PSGI/Plack porque esses assuntos já foram muito bem explorados L&lt;em outros|http://sao-paulo.pm.org/artigo/2010/PSGI&gt; e L&lt;equinocios|http://sao-paulo.pm.org/equinocio/2011/set/11&gt;.
+
+Essa arquitetura é baseada na arquitetura que o Github usa/usava que eles explicam L&lt;nesse post|https://github.com/blog/517-unicorn&gt; eles falam sobre como eles utilizam o Unicorn, o Starman foi baseado nesse cara o Miyagawa inclusive usou o nome Unicorn como &quot;inspiração&quot; para o nome Starman:
+
+&quot;The name Starman is taken from the song (Star na Otoko) by the Japanese rock band Unicorn (yes, Unicorn!). It's also known as a song by David Bowie, a power-up from Super Mario Brothers and a character from Earthbound, all of which I love.&quot;
+
+Mais um pouco sobre a historia do nome do Starman no blog dele:
+
+L&lt;Good name for Perl UNIX forking web server?|http://bulknews.typepad.com/blog/2010/02/good-name-for-perl-unix-forking-web-server.html&gt;
+
+O fonte desse artigo, assim como todos os arquivos de configuração e inicialização estão nesse L&lt;gist|https://gist.github.com/1126172&gt; não fique copiando e colando daqui, você pode pegar o arquivo separado lá ;)
+
+=head2 Sendo amigo do seu syadmin
+
+Eu fiz uma busca no APT agora, e não vi nenhum pacote do Starman. 
+
+Mas isso não significa que você vai jogar essa bomba na mão do seu sysadmin, seja gentil com ele como diria o Bruce Lee:
+
+   &quot;Be L&lt;Devops my friend|http://devops.com/&gt;&quot;
+
+Faça scripts de inicialização, não é algo tão dificil e Shell Script é uma linguagem fácil L&lt;e que faz de você um desenvolvedor melhor|http://zachholman.com/posts/glue-languages/&gt; eu precisei subir o Starman em um CentOS e no Debian, abaixo estão os arquivos de inicialização para cada uma dessas distribuições a versão do Debian teve a revisão e ajustes do Nuba - eu tinha esquecido algum header/conf ;)
+
+Debin:
+
+    #!/bin/bash
+     
+    ### BEGIN INIT INFO
+    # starman - this script starts and stops the starman daemon
+    # Provides:          starman_sppm
+    # Required-Start:    $local_fs $remote_fs $network $syslog
+    # Required-Stop:     $local_fs $remote_fs $network $syslog
+    # Default-Start:     2 3 4 5
+    # Default-Stop:      0 1 6
+    # Short-Description: starts the starman server
+    # Description:       starts starman using start-stop-daemon
+    ### END INIT INFO
+     
+    NAME=starman
+    DESC=starman
+     
+    test -x $DAEMON || exit 0
+     
+    set -e
+     
+    . /lib/lsb/init-functions
+    ## Variáveis de conf da sua App, ALTERE ISSO ANTES DE QUALQUER COISA.
+    export starman=&quot;/usr/bin/starman&quot;
+    export myapp_path=&quot;/var/www/myapp&quot;
+    export pidfile=&quot;/var/run/starman.pid&quot;
+     
+     
+    start() {
+            echo -n $&quot;Starting Starman: &quot;
+            ## eu inicio o starman para debug na porta 8080, é bom para testar algumas coisas dando bypass no nginx e tanto o log, quando o PID são criados com o usuário do nginx, para ficar mais fácil 
+            $starman -I${myapp_path}/lib --user=nginx --listen :8080 --listen /var/run/nginx/starman.sock --daemonize --pid ${pidfile} --error-log /var/log/nginx/starman.log ${myapp_path}/${myapp}.psgi
+            RETVAL=$?
+            echo
+            [ $RETVAL = 0 ]
+            return $RETVAL
+    }
+     
+    restart() {
+            echo -n $&quot;Restarting Starman: &quot;
+            export PID=`cat ${pidfile}`
+            kill -s USR2 $PID 
+            RETVAL=$?
+            echo
+            [ $RETVAL = 0 ]
+            return $RETVAL
+    }
+     
+    stop() {
+            echo -n $&quot;Stopping Starman: &quot;
+            killproc -p ${pidfile} -d 10 $starman
+            RETVAL=$?
+            echo
+            [ $RETVAL = 0 ] &amp;&amp; rm -f ${pidfile}
+    }
+    # See how we were called.
+    case &quot;$1&quot; in
+      start)
+            start
+            ;;
+      restart)
+            restart
+             ;;
+      stop)
+            stop
+            ;;
+      *)
+            echo $&quot;Usage: starman {start|restart|stop}&quot;
+            exit 1
+    esac
+     
+    exit $RETVAL
+
+CentOS
+
+    #!/bin/bash
+     
+    # starman - this script starts and stops the starman daemon
+    #
+    # chkconfig:   - 85 15
+    # description: Starman 
+    # processname: starman
+    # pidfile :    /var/run/starman.pid
+    # www file:    /var/www/myapp
+     
+     
+    # Source function library.
+    . /etc/rc.d/init.d/functions
+     
+    ## Variáveis de conf da sua App, ALTERE ISSO ANTES DE QUALQUER COISA.
+    export starman=&quot;/usr/bin/starman&quot;
+    export myapp_path=&quot;/var/www/myapp&quot;
+    export pidfile=&quot;/var/run/starman.pid&quot;
+     
+     
+    start() {
+            echo -n $&quot;Starting Starman: &quot;
+            ## eu inicio o starman para debug na porta 8080, é bom para testar algumas coisas dando bypass no nginx e tanto o log, quando o PID são criados com o usuário do nginx, para ficar mais fácil 
+            $starman -I${myapp_path}/lib --user=nginx --listen :8080 --listen /var/run/nginx/starman.sock --daemonize --pid ${pidfile} --error-log /var/log/nginx/starman.log ${myapp_path}/${myapp}.psgi
+            RETVAL=$?
+            echo
+            [ $RETVAL = 0 ]
+            return $RETVAL
+    }
+     
+    restart() {
+            echo -n $&quot;Restarting Starman: &quot;
+            export PID=`cat ${pidfile}`
+            kill -s USR2 $PID 
+            RETVAL=$?
+            echo
+            [ $RETVAL = 0 ]
+            return $RETVAL
+    }
+     
+    stop() {
+            echo -n $&quot;Stopping Starman: &quot;
+            killproc -p ${pidfile} -d 10 $starman
+            RETVAL=$?
+            echo
+            [ $RETVAL = 0 ] &amp;&amp; rm -f ${pidfile}
+    }
+    # See how we were called.
+    case &quot;$1&quot; in
+      start)
+            start
+            ;;
+      restart)
+            restart
+             ;;
+      stop)
+            stop
+            ;;
+      *)
+            echo $&quot;Usage: starman {start|restart|stop}&quot;
+            exit 1
+    esac
+     
+    exit $RETVAL
+
+=head2 Nginx + Starman
+
+
+Como vocês leram, ou não, no post do github a arquitetura deles consistem em usar o servidor do Unicorn atrás do Nginx e a comunidação entre eles é feita via Unix Socket \,,/ 
+
+O Nginx fala diretamente com os &quot;workers&quot; do Starman atráves do Starman Master, quando o Starman inicia ele sobe 'n' workers que são controlados pelo processo principal, toda requisição é processado pelos workers.
+
+Com isso você ganha algumas funcionalidades interessantes como hotdeploy, que é o ato de você subir uma nova versão da sua aplicação com ZERO DOWNTIME!!!!111
+
+Como funciona, basta você atualizar os arquivos da sua aplicação - não irá alterar nada até você reiniciar o serviço - e na hora de reiniciar o serviço é só mandar o sinal USR2 para o PID Master do Starman, isso irá dizer para ele que a aplicação precisa ser reiniciada ele irá reiniciar os seus workers paulatinamente, assim que eles ficarem ociosos até que todos estejam rodando a nova versão da aplicação.
+
+Ah, a função restart dos arquivos de inicialização que eu falei lá em cima já faz esse trabalho :)
+
+Por padrão o Starman inicia apenas 5 workers, eles podem aguentar bastante coisa, mas dependendo da sua configuração de hardware você pode ter mais mas cuidado com swap, se a memoria está indo para swap é bom você diminuir esse número.
+
+    upstream myapp_starman {
+      server unix:/tmp/starman.sock fail_timeout=0;
+    }
+   
+    server {
+      listen 80;
+   
+    client_max_body_size 1024m;
+    client_body_buffer_size 8k;
+    proxy_read_timeout 300;
+   
+    ##
+    # basic
+    ##
+    server_name www.localhost.com;
+    root /home/user/MyApp/root;
+    keepalive_timeout 0;
+   
+    ##
+    # logging
+    ##
+    access_log /var/log/nginx/myapp.access combined;
+    error_log /var/log/nginx/myapp.error;
+    
+    location /static {
+          root  /home/user/MyApp/root/;
+          autoindex on;
+    }
+   
+    ##
+    # proxy
+    ##
+    location / {
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header Host $http_host;
+      proxy_redirect off;
+      proxy_buffering off;
+      if (!-f $request_filename) {
+        proxy_pass http://myapp_starman;
+      }
+    }
+   }
+
+=head1 AUTHOR 
+
+Lindolfo &quot;Lorn&quot; Rodrigues - lorn at cpan.org
+
+=cut
+</code></pre></noscript></div>
+
 
 <p>Bom, basicamente é isso se tiver alguma duvida pergunte nos comentários :)</p>
 

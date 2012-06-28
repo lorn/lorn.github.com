@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: linux | lornlab.]]></title>
+  <link href="http://lornlab.org/blog/categories/linux/atom.xml" rel="self"/>
+  <link href="http://lornlab.org/"/>
+  <updated>2012-06-28T20:50:43-03:00</updated>
+  <id>http://lornlab.org/</id>
+  <author>
+    <name><![CDATA[Lindolfo 'Lorn' Rodrigues]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Debugging HTTP Request With Netcat]]></title>
+    <link href="http://lornlab.org/blog/2012/06/28/debugging-http-request-with-netcat/"/>
+    <updated>2012-06-28T20:45:00-03:00</updated>
+    <id>http://lornlab.org/blog/2012/06/28/debugging-http-request-with-netcat</id>
+    <content type="html"><![CDATA[<p>O que fazer quando você precisa usar uma API de terceiros e tudo funciona bem quando você está fazendo seus testes com curl.</p>
+
+<p><code>
+$ curl https://api.github.com/repos/lorn/lwp-curl/commits
+</code></p>
+
+<p>Mas quando você vai para sua linguagem botar a mão na massa, dá erro:</p>
+
+<p>```
+$ curl "https://api.github.com/repos1/lorn/lwp-curl/commits1"</p>
+
+<p>{
+  "message": "Not Found"
+}
+```</p>
+
+<p>é claro que nem sempre o erro será tão claro, e principalmente quando você está fazendo POST/PUT com arquivos, como debugar? porque funciona no curl e não funciona na minha linguagem preferida?</p>
+
+<p><blockquote><p>Netcat for the rescue!</p></blockquote></p>
+
+<p>Netcat é o canivete suiço do mundo unix, se você nunca ouviu falar e quer aprender até a transferir arquivos via Netcat (!!) veja esse post do <a href="http://www.catonmat.net/blog/unix-utilities-netcat/">pkrumins</a> nesse caso especifico, vamos usar Netcat para debugar requisições HTTP e isso ele não mostra lá ;)</p>
+
+<p><code>
+$ curl "localhost:9999/repos/lorn/lwp-curl/commits"
+</code></p>
+
+<p>Aparece assim no Netcat</p>
+
+<p><code>
+$ nc -l localhost 9999
+GET /repos/lorn/lwp-curl/commits HTTP/1.1
+User-Agent: curl/7.21.4 (universal-apple-darwin11.0) libcurl/7.21.4 OpenSSL/0.9.8r zlib/1.2.5
+Host: localhost:9999
+Accept: */*
+</code></p>
+
+<p>Agora ao invés de usar o curl, manda sua aplicação fazer o POST/PUT para o Netcat ( localhost:9999 nesse exemplo ) e vê o que o curl manda o sua aplicação não manda, no meu caso eu tinha esquecido de enviar o arquivo usando <a href="http://www.w3.org/Protocols/rfc1341/7_2_Multipart.html">HTTP Multipart</a>.</p>
+
+<p>Para usar o Netcat no Mac:</p>
+
+<p><code>
+$ nc -l localhost 9999
+</code></p>
+
+<p>Linux:</p>
+
+<p><code>
+nc -l -p 9999
+</code></p>
+
+<p>Dica do <a href="http://dsouza.github.com/b/">dsouza</a></p>
+]]></content>
+  </entry>
+  
+</feed>

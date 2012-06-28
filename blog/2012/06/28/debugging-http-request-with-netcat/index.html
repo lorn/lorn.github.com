@@ -5,12 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Sandman - Casa De Bonecas - lornlab.</title>
+  <title>Debugging HTTP Request With Netcat - lornlab.</title>
   <meta name="author" content="Lindolfo 'Lorn' Rodrigues">
 
   
-  <meta name="description" content="Como Sandman é tão famoso e eu nunca tinha lido, não resisti, e comecei a ler a queria começar pelo 1o mas a edição
-está esgotada (!!) então comecei &hellip;">
+  <meta name="description" content="O que fazer quando você precisa usar uma API de terceiros e tudo funciona bem quando você está fazendo seus testes com curl. 1
+$ curl https://api. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +19,7 @@ está esgotada (!!) então comecei &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://lornlab.org/blog/2007/02/17/sandman-casa-de-bonecas/">
+  <link rel="canonical" href="http://lornlab.org/blog/2012/06/28/debugging-http-request-with-netcat/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -80,7 +80,7 @@ está esgotada (!!) então comecei &hellip;">
   
   <header>
     
-      <h1 class="entry-title">Sandman - Casa De Bonecas</h1>
+      <h1 class="entry-title">Debugging HTTP Request With Netcat</h1>
     
     
       <p class="meta">
@@ -96,22 +96,73 @@ está esgotada (!!) então comecei &hellip;">
   
 
 
-<time datetime="2007-02-17T13:06:00-02:00" pubdate data-updated="true">Feb 17<span>th</span>, 2007</time>
+<time datetime="2012-06-28T20:45:00-03:00" pubdate data-updated="true">Jun 28<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Como Sandman é tão famoso e eu nunca tinha lido, não resisti, e comecei a ler  a queria começar pelo 1o mas a edição
-está esgotada (!!) então comecei pelo 2o, Casa de Bonecas pelo que percebi não há nenhum problema com isso você não perde nada.</p>
+<div class="entry-content"><p>O que fazer quando você precisa usar uma API de terceiros e tudo funciona bem quando você está fazendo seus testes com curl.</p>
 
-<p><img class="center" src="http://media.tumblr.com/tumblr_ljitlep23m1qhdaqj.jpg"></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ curl https://api.github.com/repos/lorn/lwp-curl/commits</span></code></pre></td></tr></table></div></figure>
 
-<p>O titulo é estranho e você só entende o porque dele nas ultimas 10 páginas.</p>
 
-<p>Sandman é muito legal, eu nunca tinha lido nada do Neil Gaiman ok, outro erro, mas depois de Sandman, fiquei animado a comprar
- alguns livros dele, agora preciso comprar outro “livro” de Sandman mas, só 1 por mês então, o próximo só no mês que vem é muito caro.</p>
+<p>Mas quando você vai para sua linguagem botar a mão na massa, dá erro:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ curl "https://api.github.com/repos1/lorn/lwp-curl/commits1"
+</span><span class='line'>
+</span><span class='line'>{
+</span><span class='line'>  "message": "Not Found"
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>é claro que nem sempre o erro será tão claro, e principalmente quando você está fazendo POST/PUT com arquivos, como debugar? porque funciona no curl e não funciona na minha linguagem preferida?</p>
+
+<blockquote><p>Netcat for the rescue!</p></blockquote>
+
+
+<p>Netcat é o canivete suiço do mundo unix, se você nunca ouviu falar e quer aprender até a transferir arquivos via Netcat (!!) veja esse post do <a href="http://www.catonmat.net/blog/unix-utilities-netcat/">pkrumins</a> nesse caso especifico, vamos usar Netcat para debugar requisições HTTP e isso ele não mostra lá ;)</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ curl "localhost:9999/repos/lorn/lwp-curl/commits"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Aparece assim no Netcat</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ nc -l localhost 9999
+</span><span class='line'>GET /repos/lorn/lwp-curl/commits HTTP/1.1
+</span><span class='line'>User-Agent: curl/7.21.4 (universal-apple-darwin11.0) libcurl/7.21.4 OpenSSL/0.9.8r zlib/1.2.5
+</span><span class='line'>Host: localhost:9999
+</span><span class='line'>Accept: */*</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Agora ao invés de usar o curl, manda sua aplicação fazer o POST/PUT para o Netcat ( localhost:9999 nesse exemplo ) e vê o que o curl manda o sua aplicação não manda, no meu caso eu tinha esquecido de enviar o arquivo usando <a href="http://www.w3.org/Protocols/rfc1341/7_2_Multipart.html">HTTP Multipart</a>.</p>
+
+<p>Para usar o Netcat no Mac:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ nc -l localhost 9999</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Linux:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>nc -l -p 9999</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Dica do <a href="http://dsouza.github.com/b/">dsouza</a></p>
 </div>
 
 
@@ -134,15 +185,21 @@ está esgotada (!!) então comecei pelo 2o, Casa de Bonecas pelo que percebi nã
   
 
 
-<time datetime="2007-02-17T13:06:00-02:00" pubdate data-updated="true">Feb 17<span>th</span>, 2007</time>
+<time datetime="2012-06-28T20:45:00-03:00" pubdate data-updated="true">Jun 28<span>th</span>, 2012</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/dev/'>dev</a>, <a class='category' href='/blog/categories/linux/'>linux</a>
+  
+</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://lornlab.org/blog/2007/02/17/sandman-casa-de-bonecas/" data-via="lornlab" data-counturl="http://lornlab.org/blog/2007/02/17/sandman-casa-de-bonecas/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://lornlab.org/blog/2012/06/28/debugging-http-request-with-netcat/" data-via="lornlab" data-counturl="http://lornlab.org/blog/2012/06/28/debugging-http-request-with-netcat/" >Tweet</a>
   
   
   
@@ -153,10 +210,8 @@ está esgotada (!!) então comecei pelo 2o, Casa de Bonecas pelo que percebi nã
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2007/01/23/livro-minority-report/" title="Previous Post: Livro Minority Report">&laquo; Livro Minority Report</a>
+        <a class="basic-alignment left" href="/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/" title="Previous Post: A Busca Pelo Deploy Contínuo - Parte 3">&laquo; A Busca Pelo Deploy Contínuo - Parte 3</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2009/01/20/perl-para-sysadmins-e-dbas/" title="Next Post: Perl Para Sysadmins E DBAs">Perl Para Sysadmins E DBAs &raquo;</a>
       
     </p>
   </footer>
@@ -286,8 +341,8 @@ está esgotada (!!) então comecei pelo 2o, Casa de Bonecas pelo que percebi nã
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://lornlab.org/blog/2007/02/17/sandman-casa-de-bonecas/';
-        var disqus_url = 'http://lornlab.org/blog/2007/02/17/sandman-casa-de-bonecas/';
+        var disqus_identifier = 'http://lornlab.org/blog/2012/06/28/debugging-http-request-with-netcat/';
+        var disqus_url = 'http://lornlab.org/blog/2012/06/28/debugging-http-request-with-netcat/';
         var disqus_script = 'embed.js';
       
     (function () {
