@@ -1,11 +1,13 @@
 ---
 layout: post
 title: "Debungging HTTP Request With Netcat"
-date: 2011-10-25 12:22
+date: 2012-06-28 20:22
 comments: true
-published: false
+published: true
 categories: [linux, dev]
 ---
+
+O que fazer quando você precisa
 mac
 nc -l localhost 9999
 
