@@ -4,7 +4,7 @@
   <title><![CDATA[Category: linux | lornlab.]]></title>
   <link href="http://lornlab.org/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://lornlab.org/"/>
-  <updated>2012-06-28T20:50:43-03:00</updated>
+  <updated>2012-06-29T14:20:27-03:00</updated>
   <id>http://lornlab.org/</id>
   <author>
     <name><![CDATA[Lindolfo 'Lorn' Rodrigues]]></name>
@@ -39,6 +39,8 @@ $ curl "https://api.github.com/repos1/lorn/lwp-curl/commits1"</p>
 <p><blockquote><p>Netcat for the rescue!</p></blockquote></p>
 
 <p>Netcat é o canivete suiço do mundo unix, se você nunca ouviu falar e quer aprender até a transferir arquivos via Netcat (!!) veja esse post do <a href="http://www.catonmat.net/blog/unix-utilities-netcat/">pkrumins</a> nesse caso especifico, vamos usar Netcat para debugar requisições HTTP e isso ele não mostra lá ;)</p>
+
+<p>Essa requisição do curl:</p>
 
 <p><code>
 $ curl "localhost:9999/repos/lorn/lwp-curl/commits"
