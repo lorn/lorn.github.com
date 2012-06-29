@@ -31,6 +31,8 @@ Netcat for the rescue!
 
 Netcat é o canivete suiço do mundo unix, se você nunca ouviu falar e quer aprender até a transferir arquivos via Netcat (!!) veja esse post do [pkrumins](http://www.catonmat.net/blog/unix-utilities-netcat/) nesse caso especifico, vamos usar Netcat para debugar requisições HTTP e isso ele não mostra lá ;)
 
+Essa requisição do curl:
+
 ```
 $ curl "localhost:9999/repos/lorn/lwp-curl/commits"
 ```
