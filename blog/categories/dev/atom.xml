@@ -4,7 +4,7 @@
   <title><![CDATA[Category: dev | lornlab.]]></title>
   <link href="http://lornlab.org/blog/categories/dev/atom.xml" rel="self"/>
   <link href="http://lornlab.org/"/>
-  <updated>2012-06-29T15:28:12-03:00</updated>
+  <updated>2012-07-06T16:07:27-03:00</updated>
   <id>http://lornlab.org/</id>
   <author>
     <name><![CDATA[Lindolfo 'Lorn' Rodrigues]]></name>
@@ -56,7 +56,7 @@ Host: localhost:9999
 Accept: */*
 </code></p>
 
-<p>Agora ao invés de usar o curl, manda sua aplicação fazer o POST/PUT para o Netcat ( localhost:9999 nesse exemplo ) e vê o que o curl manda o sua aplicação não manda, no meu caso eu tinha esquecido de enviar o arquivo usando <a href="http://www.w3.org/Protocols/rfc1341/7_2_Multipart.html">HTTP Multipart</a>.</p>
+<p>Agora ao invés de usar o curl, faça sua aplicação fazer o POST/PUT para o Netcat - localhost:9999 nesse exemplo - e veja a diferença entre o 'debug' do nc, para quando a requisição vem do curl, e o 'debug' do nc para quando a requisição vem da sua aplicação, no meu caso eu tinha esquecido de enviar o arquivo usando <a href="http://www.w3.org/Protocols/rfc1341/7_2_Multipart.html">HTTP Multipart</a>.</p>
 
 <p>Para usar o Netcat no Mac:</p>
 
