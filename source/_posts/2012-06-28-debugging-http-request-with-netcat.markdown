@@ -47,7 +47,7 @@ Host: localhost:9999
 Accept: */*
 ```
 
-Agora ao invés de usar o curl, manda sua aplicação fazer o POST/PUT para o Netcat ( localhost:9999 nesse exemplo ) e vê o que o curl manda o sua aplicação não manda, no meu caso eu tinha esquecido de enviar o arquivo usando [HTTP Multipart](http://www.w3.org/Protocols/rfc1341/7_2_Multipart.html).
+Agora ao invés de usar o curl, faça sua aplicação fazer o POST/PUT para o Netcat - localhost:9999 nesse exemplo - e veja a diferença entre o 'debug' do nc, para quando a requisição vem do curl, e o 'debug' do nc para quando a requisição vem da sua aplicação, no meu caso eu tinha esquecido de enviar o arquivo usando [HTTP Multipart](http://www.w3.org/Protocols/rfc1341/7_2_Multipart.html).
 
 Para usar o Netcat no Mac:
 
@@ -62,4 +62,3 @@ nc -l -p 9999
 ```
 
 Dica do [dsouza](http://dsouza.github.com/b/)
-    
