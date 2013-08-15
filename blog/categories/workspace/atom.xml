@@ -4,7 +4,7 @@
   <title><![CDATA[Category: workspace | lorn.io]]></title>
   <link href="http://lorn.io/blog/categories/workspace/atom.xml" rel="self"/>
   <link href="http://lorn.io/"/>
-  <updated>2013-08-15T11:37:47-03:00</updated>
+  <updated>2013-08-15T13:59:19-03:00</updated>
   <id>http://lorn.io/</id>
   <author>
     <name><![CDATA[Lindolfo 'Lorn' Rodrigues]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[A Biblioteca Pessoal De Neil Gaiman]]></title>
-    <link href="http://lorn.io/blog/2011/05/19/a-biblioteca-pessoal-de-neil-gaiman/"/>
+    <link href="http://lorn.io/2011/05/19/a-biblioteca-pessoal-de-neil-gaiman/"/>
     <updated>2011-05-19T00:03:00-03:00</updated>
-    <id>http://lorn.io/blog/2011/05/19/a-biblioteca-pessoal-de-neil-gaiman</id>
+    <id>http://lorn.io/2011/05/19/a-biblioteca-pessoal-de-neil-gaiman</id>
     <content type="html"><![CDATA[<p>Quando vi esse site pela primeira vez, e como eu já tinha lido alguma entrevista do Donald Knuth em que ele falava que tinha
 a mesma poltrona desde 1960 e só trocava o forro externo, eu percebi que precisava comprar uma poltrona para ler livros  :)</p>
 
@@ -34,9 +34,9 @@ outras livros/quadrinhos famosos, mas o que eu mais gosto e li foi Sandman, e s�
   
   <entry>
     <title type="html"><![CDATA[Meu Ambiente De Trabalho Em N Itens]]></title>
-    <link href="http://lorn.io/blog/2011/04/12/meu-ambiente-de-trabalho-em-n-itens/"/>
+    <link href="http://lorn.io/2011/04/12/meu-ambiente-de-trabalho-em-n-itens/"/>
     <updated>2011-04-12T14:59:00-03:00</updated>
-    <id>http://lorn.io/blog/2011/04/12/meu-ambiente-de-trabalho-em-n-itens</id>
+    <id>http://lorn.io/2011/04/12/meu-ambiente-de-trabalho-em-n-itens</id>
     <content type="html"><![CDATA[<p>O peka me convidou para a correntinha do bem, e ainda me intimou pelo twitter :/ aqui está como é meu ambiente de trabalho.</p>
 
 <ul>
@@ -61,9 +61,9 @@ coisa ou outra do youtube.</p></li>
   
   <entry>
     <title type="html"><![CDATA[Usando ZSH]]></title>
-    <link href="http://lorn.io/blog/2011/04/12/usando-zsh/"/>
+    <link href="http://lorn.io/2011/04/12/usando-zsh/"/>
     <updated>2011-04-12T13:31:00-03:00</updated>
-    <id>http://lorn.io/blog/2011/04/12/usando-zsh</id>
+    <id>http://lorn.io/2011/04/12/usando-zsh</id>
     <content type="html"><![CDATA[<p>Esses dias re-descobri o zsh, já havia testado a um tempo atrás mas agora foi pra valer :)</p>
 
 <p>E vou dizer, não há shell melhor :) muito melhor que o Bash</p>

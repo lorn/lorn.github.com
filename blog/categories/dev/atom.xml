@@ -4,7 +4,7 @@
   <title><![CDATA[Category: dev | lorn.io]]></title>
   <link href="http://lorn.io/blog/categories/dev/atom.xml" rel="self"/>
   <link href="http://lorn.io/"/>
-  <updated>2013-08-15T11:37:47-03:00</updated>
+  <updated>2013-08-15T13:59:19-03:00</updated>
   <id>http://lorn.io/</id>
   <author>
     <name><![CDATA[Lindolfo 'Lorn' Rodrigues]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Debugging HTTP Request With Netcat]]></title>
-    <link href="http://lorn.io/blog/2012/06/28/debugging-http-request-with-netcat/"/>
+    <link href="http://lorn.io/2012/06/28/debugging-http-request-with-netcat/"/>
     <updated>2012-06-28T20:45:00-03:00</updated>
-    <id>http://lorn.io/blog/2012/06/28/debugging-http-request-with-netcat</id>
+    <id>http://lorn.io/2012/06/28/debugging-http-request-with-netcat</id>
     <content type="html"><![CDATA[<p>O que fazer quando você precisa usar uma API de terceiros e tudo funciona bem quando você está fazendo seus testes com curl.</p>
 
 <p><code>
@@ -76,9 +76,9 @@ nc -l -p 9999
   
   <entry>
     <title type="html"><![CDATA[Hackers Que Você Deveria Conhecer (1): Brad Fitzpatrick]]></title>
-    <link href="http://lorn.io/blog/2011/05/17/hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick/"/>
+    <link href="http://lorn.io/2011/05/17/hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick/"/>
     <updated>2011-05-17T22:45:00-03:00</updated>
-    <id>http://lorn.io/blog/2011/05/17/hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick</id>
+    <id>http://lorn.io/2011/05/17/hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick</id>
     <content type="html"><![CDATA[<p>Esta série de posts é baseada na idéia do site  <a href="http://papodehomem.com.br/homens-que-voce-deveria-conhecer-homem-da-capa-preta-tenorio-cavalcante/">Papodehomem</a>
 que tem uma série parecida chamada &ldquo;Homens que você devia conhecer&rdquo;.</p>
 
@@ -111,9 +111,9 @@ está trabalhando é o <a href="http://camlistore.org/">Camlistore</a> &ndash; e
   
   <entry>
     <title type="html"><![CDATA[Meu Ambiente De Trabalho Em N Itens]]></title>
-    <link href="http://lorn.io/blog/2011/04/12/meu-ambiente-de-trabalho-em-n-itens/"/>
+    <link href="http://lorn.io/2011/04/12/meu-ambiente-de-trabalho-em-n-itens/"/>
     <updated>2011-04-12T14:59:00-03:00</updated>
-    <id>http://lorn.io/blog/2011/04/12/meu-ambiente-de-trabalho-em-n-itens</id>
+    <id>http://lorn.io/2011/04/12/meu-ambiente-de-trabalho-em-n-itens</id>
     <content type="html"><![CDATA[<p>O peka me convidou para a correntinha do bem, e ainda me intimou pelo twitter :/ aqui está como é meu ambiente de trabalho.</p>
 
 <ul>
@@ -138,9 +138,9 @@ coisa ou outra do youtube.</p></li>
   
   <entry>
     <title type="html"><![CDATA[Usando ZSH]]></title>
-    <link href="http://lorn.io/blog/2011/04/12/usando-zsh/"/>
+    <link href="http://lorn.io/2011/04/12/usando-zsh/"/>
     <updated>2011-04-12T13:31:00-03:00</updated>
-    <id>http://lorn.io/blog/2011/04/12/usando-zsh</id>
+    <id>http://lorn.io/2011/04/12/usando-zsh</id>
     <content type="html"><![CDATA[<p>Esses dias re-descobri o zsh, já havia testado a um tempo atrás mas agora foi pra valer :)</p>
 
 <p>E vou dizer, não há shell melhor :) muito melhor que o Bash</p>

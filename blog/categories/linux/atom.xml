@@ -4,7 +4,7 @@
   <title><![CDATA[Category: linux | lorn.io]]></title>
   <link href="http://lorn.io/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://lorn.io/"/>
-  <updated>2013-08-15T11:37:47-03:00</updated>
+  <updated>2013-08-15T13:59:19-03:00</updated>
   <id>http://lorn.io/</id>
   <author>
     <name><![CDATA[Lindolfo 'Lorn' Rodrigues]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Debugging HTTP Request With Netcat]]></title>
-    <link href="http://lorn.io/blog/2012/06/28/debugging-http-request-with-netcat/"/>
+    <link href="http://lorn.io/2012/06/28/debugging-http-request-with-netcat/"/>
     <updated>2012-06-28T20:45:00-03:00</updated>
-    <id>http://lorn.io/blog/2012/06/28/debugging-http-request-with-netcat</id>
+    <id>http://lorn.io/2012/06/28/debugging-http-request-with-netcat</id>
     <content type="html"><![CDATA[<p>O que fazer quando você precisa usar uma API de terceiros e tudo funciona bem quando você está fazendo seus testes com curl.</p>
 
 <p><code>

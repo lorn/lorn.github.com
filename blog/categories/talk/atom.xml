@@ -4,7 +4,7 @@
   <title><![CDATA[Category: talk | lorn.io]]></title>
   <link href="http://lorn.io/blog/categories/talk/atom.xml" rel="self"/>
   <link href="http://lorn.io/"/>
-  <updated>2013-08-15T11:37:47-03:00</updated>
+  <updated>2013-08-15T13:59:19-03:00</updated>
   <id>http://lorn.io/</id>
   <author>
     <name><![CDATA[Lindolfo 'Lorn' Rodrigues]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[A Busca Pelo Deploy Contínuo - Parte 3]]></title>
-    <link href="http://lorn.io/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/"/>
+    <link href="http://lorn.io/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/"/>
     <updated>2011-12-03T10:03:00-02:00</updated>
-    <id>http://lorn.io/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3</id>
+    <id>http://lorn.io/2011/12/03/a-busca-pelo-deploy-continuo-parte-3</id>
     <content type="html"><![CDATA[<div id="litlebox">
 Você está lendo a Parte 3 sobre "A Busca pelo deploy contínuo" eu recomendo você a começar pela <a href="http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/">Parte 1</a> e depois ler a <a href="http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/">Parte 2</a> se você já o fez, continue ;)
 </div>
@@ -71,9 +71,9 @@ Você está lendo a Parte 3 sobre "A Busca pelo deploy contínuo" eu recomendo v
   
   <entry>
     <title type="html"><![CDATA[A Busca Pelo Deploy Contínuo - Parte 2]]></title>
-    <link href="http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/"/>
+    <link href="http://lorn.io/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/"/>
     <updated>2011-12-02T11:23:00-02:00</updated>
-    <id>http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2</id>
+    <id>http://lorn.io/2011/12/02/a-busca-pelo-deploy-continuo-parte-2</id>
     <content type="html"><![CDATA[<div id="litlebox">
 Você está lendo a Parte 2 sobre "A Busca pelo deploy contínuo" eu recomendo você a começar pela <a href="http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/">Parte 1</a> mas se já leu as duas partes, leia a <a href="http://lorn.io/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/">Parte 3</a>.
 </div>
@@ -166,9 +166,9 @@ Você está lendo a Parte 2 sobre "A Busca pelo deploy contínuo" eu recomendo v
   
   <entry>
     <title type="html"><![CDATA[A Busca Pelo Deploy Contínuo - Parte 1]]></title>
-    <link href="http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/"/>
+    <link href="http://lorn.io/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/"/>
     <updated>2011-12-02T11:23:00-02:00</updated>
-    <id>http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1</id>
+    <id>http://lorn.io/2011/12/02/a-busca-pelo-deploy-continuo-parte-1</id>
     <content type="html"><![CDATA[<div id="litlebox">
 Você está lendo a Parte 1 sobre "A Busca pelo deploy contínuo" esse post tem mais duas continuações: <a href="http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/">Parte 2</a> e <a href="http://lorn.io/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/">Parte 3.</a>
 </div>
@@ -260,9 +260,9 @@ Você está lendo a Parte 1 sobre "A Busca pelo deploy contínuo" esse post tem 
   
   <entry>
     <title type="html"><![CDATA[Perl Para Sysadmins E DBAs]]></title>
-    <link href="http://lorn.io/blog/2009/01/20/perl-para-sysadmins-e-dbas/"/>
+    <link href="http://lorn.io/2009/01/20/perl-para-sysadmins-e-dbas/"/>
     <updated>2009-01-20T15:08:00-02:00</updated>
-    <id>http://lorn.io/blog/2009/01/20/perl-para-sysadmins-e-dbas</id>
+    <id>http://lorn.io/2009/01/20/perl-para-sysadmins-e-dbas</id>
     <content type="html"><![CDATA[<p>Rau!</p>
 
 <p>Depois de séculos sem posts, apenas um post para linkar para o material da minha palestra no fisl ( que não foi das melhores porque não terminei a palestra antes e fiquei BEM doente em POA :/ )</p>

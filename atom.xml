@@ -4,7 +4,7 @@
   <title><![CDATA[lorn.io]]></title>
   <link href="http://lorn.io/atom.xml" rel="self"/>
   <link href="http://lorn.io/"/>
-  <updated>2013-08-15T11:37:47-03:00</updated>
+  <updated>2013-08-15T13:59:19-03:00</updated>
   <id>http://lorn.io/</id>
   <author>
     <name><![CDATA[Lindolfo 'Lorn' Rodrigues]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Debugging HTTP Request With Netcat]]></title>
-    <link href="http://lorn.io/blog/2012/06/28/debugging-http-request-with-netcat/"/>
+    <link href="http://lorn.io/2012/06/28/debugging-http-request-with-netcat/"/>
     <updated>2012-06-28T20:45:00-03:00</updated>
-    <id>http://lorn.io/blog/2012/06/28/debugging-http-request-with-netcat</id>
+    <id>http://lorn.io/2012/06/28/debugging-http-request-with-netcat</id>
     <content type="html"><![CDATA[<p>O que fazer quando você precisa usar uma API de terceiros e tudo funciona bem quando você está fazendo seus testes com curl.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -85,9 +85,9 @@
   
   <entry>
     <title type="html"><![CDATA[A Busca Pelo Deploy Contínuo - Parte 3]]></title>
-    <link href="http://lorn.io/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/"/>
+    <link href="http://lorn.io/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/"/>
     <updated>2011-12-03T10:03:00-02:00</updated>
-    <id>http://lorn.io/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3</id>
+    <id>http://lorn.io/2011/12/03/a-busca-pelo-deploy-continuo-parte-3</id>
     <content type="html"><![CDATA[<div id="litlebox">
 Você está lendo a Parte 3 sobre &#8220;A Busca pelo deploy contínuo&#8221; eu recomendo você a começar pela <a href="http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/">Parte 1</a> e depois ler a <a href="http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/">Parte 2</a> se você já o fez, continue ;)
 </div>
@@ -142,9 +142,9 @@ Você está lendo a Parte 3 sobre &#8220;A Busca pelo deploy contínuo&#8221; eu
   
   <entry>
     <title type="html"><![CDATA[A Busca Pelo Deploy Contínuo - Parte 2]]></title>
-    <link href="http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/"/>
+    <link href="http://lorn.io/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/"/>
     <updated>2011-12-02T11:23:00-02:00</updated>
-    <id>http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2</id>
+    <id>http://lorn.io/2011/12/02/a-busca-pelo-deploy-continuo-parte-2</id>
     <content type="html"><![CDATA[<div id="litlebox">
 Você está lendo a Parte 2 sobre &#8220;A Busca pelo deploy contínuo&#8221; eu recomendo você a começar pela <a href="http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/">Parte 1</a> mas se já leu as duas partes, leia a <a href="http://lorn.io/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/">Parte 3</a>.
 </div>
@@ -235,9 +235,9 @@ Você está lendo a Parte 2 sobre &#8220;A Busca pelo deploy contínuo&#8221; eu
   
   <entry>
     <title type="html"><![CDATA[A Busca Pelo Deploy Contínuo - Parte 1]]></title>
-    <link href="http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/"/>
+    <link href="http://lorn.io/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/"/>
     <updated>2011-12-02T11:23:00-02:00</updated>
-    <id>http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1</id>
+    <id>http://lorn.io/2011/12/02/a-busca-pelo-deploy-continuo-parte-1</id>
     <content type="html"><![CDATA[<div id="litlebox">
 Você está lendo a Parte 1 sobre &#8220;A Busca pelo deploy contínuo&#8221; esse post tem mais duas continuações: <a href="http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/">Parte 2</a> e <a href="http://lorn.io/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/">Parte 3.</a>
 </div>
@@ -331,9 +331,9 @@ Você está lendo a Parte 1 sobre &#8220;A Busca pelo deploy contínuo&#8221; es
   
   <entry>
     <title type="html"><![CDATA[Lá E Devolta Outra Vez]]></title>
-    <link href="http://lorn.io/blog/2011/09/26/la-e-devolta-outra-vez/"/>
+    <link href="http://lorn.io/2011/09/26/la-e-devolta-outra-vez/"/>
     <updated>2011-09-26T15:05:00-03:00</updated>
-    <id>http://lorn.io/blog/2011/09/26/la-e-devolta-outra-vez</id>
+    <id>http://lorn.io/2011/09/26/la-e-devolta-outra-vez</id>
     <content type="html"><![CDATA[<p>Depois de muito pensar, e a preguiça dominar, resolvi continuar no bom e velho wordpress até fiz o tão
 prometido blog em catalyst, mas a parte de design css/html e afins deu um trabalhinho e não está do jeito que eu quero e
 o wordpress tem tantos temas legais. Pelo menos aprendi bastante fazendo o blog, inclusive tem um branch ativo agora porque
@@ -347,9 +347,9 @@ estou migrando a parte de persistencia para CouchDB.</p>
   
   <entry>
     <title type="html"><![CDATA[A Biblioteca Pessoal De Neil Gaiman]]></title>
-    <link href="http://lorn.io/blog/2011/05/19/a-biblioteca-pessoal-de-neil-gaiman/"/>
+    <link href="http://lorn.io/2011/05/19/a-biblioteca-pessoal-de-neil-gaiman/"/>
     <updated>2011-05-19T00:03:00-03:00</updated>
-    <id>http://lorn.io/blog/2011/05/19/a-biblioteca-pessoal-de-neil-gaiman</id>
+    <id>http://lorn.io/2011/05/19/a-biblioteca-pessoal-de-neil-gaiman</id>
     <content type="html"><![CDATA[<p>Quando vi esse site pela primeira vez, e como eu já tinha lido alguma entrevista do Donald Knuth em que ele falava que tinha
 a mesma poltrona desde 1960 e só trocava o forro externo, eu percebi que precisava comprar uma poltrona para ler livros  :)</p>
 
@@ -366,9 +366,9 @@ outras livros/quadrinhos famosos, mas o que eu mais gosto e li foi Sandman, e s�
   
   <entry>
     <title type="html"><![CDATA[Hackers Que Você Deveria Conhecer (1): Brad Fitzpatrick]]></title>
-    <link href="http://lorn.io/blog/2011/05/17/hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick/"/>
+    <link href="http://lorn.io/2011/05/17/hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick/"/>
     <updated>2011-05-17T22:45:00-03:00</updated>
-    <id>http://lorn.io/blog/2011/05/17/hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick</id>
+    <id>http://lorn.io/2011/05/17/hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick</id>
     <content type="html"><![CDATA[<p>Esta série de posts é baseada na idéia do site  <a href="http://papodehomem.com.br/homens-que-voce-deveria-conhecer-homem-da-capa-preta-tenorio-cavalcante/">Papodehomem</a>
 que tem uma série parecida chamada &ldquo;Homens que você devia conhecer&rdquo;.</p>
 
@@ -401,9 +401,9 @@ está trabalhando é o <a href="http://camlistore.org/">Camlistore</a> &ndash; e
   
   <entry>
     <title type="html"><![CDATA[Como Funciona a Escala Pentatonica]]></title>
-    <link href="http://lorn.io/blog/2011/04/15/como-funciona-a-escala-pentatonica/"/>
+    <link href="http://lorn.io/2011/04/15/como-funciona-a-escala-pentatonica/"/>
     <updated>2011-04-15T23:59:00-03:00</updated>
-    <id>http://lorn.io/blog/2011/04/15/como-funciona-a-escala-pentatonica</id>
+    <id>http://lorn.io/2011/04/15/como-funciona-a-escala-pentatonica</id>
     <content type="html"><![CDATA[<iframe src="http://player.vimeo.com/video/5732745" width="400" height="300" frameborder="0"></iframe>
 
 
@@ -416,9 +416,9 @@ está trabalhando é o <a href="http://camlistore.org/">Camlistore</a> &ndash; e
   
   <entry>
     <title type="html"><![CDATA[Meu Ambiente De Trabalho Em N Itens]]></title>
-    <link href="http://lorn.io/blog/2011/04/12/meu-ambiente-de-trabalho-em-n-itens/"/>
+    <link href="http://lorn.io/2011/04/12/meu-ambiente-de-trabalho-em-n-itens/"/>
     <updated>2011-04-12T14:59:00-03:00</updated>
-    <id>http://lorn.io/blog/2011/04/12/meu-ambiente-de-trabalho-em-n-itens</id>
+    <id>http://lorn.io/2011/04/12/meu-ambiente-de-trabalho-em-n-itens</id>
     <content type="html"><![CDATA[<p>O peka me convidou para a correntinha do bem, e ainda me intimou pelo twitter :/ aqui está como é meu ambiente de trabalho.</p>
 
 <ul>
@@ -443,9 +443,9 @@ coisa ou outra do youtube.</p></li>
   
   <entry>
     <title type="html"><![CDATA[Usando ZSH]]></title>
-    <link href="http://lorn.io/blog/2011/04/12/usando-zsh/"/>
+    <link href="http://lorn.io/2011/04/12/usando-zsh/"/>
     <updated>2011-04-12T13:31:00-03:00</updated>
-    <id>http://lorn.io/blog/2011/04/12/usando-zsh</id>
+    <id>http://lorn.io/2011/04/12/usando-zsh</id>
     <content type="html"><![CDATA[<p>Esses dias re-descobri o zsh, já havia testado a um tempo atrás mas agora foi pra valer :)</p>
 
 <p>E vou dizer, não há shell melhor :) muito melhor que o Bash</p>
@@ -472,9 +472,9 @@ a busca no install então brew install x<tab> pronto, já mostra para você todo
   
   <entry>
     <title type="html"><![CDATA[Perl Para Sysadmins E DBAs]]></title>
-    <link href="http://lorn.io/blog/2009/01/20/perl-para-sysadmins-e-dbas/"/>
+    <link href="http://lorn.io/2009/01/20/perl-para-sysadmins-e-dbas/"/>
     <updated>2009-01-20T15:08:00-02:00</updated>
-    <id>http://lorn.io/blog/2009/01/20/perl-para-sysadmins-e-dbas</id>
+    <id>http://lorn.io/2009/01/20/perl-para-sysadmins-e-dbas</id>
     <content type="html"><![CDATA[<p>Rau!</p>
 
 <p>Depois de séculos sem posts, apenas um post para linkar para o material da minha palestra no fisl ( que não foi das melhores porque não terminei a palestra antes e fiquei BEM doente em POA :/ )</p>
@@ -508,9 +508,9 @@ a busca no install então brew install x<tab> pronto, já mostra para você todo
   
   <entry>
     <title type="html"><![CDATA[Sandman - Casa De Bonecas]]></title>
-    <link href="http://lorn.io/blog/2007/02/17/sandman-casa-de-bonecas/"/>
+    <link href="http://lorn.io/2007/02/17/sandman-casa-de-bonecas/"/>
     <updated>2007-02-17T13:06:00-02:00</updated>
-    <id>http://lorn.io/blog/2007/02/17/sandman-casa-de-bonecas</id>
+    <id>http://lorn.io/2007/02/17/sandman-casa-de-bonecas</id>
     <content type="html"><![CDATA[<p>Como Sandman é tão famoso e eu nunca tinha lido, não resisti, e comecei a ler  a queria começar pelo 1o mas a edição
 está esgotada (!!) então comecei pelo 2o, Casa de Bonecas pelo que percebi não há nenhum problema com isso você não perde nada.</p>
 
@@ -525,9 +525,9 @@ está esgotada (!!) então comecei pelo 2o, Casa de Bonecas pelo que percebi nã
   
   <entry>
     <title type="html"><![CDATA[Livro Minority Report]]></title>
-    <link href="http://lorn.io/blog/2007/01/23/livro-minority-report/"/>
+    <link href="http://lorn.io/2007/01/23/livro-minority-report/"/>
     <updated>2007-01-23T12:11:00-02:00</updated>
-    <id>http://lorn.io/blog/2007/01/23/livro-minority-report</id>
+    <id>http://lorn.io/2007/01/23/livro-minority-report</id>
     <content type="html"><![CDATA[<p>Se você está pensando em comprar este livro para conhecer mais detalhes sobre o filme, coisas escondidas, esquece.</p>
 
 <p><img class="center" src="http://media.tumblr.com/tumblr_ljitkhfY8P1qhdaqj.jpg"></p>
@@ -551,9 +551,9 @@ O bom de um livro com vários contos pequenos, é que você não precisa passar 
   
   <entry>
     <title type="html"><![CDATA[Relato Conilsi - YAPC::SA::2006]]></title>
-    <link href="http://lorn.io/blog/2006/11/21/relato-conilsi-yapc-sa-2006/"/>
+    <link href="http://lorn.io/2006/11/21/relato-conilsi-yapc-sa-2006/"/>
     <updated>2006-11-21T13:21:00-02:00</updated>
-    <id>http://lorn.io/blog/2006/11/21/relato-conilsi-yapc-sa-2006</id>
+    <id>http://lorn.io/2006/11/21/relato-conilsi-yapc-sa-2006</id>
     <content type="html"><![CDATA[<p>O Conisli desse ano, certamente foi o melhor que eu participei, e como já disse para alguns amigos
  monges para o Perl, foi melhor que o Fisl</p>
 
@@ -637,9 +637,9 @@ PL/Perl: Como fazer Procedures usando Perl, isso pode ser usado para muitas cois
   
   <entry>
     <title type="html"><![CDATA[FISL 7.0]]></title>
-    <link href="http://lorn.io/blog/2006/04/19/fisl-7-0/"/>
+    <link href="http://lorn.io/2006/04/19/fisl-7-0/"/>
     <updated>2006-04-19T13:27:00-03:00</updated>
-    <id>http://lorn.io/blog/2006/04/19/fisl-7-0</id>
+    <id>http://lorn.io/2006/04/19/fisl-7-0</id>
     <content type="html"><![CDATA[<p>ae pessoal, estou no FISL o Google esta aqui, vou atualizando esse post sempre que possivel e logo mais tem fotos</p>
 
 <p>Cheguei ontem ao FISL, não postei nada de la porque o telecentro vivia cheio de gente, e a maioria vendo o orkut &ndash;_&ndash;</p>
