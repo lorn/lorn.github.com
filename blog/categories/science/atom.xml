@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: science | lornlab.]]></title>
-  <link href="http://lornlab.org/blog/categories/science/atom.xml" rel="self"/>
-  <link href="http://lornlab.org/"/>
-  <updated>2012-07-06T16:07:27-03:00</updated>
-  <id>http://lornlab.org/</id>
+  <title><![CDATA[Category: science | lorn.io]]></title>
+  <link href="http://lorn.io/blog/categories/science/atom.xml" rel="self"/>
+  <link href="http://lorn.io/"/>
+  <updated>2013-08-15T11:37:47-03:00</updated>
+  <id>http://lorn.io/</id>
   <author>
     <name><![CDATA[Lindolfo 'Lorn' Rodrigues]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Como Funciona a Escala Pentatonica]]></title>
-    <link href="http://lornlab.org/blog/2011/04/15/como-funciona-a-escala-pentatonica/"/>
+    <link href="http://lorn.io/blog/2011/04/15/como-funciona-a-escala-pentatonica/"/>
     <updated>2011-04-15T23:59:00-03:00</updated>
-    <id>http://lornlab.org/blog/2011/04/15/como-funciona-a-escala-pentatonica</id>
+    <id>http://lorn.io/blog/2011/04/15/como-funciona-a-escala-pentatonica</id>
     <content type="html"><![CDATA[<iframe src="http://player.vimeo.com/video/5732745" width="400" height="300" frameborder="0"></iframe>
 
 

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: talk | lornlab.]]></title>
-  <link href="http://lornlab.org/blog/categories/talk/atom.xml" rel="self"/>
-  <link href="http://lornlab.org/"/>
-  <updated>2012-07-06T16:07:27-03:00</updated>
-  <id>http://lornlab.org/</id>
+  <title><![CDATA[Category: talk | lorn.io]]></title>
+  <link href="http://lorn.io/blog/categories/talk/atom.xml" rel="self"/>
+  <link href="http://lorn.io/"/>
+  <updated>2013-08-15T11:37:47-03:00</updated>
+  <id>http://lorn.io/</id>
   <author>
     <name><![CDATA[Lindolfo 'Lorn' Rodrigues]]></name>
     
@@ -15,11 +15,11 @@
   
   <entry>
     <title type="html"><![CDATA[A Busca Pelo Deploy Contínuo - Parte 3]]></title>
-    <link href="http://lornlab.org/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/"/>
+    <link href="http://lorn.io/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/"/>
     <updated>2011-12-03T10:03:00-02:00</updated>
-    <id>http://lornlab.org/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3</id>
+    <id>http://lorn.io/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3</id>
     <content type="html"><![CDATA[<div id="litlebox">
-Você está lendo a Parte 3 sobre "A Busca pelo deploy contínuo" eu recomendo você a começar pela <a href="http://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/">Parte 1</a> e depois ler a <a href="http://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/">Parte 2</a> se você já o fez, continue ;)
+Você está lendo a Parte 3 sobre "A Busca pelo deploy contínuo" eu recomendo você a começar pela <a href="http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/">Parte 1</a> e depois ler a <a href="http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/">Parte 2</a> se você já o fez, continue ;)
 </div>
 
 
@@ -29,14 +29,14 @@ Você está lendo a Parte 3 sobre "A Busca pelo deploy contínuo" eu recomendo v
 
 <p>Com um Load Balance, você consegue testar funcionalidades novas no site para uma pequena porção dos usuários do site e usar os gráficos ( que você já tem lógico ) para ver se ela é boa ou não.</p>
 
-<p>Como fazer isso? faça o deploy para apenas 1 das 'n' máquinas que você tem atrás do Load Balancer e redirecione, 5% ~ 10% das suas conexões dos seus usuários para essa máquina, o resto os gráficos que você preparou da sua aplicação irão te dizer ;)</p>
+<p>Como fazer isso? faça o deploy para apenas 1 das &lsquo;n&rsquo; máquinas que você tem atrás do Load Balancer e redirecione, 5% ~ 10% das suas conexões dos seus usuários para essa máquina, o resto os gráficos que você preparou da sua aplicação irão te dizer ;)</p>
 
-<p>Falando um pouco mais de arquitetura, e especificamente de Perl, eu gosto bastante de usar o Nginx + Starman a comunicação é feita via Unix Socket o Starman foi baseado no Unicorn do Ruby, ele funciona muito bem e...</p>
+<p>Falando um pouco mais de arquitetura, e especificamente de Perl, eu gosto bastante de usar o Nginx + Starman a comunicação é feita via Unix Socket o Starman foi baseado no Unicorn do Ruby, ele funciona muito bem e&hellip;</p>
 
 <iframe width="420" height="315" src="http://www.youtube.com/embed/dFUlAQZB9Ng" frameborder="0" allowfullscreen></iframe>
 
 
-<p>"It's a unix system I known this!" arquiteturas unix, forks, sockets e afins funcionam muito bem :)</p>
+<p>&ldquo;It&rsquo;s a unix system I known this!&rdquo; arquiteturas unix, forks, sockets e afins funcionam muito bem :)</p>
 
 <p>O seu deploy consistiria em copiar os arquivos novos e mandar um sinal de reset para o pid do Starman:</p>
 
@@ -47,240 +47,8 @@ Você está lendo a Parte 3 sobre "A Busca pelo deploy contínuo" eu recomendo v
 
 <p>Abaixo uma conf de exemplo para se usar no Nginx para se conectar a um socket gerado pelo Starman:</p>
 
-<p><div><script src='https://gist.github.com/1126172.js?file='></script>
-<noscript><pre><code>=pod
-
-=encoding utf8
-
-=head1 Uma arquitetura de alta disponibilidade usando Starman
-
-Continuando a introdução dada pelo L&lt;nosso amigo que vence guerras|http://sao-paulo.pm.org/equinocio/2012/mar/13&gt;, falarei um pouco mais sobre o Starman e, como ele, não falarei sobre PSGI/Plack porque esses assuntos já foram muito bem explorados L&lt;em outros|http://sao-paulo.pm.org/artigo/2010/PSGI&gt; e L&lt;equinocios|http://sao-paulo.pm.org/equinocio/2011/set/11&gt;.
-
-Essa arquitetura é baseada na arquitetura que o Github usa/usava que eles explicam L&lt;nesse post|https://github.com/blog/517-unicorn&gt; eles falam sobre como eles utilizam o Unicorn, o Starman foi baseado nesse cara o Miyagawa inclusive usou o nome Unicorn como &quot;inspiração&quot; para o nome Starman:
-
-&quot;The name Starman is taken from the song (Star na Otoko) by the Japanese rock band Unicorn (yes, Unicorn!). It's also known as a song by David Bowie, a power-up from Super Mario Brothers and a character from Earthbound, all of which I love.&quot;
-
-Mais um pouco sobre a historia do nome do Starman no blog dele:
-
-L&lt;Good name for Perl UNIX forking web server?|http://bulknews.typepad.com/blog/2010/02/good-name-for-perl-unix-forking-web-server.html&gt;
-
-O fonte desse artigo, assim como todos os arquivos de configuração e inicialização estão nesse L&lt;gist|https://gist.github.com/1126172&gt; não fique copiando e colando daqui, você pode pegar o arquivo separado lá ;)
-
-=head2 Sendo amigo do seu syadmin
-
-Eu fiz uma busca no APT agora, e não vi nenhum pacote do Starman. 
-
-Mas isso não significa que você vai jogar essa bomba na mão do seu sysadmin, seja gentil com ele como diria o Bruce Lee:
-
-   &quot;Be L&lt;Devops my friend|http://devops.com/&gt;&quot;
-
-Faça scripts de inicialização, não é algo tão dificil e Shell Script é uma linguagem fácil L&lt;e que faz de você um desenvolvedor melhor|http://zachholman.com/posts/glue-languages/&gt; eu precisei subir o Starman em um CentOS e no Debian, abaixo estão os arquivos de inicialização para cada uma dessas distribuições a versão do Debian teve a revisão e ajustes do Nuba - eu tinha esquecido algum header/conf ;)
-
-Debin:
-
-    #!/bin/bash
-     
-    ### BEGIN INIT INFO
-    # starman - this script starts and stops the starman daemon
-    # Provides:          starman_sppm
-    # Required-Start:    $local_fs $remote_fs $network $syslog
-    # Required-Stop:     $local_fs $remote_fs $network $syslog
-    # Default-Start:     2 3 4 5
-    # Default-Stop:      0 1 6
-    # Short-Description: starts the starman server
-    # Description:       starts starman using start-stop-daemon
-    ### END INIT INFO
-     
-    NAME=starman
-    DESC=starman
-     
-    test -x $DAEMON || exit 0
-     
-    set -e
-     
-    . /lib/lsb/init-functions
-    ## Variáveis de conf da sua App, ALTERE ISSO ANTES DE QUALQUER COISA.
-    export starman=&quot;/usr/bin/starman&quot;
-    export myapp_path=&quot;/var/www/myapp&quot;
-    export pidfile=&quot;/var/run/starman.pid&quot;
-     
-     
-    start() {
-            echo -n $&quot;Starting Starman: &quot;
-            ## eu inicio o starman para debug na porta 8080, é bom para testar algumas coisas dando bypass no nginx e tanto o log, quando o PID são criados com o usuário do nginx, para ficar mais fácil 
-            $starman -I${myapp_path}/lib --user=nginx --listen :8080 --listen /var/run/nginx/starman.sock --daemonize --pid ${pidfile} --error-log /var/log/nginx/starman.log ${myapp_path}/${myapp}.psgi
-            RETVAL=$?
-            echo
-            [ $RETVAL = 0 ]
-            return $RETVAL
-    }
-     
-    restart() {
-            echo -n $&quot;Restarting Starman: &quot;
-            export PID=`cat ${pidfile}`
-            kill -s USR2 $PID 
-            RETVAL=$?
-            echo
-            [ $RETVAL = 0 ]
-            return $RETVAL
-    }
-     
-    stop() {
-            echo -n $&quot;Stopping Starman: &quot;
-            killproc -p ${pidfile} -d 10 $starman
-            RETVAL=$?
-            echo
-            [ $RETVAL = 0 ] &amp;&amp; rm -f ${pidfile}
-    }
-    # See how we were called.
-    case &quot;$1&quot; in
-      start)
-            start
-            ;;
-      restart)
-            restart
-             ;;
-      stop)
-            stop
-            ;;
-      *)
-            echo $&quot;Usage: starman {start|restart|stop}&quot;
-            exit 1
-    esac
-     
-    exit $RETVAL
-
-CentOS
-
-    #!/bin/bash
-     
-    # starman - this script starts and stops the starman daemon
-    #
-    # chkconfig:   - 85 15
-    # description: Starman 
-    # processname: starman
-    # pidfile :    /var/run/starman.pid
-    # www file:    /var/www/myapp
-     
-     
-    # Source function library.
-    . /etc/rc.d/init.d/functions
-     
-    ## Variáveis de conf da sua App, ALTERE ISSO ANTES DE QUALQUER COISA.
-    export starman=&quot;/usr/bin/starman&quot;
-    export myapp_path=&quot;/var/www/myapp&quot;
-    export pidfile=&quot;/var/run/starman.pid&quot;
-     
-     
-    start() {
-            echo -n $&quot;Starting Starman: &quot;
-            ## eu inicio o starman para debug na porta 8080, é bom para testar algumas coisas dando bypass no nginx e tanto o log, quando o PID são criados com o usuário do nginx, para ficar mais fácil 
-            $starman -I${myapp_path}/lib --user=nginx --listen :8080 --listen /var/run/nginx/starman.sock --daemonize --pid ${pidfile} --error-log /var/log/nginx/starman.log ${myapp_path}/${myapp}.psgi
-            RETVAL=$?
-            echo
-            [ $RETVAL = 0 ]
-            return $RETVAL
-    }
-     
-    restart() {
-            echo -n $&quot;Restarting Starman: &quot;
-            export PID=`cat ${pidfile}`
-            kill -s USR2 $PID 
-            RETVAL=$?
-            echo
-            [ $RETVAL = 0 ]
-            return $RETVAL
-    }
-     
-    stop() {
-            echo -n $&quot;Stopping Starman: &quot;
-            killproc -p ${pidfile} -d 10 $starman
-            RETVAL=$?
-            echo
-            [ $RETVAL = 0 ] &amp;&amp; rm -f ${pidfile}
-    }
-    # See how we were called.
-    case &quot;$1&quot; in
-      start)
-            start
-            ;;
-      restart)
-            restart
-             ;;
-      stop)
-            stop
-            ;;
-      *)
-            echo $&quot;Usage: starman {start|restart|stop}&quot;
-            exit 1
-    esac
-     
-    exit $RETVAL
-
-=head2 Nginx + Starman
-
-
-Como vocês leram, ou não, no post do github a arquitetura deles consistem em usar o servidor do Unicorn atrás do Nginx e a comunidação entre eles é feita via Unix Socket \,,/ 
-
-O Nginx fala diretamente com os &quot;workers&quot; do Starman atráves do Starman Master, quando o Starman inicia ele sobe 'n' workers que são controlados pelo processo principal, toda requisição é processado pelos workers.
-
-Com isso você ganha algumas funcionalidades interessantes como hotdeploy, que é o ato de você subir uma nova versão da sua aplicação com ZERO DOWNTIME!!!!111
-
-Como funciona, basta você atualizar os arquivos da sua aplicação - não irá alterar nada até você reiniciar o serviço - e na hora de reiniciar o serviço é só mandar o sinal USR2 para o PID Master do Starman, isso irá dizer para ele que a aplicação precisa ser reiniciada ele irá reiniciar os seus workers paulatinamente, assim que eles ficarem ociosos até que todos estejam rodando a nova versão da aplicação.
-
-Ah, a função restart dos arquivos de inicialização que eu falei lá em cima já faz esse trabalho :)
-
-Por padrão o Starman inicia apenas 5 workers, eles podem aguentar bastante coisa, mas dependendo da sua configuração de hardware você pode ter mais mas cuidado com swap, se a memoria está indo para swap é bom você diminuir esse número.
-
-    upstream myapp_starman {
-      server unix:/tmp/starman.sock fail_timeout=0;
-    }
-   
-    server {
-      listen 80;
-   
-    client_max_body_size 1024m;
-    client_body_buffer_size 8k;
-    proxy_read_timeout 300;
-   
-    ##
-    # basic
-    ##
-    server_name www.localhost.com;
-    root /home/user/MyApp/root;
-    keepalive_timeout 0;
-   
-    ##
-    # logging
-    ##
-    access_log /var/log/nginx/myapp.access combined;
-    error_log /var/log/nginx/myapp.error;
-    
-    location /static {
-          root  /home/user/MyApp/root/;
-          autoindex on;
-    }
-   
-    ##
-    # proxy
-    ##
-    location / {
-      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-      proxy_set_header Host $http_host;
-      proxy_redirect off;
-      proxy_buffering off;
-      if (!-f $request_filename) {
-        proxy_pass http://myapp_starman;
-      }
-    }
-   }
-
-=head1 AUTHOR 
-
-Lindolfo &quot;Lorn&quot; Rodrigues - lorn at cpan.org
-
-=cut
-</code></pre></noscript></div>
+<p><div><script src='https://gist.github.com/1126172.js'></script>
+<noscript><pre><code></code></pre></noscript></div>
 </p>
 
 <p>Bom, basicamente é isso se tiver alguma duvida pergunte nos comentários :)</p>
@@ -303,18 +71,18 @@ Lindolfo &quot;Lorn&quot; Rodrigues - lorn at cpan.org
   
   <entry>
     <title type="html"><![CDATA[A Busca Pelo Deploy Contínuo - Parte 2]]></title>
-    <link href="http://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/"/>
+    <link href="http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/"/>
     <updated>2011-12-02T11:23:00-02:00</updated>
-    <id>http://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2</id>
+    <id>http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2</id>
     <content type="html"><![CDATA[<div id="litlebox">
-Você está lendo a Parte 2 sobre "A Busca pelo deploy contínuo" eu recomendo você a começar pela <a href="http://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/">Parte 1</a> mas se já leu as duas partes, leia a <a href="http://lornlab.org/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/">Parte 3</a>.
+Você está lendo a Parte 2 sobre "A Busca pelo deploy contínuo" eu recomendo você a começar pela <a href="http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/">Parte 1</a> mas se já leu as duas partes, leia a <a href="http://lorn.io/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/">Parte 3</a>.
 </div>
 
 
 <p>Agora que você já está convencido que precisa disso, ou não, vou começar a falar de algumas ferramentas/técnicas que você pode usar para te ajudar no processo:</p>
 
 <ul>
-<li><p>SCM - Software Configuration Management</p>
+<li><p>SCM &ndash; Software Configuration Management</p>
 
 <p>Também conhecido como VCS ( Version Control System ), você precisa disso, se você não tem <strong>há algo muito errado</strong> e se você está usando Subversion, isso não é tão ruim, mas comece a usar git a partir de hoje, sério.</p></li>
 <li><p>Testes</p>
@@ -322,7 +90,7 @@ Você está lendo a Parte 2 sobre "A Busca pelo deploy contínuo" eu recomendo v
 <p>Se você acha que teste é besteira, então deploy continuo é besteira para você também. É impossível ter um deploy contínuo confiável sem testes</p></li>
 <li><p>Continuos Integration Software</p>
 
-<p>Esse tipo de software tem um papel simples, porem eficaz, ele fica fazendo "pooling" no seu SCM, a cada commit seu ele vai rodar o seu processo de "build" para ver se ele continua funcionando depois do código que você acabou de comitar, um processo de build pode conter:</p>
+<p>Esse tipo de software tem um papel simples, porem eficaz, ele fica fazendo &ldquo;pooling&rdquo; no seu SCM, a cada commit seu ele vai rodar o seu processo de &ldquo;build&rdquo; para ver se ele continua funcionando depois do código que você acabou de comitar, um processo de build pode conter:</p>
 
 <ul>
 <li>Gerar pacotes</li>
@@ -348,7 +116,7 @@ Você está lendo a Parte 2 sobre "A Busca pelo deploy contínuo" eu recomendo v
 <p>Simples assim, mas tem que ser um script só que faz todo o trabalho, copiar arquivos, reinciar webserver etc</p>
 
 <p>Na Etsy quando o script ficou avançado eles evoluiram para um software web, que inclusive é opensource mais detalhes aqui: <a href="http://codeascraft.etsy.com/2010/05/20/quantum-of-deployment/">Deploynator Etsy</a></p></li>
-<li><p>Puppet/Chef - eu não sei qual o nome dessa categoria de software, o que você faz com eles é escrever "receitas" de máquinas, imagine que a empresa está crescendo e você precisa montar 10 novos webservers que incluem:</p>
+<li><p>Puppet/Chef &ndash; eu não sei qual o nome dessa categoria de software, o que você faz com eles é escrever &ldquo;receitas&rdquo; de máquinas, imagine que a empresa está crescendo e você precisa montar 10 novos webservers que incluem:</p>
 
 <ul>
 <li>Instalar SO</li>
@@ -362,7 +130,7 @@ Você está lendo a Parte 2 sobre "A Busca pelo deploy contínuo" eu recomendo v
 
 <p>Tirando a instalação do Linux, todo o resto você pode automatizar com puppet ou chef você cria receitas nele dizendo como ele vai configurar seu Webserver, seu sistema e depois é só executar essa receita na máquina ele vai instalar o pacote e fazer todo o trabalho pra você.</p>
 
-<p>E você vai precisar fazer isso UMA vez para 'n' maquinas, e quando precisar mudar algo e só alterar na receita ele mantém as maquinas sincronizadas com sua receitas, nada de sair editando o mesmo arquivo em várias máquinas.</p></li>
+<p>E você vai precisar fazer isso UMA vez para &lsquo;n&rsquo; maquinas, e quando precisar mudar algo e só alterar na receita ele mantém as maquinas sincronizadas com sua receitas, nada de sair editando o mesmo arquivo em várias máquinas.</p></li>
 <li><p>Monitoramento</p>
 
 <ul>
@@ -390,7 +158,7 @@ Você está lendo a Parte 2 sobre "A Busca pelo deploy contínuo" eu recomendo v
 <h2>Continua ..</h2>
 
 <div id="litlebox">
-Você está lendo a Parte 2 sobre "A Busca pelo deploy contínuo" eu recomendo você a começar pela <a href="http://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/">Parte 1</a> mas se já leu as duas partes, leia a <a href="http://lornlab.org/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/">Parte 3</a>.
+Você está lendo a Parte 2 sobre "A Busca pelo deploy contínuo" eu recomendo você a começar pela <a href="http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/">Parte 1</a> mas se já leu as duas partes, leia a <a href="http://lorn.io/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/">Parte 3</a>.
 </div>
 
 ]]></content>
@@ -398,23 +166,23 @@ Você está lendo a Parte 2 sobre "A Busca pelo deploy contínuo" eu recomendo v
   
   <entry>
     <title type="html"><![CDATA[A Busca Pelo Deploy Contínuo - Parte 1]]></title>
-    <link href="http://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/"/>
+    <link href="http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/"/>
     <updated>2011-12-02T11:23:00-02:00</updated>
-    <id>http://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1</id>
+    <id>http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1</id>
     <content type="html"><![CDATA[<div id="litlebox">
-Você está lendo a Parte 1 sobre "A Busca pelo deploy contínuo" esse post tem mais duas continuações: <a href="http://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/">Parte 2</a> e <a href="http://lornlab.org/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/">Parte 3.</a>
+Você está lendo a Parte 1 sobre "A Busca pelo deploy contínuo" esse post tem mais duas continuações: <a href="http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/">Parte 2</a> e <a href="http://lorn.io/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/">Parte 3.</a>
 </div>
 
 
 <p>No dia 05/11 apresentei  no <a href="http://www.yapcbrasil.org.br/2011/">YAPC::Brasil</a> uma palestra com o nome
-"Em busca do deploy continuo" nesse post vou tentar descrever sobre tudo o que eu falei.</p>
+&ldquo;Em busca do deploy continuo&rdquo; nesse post vou tentar descrever sobre tudo o que eu falei.</p>
 
 <div style="width:425px" id="__ss_10173611"> <strong style="display:block;margin:12px 0 4px"><a href="http://www.slideshare.net/lornlab/a-busca-pelo-deploy-continuo" title="A busca pelo deploy continuo" target="_blank">A busca pelo deploy continuo</a></strong> <iframe src="http://www.slideshare.net/slideshow/embed_code/10173611" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> <div style="padding:5px 0 12px"> View more <a href="http://www.slideshare.net/" target="_blank">presentations</a> from <a href="http://www.slideshare.net/lornlab" target="_blank">Lindolfo Rodrigues Oliveira Neto</a> </div> </div>
 
 
 <h2>Como começar?</h2>
 
-<p>Infelizmente o principal problema do "Deploy Continuo" não é técnico e sim cultural, e mudança de cultura é muito mais difícil que mudança de Banco de Dados ou de Linguagem de Programação é enraizado nas fundações da empresa, esses são alguns exemplos culturais:</p>
+<p>Infelizmente o principal problema do &ldquo;Deploy Continuo&rdquo; não é técnico e sim cultural, e mudança de cultura é muito mais difícil que mudança de Banco de Dados ou de Linguagem de Programação é enraizado nas fundações da empresa, esses são alguns exemplos culturais:</p>
 
 <ul>
 <li><p>Falta de confiança</p></li>
@@ -422,9 +190,9 @@ Você está lendo a Parte 1 sobre "A Busca pelo deploy contínuo" esse post tem 
 </ul>
 
 
-<p><blockquote><p>Processo é uma reação à estupidez incorporada antes<br/> - Clay Shirky</p></blockquote></p>
+<p><blockquote><p>Processo é uma reação à estupidez incorporada antes<br/> &ndash; Clay Shirky</p></blockquote></p>
 
-<p> Em português claro, esse seria o famoso "vai que..." :</p>
+<p> Em português claro, esse seria o famoso &ldquo;vai que&hellip;&rdquo; :</p>
 
 <ul>
 <li>Vai que alguém faz uma alteração errada e o site fica fora do ar</li>
@@ -448,7 +216,7 @@ Você está lendo a Parte 1 sobre "A Busca pelo deploy contínuo" esse post tem 
 
 <p>Mas até agora, eu sou falei de empresinhas pequenas, por mais que elas ganhem algum dinheiro não tem um nome a zelar.</p>
 
-<p><blockquote><p>Quero ver isso funcionar em uma empresa grande!<br/> - Cara de processo</p></blockquote></p>
+<p><blockquote><p>Quero ver isso funcionar em uma empresa grande!<br/> &ndash; Cara de processo</p></blockquote></p>
 
 <p>Funciona, vou te dizer dois exemplos:</p>
 
@@ -460,7 +228,7 @@ Você está lendo a Parte 1 sobre "A Busca pelo deploy contínuo" esse post tem 
 
 <p>A <a href="http://amazon.com">Amazon</a> chegou a divulgar em um apresentação na Velocity 2011 que faz um deploy a cada 11.6 segundos e você aí feliz por ter conseguido uma janela mais cedo para fazer seu deploy né?</p>
 
-<p>A <a href="http://etsy.com">Etsy</a>, não é muito famosa aqui no Brasil, e a conheci ela antes de me interessar sobre deploy continuo comprei um adesivo com uma frase de StarWars lá :) eles funcionam como um Mercado Livre para artesões e outras profissões "hand-made".</p>
+<p>A <a href="http://etsy.com">Etsy</a>, não é muito famosa aqui no Brasil, e a conheci ela antes de me interessar sobre deploy continuo comprei um adesivo com uma frase de StarWars lá :) eles funcionam como um Mercado Livre para artesões e outras profissões &ldquo;hand-made&rdquo;.</p>
 
 <p>Eles tem a bagatela de 1 bilhão de pageview por mês!</p>
 
@@ -482,7 +250,7 @@ Você está lendo a Parte 1 sobre "A Busca pelo deploy contínuo" esse post tem 
 <h2>Continua ..</h2>
 
 <div id="litlebox">
-Você está lendo a Parte 1 sobre "A Busca pelo deploy contínuo" esse post tem mais duas continuações: <a href="http://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/">Parte 2</a> e <a href="blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/">Parte 3.</a>
+Você está lendo a Parte 1 sobre "A Busca pelo deploy contínuo" esse post tem mais duas continuações: <a href="http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/">Parte 2</a> e <a href="blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/">Parte 3.</a>
 </div>
 
 
@@ -492,9 +260,9 @@ Você está lendo a Parte 1 sobre "A Busca pelo deploy contínuo" esse post tem 
   
   <entry>
     <title type="html"><![CDATA[Perl Para Sysadmins E DBAs]]></title>
-    <link href="http://lornlab.org/blog/2009/01/20/perl-para-sysadmins-e-dbas/"/>
+    <link href="http://lorn.io/blog/2009/01/20/perl-para-sysadmins-e-dbas/"/>
     <updated>2009-01-20T15:08:00-02:00</updated>
-    <id>http://lornlab.org/blog/2009/01/20/perl-para-sysadmins-e-dbas</id>
+    <id>http://lorn.io/blog/2009/01/20/perl-para-sysadmins-e-dbas</id>
     <content type="html"><![CDATA[<p>Rau!</p>
 
 <p>Depois de séculos sem posts, apenas um post para linkar para o material da minha palestra no fisl ( que não foi das melhores porque não terminei a palestra antes e fiquei BEM doente em POA :/ )</p>
@@ -513,101 +281,8 @@ Você está lendo a Parte 1 sobre "A Busca pelo deploy contínuo" esse post tem 
 
 <p>Update 3: Agora quem trata o gist é o octopress \,,/</p>
 
-<p><div><script src='https://gist.github.com/760136.js?file='></script>
-<noscript><pre><code>#!/usr/bin/perl
-
-=head1 NAME
-
-    conta_acessos 
-    
-=head1 DESCRIPTION
-
-=head1 AUTHOR
-
-    Renan Rangel &lt;rvr777 at gmail dot com&gt;
-    Lorn &lt;lorn at lornlab dot org&gt;
-
-=head1 COPYRIGHT 
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
-    
-=cut
-
-use strict;
-use Data::Dumper;
-
-die &lt;DATA&gt;
-  unless scalar @ARGV;
-  
-our $VERSION = '0.1';
-
-my ($c, @p, %option) = 0;
-my %hash_count = ();
-# look for options and patterns
-my $ip = 0;
-foreach (@ARGV) {
-  if (/^-(.+)$/) {
-      my $arg = $1;
-    if($arg eq 'ip'){
-        $ip = 1;
-    }elsif ($arg eq 'h'){
-        do { 
-            print &lt;DATA&gt;;
-            exit(0);
-        };
-    }elsif ($arg eq 'i'){
-        do {
-            $option{i} = 1;
-            next;
-        };
-    }elsif ($arg eq 'v'){
-        do {
-            print &quot;conta_acessos $VERSION\nAuthor: Renan Rangel &lt;rvr777\@gmail.com&gt;\n        Lorn &lt;lorn.br\@gmail.com.br&gt;\n&quot;;
-            exit(0)
-        };
-    }else{
-        die &lt;DATA&gt;;
-    }
-  }else{
-      die &lt;DATA&gt;;
-  }
-}
-
-# search and replace the pattern with the colored text
-my $found = 0;
-while (my $line = &lt;STDIN&gt;) {
-    my ($ip) = split(/\s/,$line);
-    $hash_count{$ip} = $hash_count{$ip} + 1;
-}
-
-print Dumper \%hash_count;    
-foreach my $line ( sort { $hash_count{$b} &lt;=&gt; $hash_count{$a} } keys
-%hash_count) {
-    my $acessos = $hash_count{$line};
-    print &quot;ip: $line\tacessos:\t$acessos\n&quot;;
-}
-
-exit(0);
-
-__DATA__
-Usage: 
-  tail -1000 /var/log/apache2/access.log | perl conta_acessos.pl -ip 
-  
-Options:
-  -h = Print help message
-  -i = Case insensitive
-  -v = Show version</code></pre></noscript></div>
+<p><div><script src='https://gist.github.com/760136.js'></script>
+<noscript><pre><code></code></pre></noscript></div>
 </p>
 
 <iframe scrolling="no" marginheight="0" marginwidth="0" frameborder="0" height="355" width="425" src="http://www.slideshare.net/slideshow/embed_code/7618654"></iframe>

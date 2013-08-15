@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: zsh | lornlab.]]></title>
-  <link href="http://lornlab.org/blog/categories/zsh/atom.xml" rel="self"/>
-  <link href="http://lornlab.org/"/>
-  <updated>2012-07-06T16:07:27-03:00</updated>
-  <id>http://lornlab.org/</id>
+  <title><![CDATA[Category: zsh | lorn.io]]></title>
+  <link href="http://lorn.io/blog/categories/zsh/atom.xml" rel="self"/>
+  <link href="http://lorn.io/"/>
+  <updated>2013-08-15T11:37:47-03:00</updated>
+  <id>http://lorn.io/</id>
   <author>
     <name><![CDATA[Lindolfo 'Lorn' Rodrigues]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Usando ZSH]]></title>
-    <link href="http://lornlab.org/blog/2011/04/12/usando-zsh/"/>
+    <link href="http://lorn.io/blog/2011/04/12/usando-zsh/"/>
     <updated>2011-04-12T13:31:00-03:00</updated>
-    <id>http://lornlab.org/blog/2011/04/12/usando-zsh</id>
+    <id>http://lorn.io/blog/2011/04/12/usando-zsh</id>
     <content type="html"><![CDATA[<p>Esses dias re-descobri o zsh, já havia testado a um tempo atrás mas agora foi pra valer :)</p>
 
 <p>E vou dizer, não há shell melhor :) muito melhor que o Bash</p>

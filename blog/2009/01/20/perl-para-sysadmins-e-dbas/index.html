@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Perl Para Sysadmins E DBAs - lornlab.</title>
+  <title>Perl Para Sysadmins E DBAs - lorn.io</title>
   <meta name="author" content="Lindolfo 'Lorn' Rodrigues">
 
   
@@ -18,13 +18,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://lornlab.org/blog/2009/01/20/perl-para-sysadmins-e-dbas/">
+  <link rel="canonical" href="http://lorn.io/blog/2009/01/20/perl-para-sysadmins-e-dbas/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="lornlab." type="application/atom+xml">
+  <link href="/atom.xml" rel="alternate" title="lorn.io" type="application/atom+xml">
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -47,9 +47,9 @@
 
 <body   >
   <header role="banner"><hgroup>
-  <h1><a href="/">lornlab.</a></h1>
+  <h1><a href="/">lorn.io</a></h1>
   
-    <h2>Compilando, programando e seguindo a canção...</h2>
+    <h2>inputs and ouputs from a random programmer</h2>
   
 </hgroup>
 
@@ -61,7 +61,7 @@
   
 <form action="http://google.com/search" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:lornlab.org" />
+    <input type="hidden" name="q" value="site:lorn.io" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form>
@@ -121,101 +121,8 @@
 
 <p>Update 3: Agora quem trata o gist é o octopress \,,/</p>
 
-<div><script src='https://gist.github.com/760136.js?file='></script>
-<noscript><pre><code>#!/usr/bin/perl
-
-=head1 NAME
-
-    conta_acessos 
-    
-=head1 DESCRIPTION
-
-=head1 AUTHOR
-
-    Renan Rangel &lt;rvr777 at gmail dot com&gt;
-    Lorn &lt;lorn at lornlab dot org&gt;
-
-=head1 COPYRIGHT 
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
-    
-=cut
-
-use strict;
-use Data::Dumper;
-
-die &lt;DATA&gt;
-  unless scalar @ARGV;
-  
-our $VERSION = '0.1';
-
-my ($c, @p, %option) = 0;
-my %hash_count = ();
-# look for options and patterns
-my $ip = 0;
-foreach (@ARGV) {
-  if (/^-(.+)$/) {
-      my $arg = $1;
-    if($arg eq 'ip'){
-        $ip = 1;
-    }elsif ($arg eq 'h'){
-        do { 
-            print &lt;DATA&gt;;
-            exit(0);
-        };
-    }elsif ($arg eq 'i'){
-        do {
-            $option{i} = 1;
-            next;
-        };
-    }elsif ($arg eq 'v'){
-        do {
-            print &quot;conta_acessos $VERSION\nAuthor: Renan Rangel &lt;rvr777\@gmail.com&gt;\n        Lorn &lt;lorn.br\@gmail.com.br&gt;\n&quot;;
-            exit(0)
-        };
-    }else{
-        die &lt;DATA&gt;;
-    }
-  }else{
-      die &lt;DATA&gt;;
-  }
-}
-
-# search and replace the pattern with the colored text
-my $found = 0;
-while (my $line = &lt;STDIN&gt;) {
-    my ($ip) = split(/\s/,$line);
-    $hash_count{$ip} = $hash_count{$ip} + 1;
-}
-
-print Dumper \%hash_count;    
-foreach my $line ( sort { $hash_count{$b} &lt;=&gt; $hash_count{$a} } keys
-%hash_count) {
-    my $acessos = $hash_count{$line};
-    print &quot;ip: $line\tacessos:\t$acessos\n&quot;;
-}
-
-exit(0);
-
-__DATA__
-Usage: 
-  tail -1000 /var/log/apache2/access.log | perl conta_acessos.pl -ip 
-  
-Options:
-  -h = Print help message
-  -i = Case insensitive
-  -v = Show version</code></pre></noscript></div>
+<div><script src='https://gist.github.com/760136.js'></script>
+<noscript><pre><code></code></pre></noscript></div>
 
 
 
@@ -260,7 +167,7 @@ Options:
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://lornlab.org/blog/2009/01/20/perl-para-sysadmins-e-dbas/" data-via="lornlab" data-counturl="http://lornlab.org/blog/2009/01/20/perl-para-sysadmins-e-dbas/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://lorn.io/blog/2009/01/20/perl-para-sysadmins-e-dbas/" data-via="lorn" data-counturl="http://lorn.io/blog/2009/01/20/perl-para-sysadmins-e-dbas/" >Tweet</a>
   
   
   
@@ -348,23 +255,6 @@ Options:
 
 
 <section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating...</li>
-  </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("lornlab", 3, false);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/lornlab" class="twitter-follow-button" data-show-count="false">Follow @lornlab</a>
-  
-</section>
-
-
-<section>
   <h1>My Pinboard</h1>
   <ul id="pinboard_linkroll">Fetching linkroll...</ul>
   <p><a href="http://pinboard.in/u:lorn">My Pinboard Bookmarks &raquo;</a></p>
@@ -392,7 +282,7 @@ Options:
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Lindolfo 'Lorn' Rodrigues -
+  Copyright &copy; 2013 - Lindolfo 'Lorn' Rodrigues -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
@@ -404,8 +294,8 @@ Options:
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://lornlab.org/blog/2009/01/20/perl-para-sysadmins-e-dbas/';
-        var disqus_url = 'http://lornlab.org/blog/2009/01/20/perl-para-sysadmins-e-dbas/';
+        var disqus_identifier = 'http://lorn.io/blog/2009/01/20/perl-para-sysadmins-e-dbas/';
+        var disqus_url = 'http://lorn.io/blog/2009/01/20/perl-para-sysadmins-e-dbas/';
         var disqus_script = 'embed.js';
       
     (function () {

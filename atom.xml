@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[lornlab.]]></title>
-  <link href="http://lornlab.org/atom.xml" rel="self"/>
-  <link href="http://lornlab.org/"/>
-  <updated>2012-07-06T16:07:27-03:00</updated>
-  <id>http://lornlab.org/</id>
+  <title><![CDATA[lorn.io]]></title>
+  <link href="http://lorn.io/atom.xml" rel="self"/>
+  <link href="http://lorn.io/"/>
+  <updated>2013-08-15T11:37:47-03:00</updated>
+  <id>http://lorn.io/</id>
   <author>
     <name><![CDATA[Lindolfo 'Lorn' Rodrigues]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Debugging HTTP Request With Netcat]]></title>
-    <link href="http://lornlab.org/blog/2012/06/28/debugging-http-request-with-netcat/"/>
+    <link href="http://lorn.io/blog/2012/06/28/debugging-http-request-with-netcat/"/>
     <updated>2012-06-28T20:45:00-03:00</updated>
-    <id>http://lornlab.org/blog/2012/06/28/debugging-http-request-with-netcat</id>
+    <id>http://lorn.io/blog/2012/06/28/debugging-http-request-with-netcat</id>
     <content type="html"><![CDATA[<p>O que fazer quando você precisa usar uma API de terceiros e tudo funciona bem quando você está fazendo seus testes com curl.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -65,7 +65,7 @@
 </span><span class='line'>Accept: */*</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Agora ao invés de usar o curl, faça sua aplicação fazer o POST/PUT para o Netcat - localhost:9999 nesse exemplo - e veja a diferença entre o &#8216;debug&#8217; do nc, para quando a requisição vem do curl, e o &#8216;debug&#8217; do nc para quando a requisição vem da sua aplicação, no meu caso eu tinha esquecido de enviar o arquivo usando <a href="http://www.w3.org/Protocols/rfc1341/7_2_Multipart.html">HTTP Multipart</a>.</p>
+<p>Agora ao invés de usar o curl, faça sua aplicação fazer o POST/PUT para o Netcat &ndash; localhost:9999 nesse exemplo &ndash; e veja a diferença entre o &lsquo;debug&rsquo; do nc, para quando a requisição vem do curl, e o &lsquo;debug&rsquo; do nc para quando a requisição vem da sua aplicação, no meu caso eu tinha esquecido de enviar o arquivo usando <a href="http://www.w3.org/Protocols/rfc1341/7_2_Multipart.html">HTTP Multipart</a>.</p>
 
 <p>Para usar o Netcat no Mac:</p>
 
@@ -85,11 +85,11 @@
   
   <entry>
     <title type="html"><![CDATA[A Busca Pelo Deploy Contínuo - Parte 3]]></title>
-    <link href="http://lornlab.org/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/"/>
+    <link href="http://lorn.io/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/"/>
     <updated>2011-12-03T10:03:00-02:00</updated>
-    <id>http://lornlab.org/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3</id>
+    <id>http://lorn.io/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3</id>
     <content type="html"><![CDATA[<div id="litlebox">
-Você está lendo a Parte 3 sobre &#8220;A Busca pelo deploy contínuo&#8221; eu recomendo você a começar pela <a href="http://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/">Parte 1</a> e depois ler a <a href="http://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/">Parte 2</a> se você já o fez, continue ;)
+Você está lendo a Parte 3 sobre &#8220;A Busca pelo deploy contínuo&#8221; eu recomendo você a começar pela <a href="http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/">Parte 1</a> e depois ler a <a href="http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/">Parte 2</a> se você já o fez, continue ;)
 </div>
 
 
@@ -99,14 +99,14 @@ Você está lendo a Parte 3 sobre &#8220;A Busca pelo deploy contínuo&#8221; eu
 
 <p>Com um Load Balance, você consegue testar funcionalidades novas no site para uma pequena porção dos usuários do site e usar os gráficos ( que você já tem lógico ) para ver se ela é boa ou não.</p>
 
-<p>Como fazer isso? faça o deploy para apenas 1 das &#8216;n&#8217; máquinas que você tem atrás do Load Balancer e redirecione, 5% ~ 10% das suas conexões dos seus usuários para essa máquina, o resto os gráficos que você preparou da sua aplicação irão te dizer ;)</p>
+<p>Como fazer isso? faça o deploy para apenas 1 das &lsquo;n&rsquo; máquinas que você tem atrás do Load Balancer e redirecione, 5% ~ 10% das suas conexões dos seus usuários para essa máquina, o resto os gráficos que você preparou da sua aplicação irão te dizer ;)</p>
 
-<p>Falando um pouco mais de arquitetura, e especificamente de Perl, eu gosto bastante de usar o Nginx + Starman a comunicação é feita via Unix Socket o Starman foi baseado no Unicorn do Ruby, ele funciona muito bem e&#8230;</p>
+<p>Falando um pouco mais de arquitetura, e especificamente de Perl, eu gosto bastante de usar o Nginx + Starman a comunicação é feita via Unix Socket o Starman foi baseado no Unicorn do Ruby, ele funciona muito bem e&hellip;</p>
 
 <iframe width="420" height="315" src="http://www.youtube.com/embed/dFUlAQZB9Ng" frameborder="0" allowfullscreen></iframe>
 
 
-<p>&#8220;It&#8217;s a unix system I known this!&#8221; arquiteturas unix, forks, sockets e afins funcionam muito bem :)</p>
+<p>&ldquo;It&rsquo;s a unix system I known this!&rdquo; arquiteturas unix, forks, sockets e afins funcionam muito bem :)</p>
 
 <p>O seu deploy consistiria em copiar os arquivos novos e mandar um sinal de reset para o pid do Starman:</p>
 
@@ -118,240 +118,8 @@ Você está lendo a Parte 3 sobre &#8220;A Busca pelo deploy contínuo&#8221; eu
 
 <p>Abaixo uma conf de exemplo para se usar no Nginx para se conectar a um socket gerado pelo Starman:</p>
 
-<div><script src='https://gist.github.com/1126172.js?file='></script>
-<noscript><pre><code>=pod
-
-=encoding utf8
-
-=head1 Uma arquitetura de alta disponibilidade usando Starman
-
-Continuando a introdução dada pelo L&lt;nosso amigo que vence guerras|http://sao-paulo.pm.org/equinocio/2012/mar/13&gt;, falarei um pouco mais sobre o Starman e, como ele, não falarei sobre PSGI/Plack porque esses assuntos já foram muito bem explorados L&lt;em outros|http://sao-paulo.pm.org/artigo/2010/PSGI&gt; e L&lt;equinocios|http://sao-paulo.pm.org/equinocio/2011/set/11&gt;.
-
-Essa arquitetura é baseada na arquitetura que o Github usa/usava que eles explicam L&lt;nesse post|https://github.com/blog/517-unicorn&gt; eles falam sobre como eles utilizam o Unicorn, o Starman foi baseado nesse cara o Miyagawa inclusive usou o nome Unicorn como &quot;inspiração&quot; para o nome Starman:
-
-&quot;The name Starman is taken from the song (Star na Otoko) by the Japanese rock band Unicorn (yes, Unicorn!). It's also known as a song by David Bowie, a power-up from Super Mario Brothers and a character from Earthbound, all of which I love.&quot;
-
-Mais um pouco sobre a historia do nome do Starman no blog dele:
-
-L&lt;Good name for Perl UNIX forking web server?|http://bulknews.typepad.com/blog/2010/02/good-name-for-perl-unix-forking-web-server.html&gt;
-
-O fonte desse artigo, assim como todos os arquivos de configuração e inicialização estão nesse L&lt;gist|https://gist.github.com/1126172&gt; não fique copiando e colando daqui, você pode pegar o arquivo separado lá ;)
-
-=head2 Sendo amigo do seu syadmin
-
-Eu fiz uma busca no APT agora, e não vi nenhum pacote do Starman. 
-
-Mas isso não significa que você vai jogar essa bomba na mão do seu sysadmin, seja gentil com ele como diria o Bruce Lee:
-
-   &quot;Be L&lt;Devops my friend|http://devops.com/&gt;&quot;
-
-Faça scripts de inicialização, não é algo tão dificil e Shell Script é uma linguagem fácil L&lt;e que faz de você um desenvolvedor melhor|http://zachholman.com/posts/glue-languages/&gt; eu precisei subir o Starman em um CentOS e no Debian, abaixo estão os arquivos de inicialização para cada uma dessas distribuições a versão do Debian teve a revisão e ajustes do Nuba - eu tinha esquecido algum header/conf ;)
-
-Debin:
-
-    #!/bin/bash
-     
-    ### BEGIN INIT INFO
-    # starman - this script starts and stops the starman daemon
-    # Provides:          starman_sppm
-    # Required-Start:    $local_fs $remote_fs $network $syslog
-    # Required-Stop:     $local_fs $remote_fs $network $syslog
-    # Default-Start:     2 3 4 5
-    # Default-Stop:      0 1 6
-    # Short-Description: starts the starman server
-    # Description:       starts starman using start-stop-daemon
-    ### END INIT INFO
-     
-    NAME=starman
-    DESC=starman
-     
-    test -x $DAEMON || exit 0
-     
-    set -e
-     
-    . /lib/lsb/init-functions
-    ## Variáveis de conf da sua App, ALTERE ISSO ANTES DE QUALQUER COISA.
-    export starman=&quot;/usr/bin/starman&quot;
-    export myapp_path=&quot;/var/www/myapp&quot;
-    export pidfile=&quot;/var/run/starman.pid&quot;
-     
-     
-    start() {
-            echo -n $&quot;Starting Starman: &quot;
-            ## eu inicio o starman para debug na porta 8080, é bom para testar algumas coisas dando bypass no nginx e tanto o log, quando o PID são criados com o usuário do nginx, para ficar mais fácil 
-            $starman -I${myapp_path}/lib --user=nginx --listen :8080 --listen /var/run/nginx/starman.sock --daemonize --pid ${pidfile} --error-log /var/log/nginx/starman.log ${myapp_path}/${myapp}.psgi
-            RETVAL=$?
-            echo
-            [ $RETVAL = 0 ]
-            return $RETVAL
-    }
-     
-    restart() {
-            echo -n $&quot;Restarting Starman: &quot;
-            export PID=`cat ${pidfile}`
-            kill -s USR2 $PID 
-            RETVAL=$?
-            echo
-            [ $RETVAL = 0 ]
-            return $RETVAL
-    }
-     
-    stop() {
-            echo -n $&quot;Stopping Starman: &quot;
-            killproc -p ${pidfile} -d 10 $starman
-            RETVAL=$?
-            echo
-            [ $RETVAL = 0 ] &amp;&amp; rm -f ${pidfile}
-    }
-    # See how we were called.
-    case &quot;$1&quot; in
-      start)
-            start
-            ;;
-      restart)
-            restart
-             ;;
-      stop)
-            stop
-            ;;
-      *)
-            echo $&quot;Usage: starman {start|restart|stop}&quot;
-            exit 1
-    esac
-     
-    exit $RETVAL
-
-CentOS
-
-    #!/bin/bash
-     
-    # starman - this script starts and stops the starman daemon
-    #
-    # chkconfig:   - 85 15
-    # description: Starman 
-    # processname: starman
-    # pidfile :    /var/run/starman.pid
-    # www file:    /var/www/myapp
-     
-     
-    # Source function library.
-    . /etc/rc.d/init.d/functions
-     
-    ## Variáveis de conf da sua App, ALTERE ISSO ANTES DE QUALQUER COISA.
-    export starman=&quot;/usr/bin/starman&quot;
-    export myapp_path=&quot;/var/www/myapp&quot;
-    export pidfile=&quot;/var/run/starman.pid&quot;
-     
-     
-    start() {
-            echo -n $&quot;Starting Starman: &quot;
-            ## eu inicio o starman para debug na porta 8080, é bom para testar algumas coisas dando bypass no nginx e tanto o log, quando o PID são criados com o usuário do nginx, para ficar mais fácil 
-            $starman -I${myapp_path}/lib --user=nginx --listen :8080 --listen /var/run/nginx/starman.sock --daemonize --pid ${pidfile} --error-log /var/log/nginx/starman.log ${myapp_path}/${myapp}.psgi
-            RETVAL=$?
-            echo
-            [ $RETVAL = 0 ]
-            return $RETVAL
-    }
-     
-    restart() {
-            echo -n $&quot;Restarting Starman: &quot;
-            export PID=`cat ${pidfile}`
-            kill -s USR2 $PID 
-            RETVAL=$?
-            echo
-            [ $RETVAL = 0 ]
-            return $RETVAL
-    }
-     
-    stop() {
-            echo -n $&quot;Stopping Starman: &quot;
-            killproc -p ${pidfile} -d 10 $starman
-            RETVAL=$?
-            echo
-            [ $RETVAL = 0 ] &amp;&amp; rm -f ${pidfile}
-    }
-    # See how we were called.
-    case &quot;$1&quot; in
-      start)
-            start
-            ;;
-      restart)
-            restart
-             ;;
-      stop)
-            stop
-            ;;
-      *)
-            echo $&quot;Usage: starman {start|restart|stop}&quot;
-            exit 1
-    esac
-     
-    exit $RETVAL
-
-=head2 Nginx + Starman
-
-
-Como vocês leram, ou não, no post do github a arquitetura deles consistem em usar o servidor do Unicorn atrás do Nginx e a comunidação entre eles é feita via Unix Socket \,,/ 
-
-O Nginx fala diretamente com os &quot;workers&quot; do Starman atráves do Starman Master, quando o Starman inicia ele sobe 'n' workers que são controlados pelo processo principal, toda requisição é processado pelos workers.
-
-Com isso você ganha algumas funcionalidades interessantes como hotdeploy, que é o ato de você subir uma nova versão da sua aplicação com ZERO DOWNTIME!!!!111
-
-Como funciona, basta você atualizar os arquivos da sua aplicação - não irá alterar nada até você reiniciar o serviço - e na hora de reiniciar o serviço é só mandar o sinal USR2 para o PID Master do Starman, isso irá dizer para ele que a aplicação precisa ser reiniciada ele irá reiniciar os seus workers paulatinamente, assim que eles ficarem ociosos até que todos estejam rodando a nova versão da aplicação.
-
-Ah, a função restart dos arquivos de inicialização que eu falei lá em cima já faz esse trabalho :)
-
-Por padrão o Starman inicia apenas 5 workers, eles podem aguentar bastante coisa, mas dependendo da sua configuração de hardware você pode ter mais mas cuidado com swap, se a memoria está indo para swap é bom você diminuir esse número.
-
-    upstream myapp_starman {
-      server unix:/tmp/starman.sock fail_timeout=0;
-    }
-   
-    server {
-      listen 80;
-   
-    client_max_body_size 1024m;
-    client_body_buffer_size 8k;
-    proxy_read_timeout 300;
-   
-    ##
-    # basic
-    ##
-    server_name www.localhost.com;
-    root /home/user/MyApp/root;
-    keepalive_timeout 0;
-   
-    ##
-    # logging
-    ##
-    access_log /var/log/nginx/myapp.access combined;
-    error_log /var/log/nginx/myapp.error;
-    
-    location /static {
-          root  /home/user/MyApp/root/;
-          autoindex on;
-    }
-   
-    ##
-    # proxy
-    ##
-    location / {
-      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-      proxy_set_header Host $http_host;
-      proxy_redirect off;
-      proxy_buffering off;
-      if (!-f $request_filename) {
-        proxy_pass http://myapp_starman;
-      }
-    }
-   }
-
-=head1 AUTHOR 
-
-Lindolfo &quot;Lorn&quot; Rodrigues - lorn at cpan.org
-
-=cut
-</code></pre></noscript></div>
+<div><script src='https://gist.github.com/1126172.js'></script>
+<noscript><pre><code></code></pre></noscript></div>
 
 
 <p>Bom, basicamente é isso se tiver alguma duvida pergunte nos comentários :)</p>
@@ -374,18 +142,18 @@ Lindolfo &quot;Lorn&quot; Rodrigues - lorn at cpan.org
   
   <entry>
     <title type="html"><![CDATA[A Busca Pelo Deploy Contínuo - Parte 2]]></title>
-    <link href="http://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/"/>
+    <link href="http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/"/>
     <updated>2011-12-02T11:23:00-02:00</updated>
-    <id>http://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2</id>
+    <id>http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2</id>
     <content type="html"><![CDATA[<div id="litlebox">
-Você está lendo a Parte 2 sobre &#8220;A Busca pelo deploy contínuo&#8221; eu recomendo você a começar pela <a href="http://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/">Parte 1</a> mas se já leu as duas partes, leia a <a href="http://lornlab.org/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/">Parte 3</a>.
+Você está lendo a Parte 2 sobre &#8220;A Busca pelo deploy contínuo&#8221; eu recomendo você a começar pela <a href="http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/">Parte 1</a> mas se já leu as duas partes, leia a <a href="http://lorn.io/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/">Parte 3</a>.
 </div>
 
 
 <p>Agora que você já está convencido que precisa disso, ou não, vou começar a falar de algumas ferramentas/técnicas que você pode usar para te ajudar no processo:</p>
 
 <ul>
-<li><p>SCM - Software Configuration Management</p>
+<li><p>SCM &ndash; Software Configuration Management</p>
 
 <p>Também conhecido como VCS ( Version Control System ), você precisa disso, se você não tem <strong>há algo muito errado</strong> e se você está usando Subversion, isso não é tão ruim, mas comece a usar git a partir de hoje, sério.</p></li>
 <li><p>Testes</p>
@@ -393,7 +161,7 @@ Você está lendo a Parte 2 sobre &#8220;A Busca pelo deploy contínuo&#8221; eu
 <p>Se você acha que teste é besteira, então deploy continuo é besteira para você também. É impossível ter um deploy contínuo confiável sem testes</p></li>
 <li><p>Continuos Integration Software</p>
 
-<p>Esse tipo de software tem um papel simples, porem eficaz, ele fica fazendo &#8220;pooling&#8221; no seu SCM, a cada commit seu ele vai rodar o seu processo de &#8220;build&#8221; para ver se ele continua funcionando depois do código que você acabou de comitar, um processo de build pode conter:</p>
+<p>Esse tipo de software tem um papel simples, porem eficaz, ele fica fazendo &ldquo;pooling&rdquo; no seu SCM, a cada commit seu ele vai rodar o seu processo de &ldquo;build&rdquo; para ver se ele continua funcionando depois do código que você acabou de comitar, um processo de build pode conter:</p>
 
 <ul>
 <li>Gerar pacotes</li>
@@ -419,7 +187,7 @@ Você está lendo a Parte 2 sobre &#8220;A Busca pelo deploy contínuo&#8221; eu
 <p>Simples assim, mas tem que ser um script só que faz todo o trabalho, copiar arquivos, reinciar webserver etc</p>
 
 <p>Na Etsy quando o script ficou avançado eles evoluiram para um software web, que inclusive é opensource mais detalhes aqui: <a href="http://codeascraft.etsy.com/2010/05/20/quantum-of-deployment/">Deploynator Etsy</a></p></li>
-<li><p>Puppet/Chef - eu não sei qual o nome dessa categoria de software, o que você faz com eles é escrever &#8220;receitas&#8221; de máquinas, imagine que a empresa está crescendo e você precisa montar 10 novos webservers que incluem:</p>
+<li><p>Puppet/Chef &ndash; eu não sei qual o nome dessa categoria de software, o que você faz com eles é escrever &ldquo;receitas&rdquo; de máquinas, imagine que a empresa está crescendo e você precisa montar 10 novos webservers que incluem:</p>
 
 <ul>
 <li>Instalar SO</li>
@@ -433,7 +201,7 @@ Você está lendo a Parte 2 sobre &#8220;A Busca pelo deploy contínuo&#8221; eu
 
 <p>Tirando a instalação do Linux, todo o resto você pode automatizar com puppet ou chef você cria receitas nele dizendo como ele vai configurar seu Webserver, seu sistema e depois é só executar essa receita na máquina ele vai instalar o pacote e fazer todo o trabalho pra você.</p>
 
-<p>E você vai precisar fazer isso UMA vez para &#8216;n&#8217; maquinas, e quando precisar mudar algo e só alterar na receita ele mantém as maquinas sincronizadas com sua receitas, nada de sair editando o mesmo arquivo em várias máquinas.</p></li>
+<p>E você vai precisar fazer isso UMA vez para &lsquo;n&rsquo; maquinas, e quando precisar mudar algo e só alterar na receita ele mantém as maquinas sincronizadas com sua receitas, nada de sair editando o mesmo arquivo em várias máquinas.</p></li>
 <li><p>Monitoramento</p>
 
 <ul>
@@ -446,7 +214,7 @@ Você está lendo a Parte 2 sobre &#8220;A Busca pelo deploy contínuo&#8221; eu
 
 <p>Além desses gráficos ajudar o pessoal de Marketing/Vendas vai te ajudar quando entrar alguma funcionalidade nova no site, porque sempre tem um espertão na empresa, e muitas vezes esse espertão é o dono, que vai dizer:</p>
 
-<p><blockquote><p>Acho que depois que você colocou aquela funcionalidade no site, o site está vendendo menos, estou com esse pressentimento.<br/>     - Espertão</p></blockquote></p>
+<p><blockquote><p>Acho que depois que você colocou aquela funcionalidade no site, o site está vendendo menos, estou com esse pressentimento.<br/>     &ndash; Espertão</p></blockquote></p>
 
 <p>A Etsy liberou recentemente a ferramente que eles fizeram para fazer gráficos, vale a pena dar uma olhada <a href="http://codeascraft.etsy.com/2011/02/15/measure-anything-measure-everything/">Measure Anything, Measure Everything</a> eles contam bastante expêriencia deles com geração de gráfico para tudo, até para a quantidade de café na cozinha!</p>
 
@@ -459,7 +227,7 @@ Você está lendo a Parte 2 sobre &#8220;A Busca pelo deploy contínuo&#8221; eu
 <h2>Continua ..</h2>
 
 <div id="litlebox">
-Você está lendo a Parte 2 sobre &#8220;A Busca pelo deploy contínuo&#8221; eu recomendo você a começar pela <a href="http://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/">Parte 1</a> mas se já leu as duas partes, leia a <a href="http://lornlab.org/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/">Parte 3</a>.
+Você está lendo a Parte 2 sobre &#8220;A Busca pelo deploy contínuo&#8221; eu recomendo você a começar pela <a href="http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/">Parte 1</a> mas se já leu as duas partes, leia a <a href="http://lorn.io/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/">Parte 3</a>.
 </div>
 
 ]]></content>
@@ -467,23 +235,23 @@ Você está lendo a Parte 2 sobre &#8220;A Busca pelo deploy contínuo&#8221; eu
   
   <entry>
     <title type="html"><![CDATA[A Busca Pelo Deploy Contínuo - Parte 1]]></title>
-    <link href="http://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/"/>
+    <link href="http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/"/>
     <updated>2011-12-02T11:23:00-02:00</updated>
-    <id>http://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1</id>
+    <id>http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1</id>
     <content type="html"><![CDATA[<div id="litlebox">
-Você está lendo a Parte 1 sobre &#8220;A Busca pelo deploy contínuo&#8221; esse post tem mais duas continuações: <a href="http://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/">Parte 2</a> e <a href="http://lornlab.org/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/">Parte 3.</a>
+Você está lendo a Parte 1 sobre &#8220;A Busca pelo deploy contínuo&#8221; esse post tem mais duas continuações: <a href="http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/">Parte 2</a> e <a href="http://lorn.io/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/">Parte 3.</a>
 </div>
 
 
 <p>No dia 05/11 apresentei  no <a href="http://www.yapcbrasil.org.br/2011/">YAPC::Brasil</a> uma palestra com o nome
-&#8220;Em busca do deploy continuo&#8221; nesse post vou tentar descrever sobre tudo o que eu falei.</p>
+&ldquo;Em busca do deploy continuo&rdquo; nesse post vou tentar descrever sobre tudo o que eu falei.</p>
 
 <div style="width:425px" id="__ss_10173611"> <strong style="display:block;margin:12px 0 4px"><a href="http://www.slideshare.net/lornlab/a-busca-pelo-deploy-continuo" title="A busca pelo deploy continuo" target="_blank">A busca pelo deploy continuo</a></strong> <iframe src="http://www.slideshare.net/slideshow/embed_code/10173611" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> <div style="padding:5px 0 12px"> View more <a href="http://www.slideshare.net/" target="_blank">presentations</a> from <a href="http://www.slideshare.net/lornlab" target="_blank">Lindolfo Rodrigues Oliveira Neto</a> </div> </div>
 
 
 <h2>Como começar?</h2>
 
-<p>Infelizmente o principal problema do &#8220;Deploy Continuo&#8221; não é técnico e sim cultural, e mudança de cultura é muito mais difícil que mudança de Banco de Dados ou de Linguagem de Programação é enraizado nas fundações da empresa, esses são alguns exemplos culturais:</p>
+<p>Infelizmente o principal problema do &ldquo;Deploy Continuo&rdquo; não é técnico e sim cultural, e mudança de cultura é muito mais difícil que mudança de Banco de Dados ou de Linguagem de Programação é enraizado nas fundações da empresa, esses são alguns exemplos culturais:</p>
 
 <ul>
 <li><p>Falta de confiança</p></li>
@@ -494,7 +262,7 @@ Você está lendo a Parte 1 sobre &#8220;A Busca pelo deploy contínuo&#8221; es
 <blockquote><p>Processo é uma reação à estupidez incorporada antes<br/> - Clay Shirky</p></blockquote>
 
 
-<p> Em português claro, esse seria o famoso &#8220;vai que&#8230;&#8221; :</p>
+<p> Em português claro, esse seria o famoso &ldquo;vai que&hellip;&rdquo; :</p>
 
 <ul>
 <li>Vai que alguém faz uma alteração errada e o site fica fora do ar</li>
@@ -531,7 +299,7 @@ Você está lendo a Parte 1 sobre &#8220;A Busca pelo deploy contínuo&#8221; es
 
 <p>A <a href="http://amazon.com">Amazon</a> chegou a divulgar em um apresentação na Velocity 2011 que faz um deploy a cada 11.6 segundos e você aí feliz por ter conseguido uma janela mais cedo para fazer seu deploy né?</p>
 
-<p>A <a href="http://etsy.com">Etsy</a>, não é muito famosa aqui no Brasil, e a conheci ela antes de me interessar sobre deploy continuo comprei um adesivo com uma frase de StarWars lá :) eles funcionam como um Mercado Livre para artesões e outras profissões &#8220;hand-made&#8221;.</p>
+<p>A <a href="http://etsy.com">Etsy</a>, não é muito famosa aqui no Brasil, e a conheci ela antes de me interessar sobre deploy continuo comprei um adesivo com uma frase de StarWars lá :) eles funcionam como um Mercado Livre para artesões e outras profissões &ldquo;hand-made&rdquo;.</p>
 
 <p>Eles tem a bagatela de 1 bilhão de pageview por mês!</p>
 
@@ -553,7 +321,7 @@ Você está lendo a Parte 1 sobre &#8220;A Busca pelo deploy contínuo&#8221; es
 <h2>Continua ..</h2>
 
 <div id="litlebox">
-Você está lendo a Parte 1 sobre &#8220;A Busca pelo deploy contínuo&#8221; esse post tem mais duas continuações: <a href="http://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/">Parte 2</a> e <a href="blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/">Parte 3.</a>
+Você está lendo a Parte 1 sobre &#8220;A Busca pelo deploy contínuo&#8221; esse post tem mais duas continuações: <a href="http://lorn.io/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/">Parte 2</a> e <a href="blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/">Parte 3.</a>
 </div>
 
 
@@ -563,9 +331,9 @@ Você está lendo a Parte 1 sobre &#8220;A Busca pelo deploy contínuo&#8221; es
   
   <entry>
     <title type="html"><![CDATA[Lá E Devolta Outra Vez]]></title>
-    <link href="http://lornlab.org/blog/2011/09/26/la-e-devolta-outra-vez/"/>
+    <link href="http://lorn.io/blog/2011/09/26/la-e-devolta-outra-vez/"/>
     <updated>2011-09-26T15:05:00-03:00</updated>
-    <id>http://lornlab.org/blog/2011/09/26/la-e-devolta-outra-vez</id>
+    <id>http://lorn.io/blog/2011/09/26/la-e-devolta-outra-vez</id>
     <content type="html"><![CDATA[<p>Depois de muito pensar, e a preguiça dominar, resolvi continuar no bom e velho wordpress até fiz o tão
 prometido blog em catalyst, mas a parte de design css/html e afins deu um trabalhinho e não está do jeito que eu quero e
 o wordpress tem tantos temas legais. Pelo menos aprendi bastante fazendo o blog, inclusive tem um branch ativo agora porque
@@ -579,9 +347,9 @@ estou migrando a parte de persistencia para CouchDB.</p>
   
   <entry>
     <title type="html"><![CDATA[A Biblioteca Pessoal De Neil Gaiman]]></title>
-    <link href="http://lornlab.org/blog/2011/05/19/a-biblioteca-pessoal-de-neil-gaiman/"/>
+    <link href="http://lorn.io/blog/2011/05/19/a-biblioteca-pessoal-de-neil-gaiman/"/>
     <updated>2011-05-19T00:03:00-03:00</updated>
-    <id>http://lornlab.org/blog/2011/05/19/a-biblioteca-pessoal-de-neil-gaiman</id>
+    <id>http://lorn.io/blog/2011/05/19/a-biblioteca-pessoal-de-neil-gaiman</id>
     <content type="html"><![CDATA[<p>Quando vi esse site pela primeira vez, e como eu já tinha lido alguma entrevista do Donald Knuth em que ele falava que tinha
 a mesma poltrona desde 1960 e só trocava o forro externo, eu percebi que precisava comprar uma poltrona para ler livros  :)</p>
 
@@ -598,11 +366,11 @@ outras livros/quadrinhos famosos, mas o que eu mais gosto e li foi Sandman, e s�
   
   <entry>
     <title type="html"><![CDATA[Hackers Que Você Deveria Conhecer (1): Brad Fitzpatrick]]></title>
-    <link href="http://lornlab.org/blog/2011/05/17/hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick/"/>
+    <link href="http://lorn.io/blog/2011/05/17/hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick/"/>
     <updated>2011-05-17T22:45:00-03:00</updated>
-    <id>http://lornlab.org/blog/2011/05/17/hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick</id>
+    <id>http://lorn.io/blog/2011/05/17/hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick</id>
     <content type="html"><![CDATA[<p>Esta série de posts é baseada na idéia do site  <a href="http://papodehomem.com.br/homens-que-voce-deveria-conhecer-homem-da-capa-preta-tenorio-cavalcante/">Papodehomem</a>
-que tem uma série parecida chamada &#8220;Homens que você devia conhecer&#8221;.</p>
+que tem uma série parecida chamada &ldquo;Homens que você devia conhecer&rdquo;.</p>
 
 <p>A ideia é falar de hackers em geral, tipo algum dia pode ter uma história de um cortador de lenha que fez uma mesa só com seu machado
 por exemplo :) Esse é um exemplo clássico de hacker.</p>
@@ -627,15 +395,15 @@ os novos servidores, em 12h ele fez a primeira versão do Memcached.</p>
 <p>Em 2005 o <a href="http://news.livejournal.com/82926.html">LiveJornal foi comprado pela Sixapart</a>, e em 2008 ele foi trabalhar no Google.</p>
 
 <p>Ele também é contribuidor ativo no <a href="http://search.cpan.org/~bradfitz/">CPAN</a> , apesar de estar trabalhando no Google focando na linguagem de programação Go, o ultimo projeto que ele
-está trabalhando é o <a href="http://camlistore.org/">Camlistore</a> - escrito em Go, que vale um post só pra ele porque é um proejto bem interessante.</p>
+está trabalhando é o <a href="http://camlistore.org/">Camlistore</a> &ndash; escrito em Go, que vale um post só pra ele porque é um proejto bem interessante.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Como Funciona a Escala Pentatonica]]></title>
-    <link href="http://lornlab.org/blog/2011/04/15/como-funciona-a-escala-pentatonica/"/>
+    <link href="http://lorn.io/blog/2011/04/15/como-funciona-a-escala-pentatonica/"/>
     <updated>2011-04-15T23:59:00-03:00</updated>
-    <id>http://lornlab.org/blog/2011/04/15/como-funciona-a-escala-pentatonica</id>
+    <id>http://lorn.io/blog/2011/04/15/como-funciona-a-escala-pentatonica</id>
     <content type="html"><![CDATA[<iframe src="http://player.vimeo.com/video/5732745" width="400" height="300" frameborder="0"></iframe>
 
 
@@ -648,24 +416,24 @@ está trabalhando é o <a href="http://camlistore.org/">Camlistore</a> - escrito
   
   <entry>
     <title type="html"><![CDATA[Meu Ambiente De Trabalho Em N Itens]]></title>
-    <link href="http://lornlab.org/blog/2011/04/12/meu-ambiente-de-trabalho-em-n-itens/"/>
+    <link href="http://lorn.io/blog/2011/04/12/meu-ambiente-de-trabalho-em-n-itens/"/>
     <updated>2011-04-12T14:59:00-03:00</updated>
-    <id>http://lornlab.org/blog/2011/04/12/meu-ambiente-de-trabalho-em-n-itens</id>
+    <id>http://lorn.io/blog/2011/04/12/meu-ambiente-de-trabalho-em-n-itens</id>
     <content type="html"><![CDATA[<p>O peka me convidou para a correntinha do bem, e ainda me intimou pelo twitter :/ aqui está como é meu ambiente de trabalho.</p>
 
 <ul>
 <li><p><a href="http://lornlab.org/blog/2011/04/12/usando-zsh/">ZSH</a>, o cara é tão bom que tem um post só para ele :)</p></li>
-<li><p><a href="http://code.google.com/p/iterm2/">iTerm2</a> - Eu sempre usei o Terminal.App padrão do MacOSX, há um tempo atrás ouvi falar do iTerm, mas
+<li><p><a href="http://code.google.com/p/iterm2/">iTerm2</a> &ndash; Eu sempre usei o Terminal.App padrão do MacOSX, há um tempo atrás ouvi falar do iTerm, mas
 dado a minha pessima organização, acabei me esquecendo. Por causa dessa foto no twitter/facebook recebi a dica do
 iTerm2 e vou dizer, deixa o Terminal.App no chinelo tem fullscreen, 256 cores, busca, histórico propia, só instalando para
 você ver o que eu estou falando pena que está em alpha, mas estou atualizando a cada relase.</p></li>
-<li><p>Git - No trabalho apenas o git, em casa git e github.com/lorn onde faço minhas brincadeiras</p></li>
-<li><p><a href="http://www.virtualbox.org/">Virtualbox</a> - Para emular um Linux ou Windows quando preciso</p></li>
-<li><p><a href="http://www.irssi.org/">Irssi</a> - irc remoto ( via ssh ) 24/7 na irc.freenode.net e irc.perl.org :)</p></li>
-<li><p><a href="http://sites.google.com/site/yorufukurou/">Yorufukoru</a> - Cliente de twitter, vejo pouco o twitter, mas quando vejo é com ele.</p></li>
-<li><p>Musica - Tudo o que eu preciso/quero ouvir está no iPhone então ligo o fone de ouvido nele e já era, de vez em quando ouço uma
+<li><p>Git &ndash; No trabalho apenas o git, em casa git e github.com/lorn onde faço minhas brincadeiras</p></li>
+<li><p><a href="http://www.virtualbox.org/">Virtualbox</a> &ndash; Para emular um Linux ou Windows quando preciso</p></li>
+<li><p><a href="http://www.irssi.org/">Irssi</a> &ndash; irc remoto ( via ssh ) 24/7 na irc.freenode.net e irc.perl.org :)</p></li>
+<li><p><a href="http://sites.google.com/site/yorufukurou/">Yorufukoru</a> &ndash; Cliente de twitter, vejo pouco o twitter, mas quando vejo é com ele.</p></li>
+<li><p>Musica &ndash; Tudo o que eu preciso/quero ouvir está no iPhone então ligo o fone de ouvido nele e já era, de vez em quando ouço uma
 coisa ou outra do youtube.</p></li>
-<li><p><a href="http://www.vim.org/">Vim</a> - Por ultimo, mas não menos importante &#8220;O Editor&#8221;, minhas configurações estão <a href="https://github.com/lorn/vim_confs">aqui</a>.</p></li>
+<li><p><a href="http://www.vim.org/">Vim</a> &ndash; Por ultimo, mas não menos importante &ldquo;O Editor&rdquo;, minhas configurações estão <a href="https://github.com/lorn/vim_confs">aqui</a>.</p></li>
 </ul>
 
 
@@ -675,9 +443,9 @@ coisa ou outra do youtube.</p></li>
   
   <entry>
     <title type="html"><![CDATA[Usando ZSH]]></title>
-    <link href="http://lornlab.org/blog/2011/04/12/usando-zsh/"/>
+    <link href="http://lorn.io/blog/2011/04/12/usando-zsh/"/>
     <updated>2011-04-12T13:31:00-03:00</updated>
-    <id>http://lornlab.org/blog/2011/04/12/usando-zsh</id>
+    <id>http://lorn.io/blog/2011/04/12/usando-zsh</id>
     <content type="html"><![CDATA[<p>Esses dias re-descobri o zsh, já havia testado a um tempo atrás mas agora foi pra valer :)</p>
 
 <p>E vou dizer, não há shell melhor :) muito melhor que o Bash</p>
@@ -704,9 +472,9 @@ a busca no install então brew install x<tab> pronto, já mostra para você todo
   
   <entry>
     <title type="html"><![CDATA[Perl Para Sysadmins E DBAs]]></title>
-    <link href="http://lornlab.org/blog/2009/01/20/perl-para-sysadmins-e-dbas/"/>
+    <link href="http://lorn.io/blog/2009/01/20/perl-para-sysadmins-e-dbas/"/>
     <updated>2009-01-20T15:08:00-02:00</updated>
-    <id>http://lornlab.org/blog/2009/01/20/perl-para-sysadmins-e-dbas</id>
+    <id>http://lorn.io/blog/2009/01/20/perl-para-sysadmins-e-dbas</id>
     <content type="html"><![CDATA[<p>Rau!</p>
 
 <p>Depois de séculos sem posts, apenas um post para linkar para o material da minha palestra no fisl ( que não foi das melhores porque não terminei a palestra antes e fiquei BEM doente em POA :/ )</p>
@@ -725,101 +493,8 @@ a busca no install então brew install x<tab> pronto, já mostra para você todo
 
 <p>Update 3: Agora quem trata o gist é o octopress \,,/</p>
 
-<div><script src='https://gist.github.com/760136.js?file='></script>
-<noscript><pre><code>#!/usr/bin/perl
-
-=head1 NAME
-
-    conta_acessos 
-    
-=head1 DESCRIPTION
-
-=head1 AUTHOR
-
-    Renan Rangel &lt;rvr777 at gmail dot com&gt;
-    Lorn &lt;lorn at lornlab dot org&gt;
-
-=head1 COPYRIGHT 
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
-    
-=cut
-
-use strict;
-use Data::Dumper;
-
-die &lt;DATA&gt;
-  unless scalar @ARGV;
-  
-our $VERSION = '0.1';
-
-my ($c, @p, %option) = 0;
-my %hash_count = ();
-# look for options and patterns
-my $ip = 0;
-foreach (@ARGV) {
-  if (/^-(.+)$/) {
-      my $arg = $1;
-    if($arg eq 'ip'){
-        $ip = 1;
-    }elsif ($arg eq 'h'){
-        do { 
-            print &lt;DATA&gt;;
-            exit(0);
-        };
-    }elsif ($arg eq 'i'){
-        do {
-            $option{i} = 1;
-            next;
-        };
-    }elsif ($arg eq 'v'){
-        do {
-            print &quot;conta_acessos $VERSION\nAuthor: Renan Rangel &lt;rvr777\@gmail.com&gt;\n        Lorn &lt;lorn.br\@gmail.com.br&gt;\n&quot;;
-            exit(0)
-        };
-    }else{
-        die &lt;DATA&gt;;
-    }
-  }else{
-      die &lt;DATA&gt;;
-  }
-}
-
-# search and replace the pattern with the colored text
-my $found = 0;
-while (my $line = &lt;STDIN&gt;) {
-    my ($ip) = split(/\s/,$line);
-    $hash_count{$ip} = $hash_count{$ip} + 1;
-}
-
-print Dumper \%hash_count;    
-foreach my $line ( sort { $hash_count{$b} &lt;=&gt; $hash_count{$a} } keys
-%hash_count) {
-    my $acessos = $hash_count{$line};
-    print &quot;ip: $line\tacessos:\t$acessos\n&quot;;
-}
-
-exit(0);
-
-__DATA__
-Usage: 
-  tail -1000 /var/log/apache2/access.log | perl conta_acessos.pl -ip 
-  
-Options:
-  -h = Print help message
-  -i = Case insensitive
-  -v = Show version</code></pre></noscript></div>
+<div><script src='https://gist.github.com/760136.js'></script>
+<noscript><pre><code></code></pre></noscript></div>
 
 
 
@@ -833,9 +508,9 @@ Options:
   
   <entry>
     <title type="html"><![CDATA[Sandman - Casa De Bonecas]]></title>
-    <link href="http://lornlab.org/blog/2007/02/17/sandman-casa-de-bonecas/"/>
+    <link href="http://lorn.io/blog/2007/02/17/sandman-casa-de-bonecas/"/>
     <updated>2007-02-17T13:06:00-02:00</updated>
-    <id>http://lornlab.org/blog/2007/02/17/sandman-casa-de-bonecas</id>
+    <id>http://lorn.io/blog/2007/02/17/sandman-casa-de-bonecas</id>
     <content type="html"><![CDATA[<p>Como Sandman é tão famoso e eu nunca tinha lido, não resisti, e comecei a ler  a queria começar pelo 1o mas a edição
 está esgotada (!!) então comecei pelo 2o, Casa de Bonecas pelo que percebi não há nenhum problema com isso você não perde nada.</p>
 
@@ -850,9 +525,9 @@ está esgotada (!!) então comecei pelo 2o, Casa de Bonecas pelo que percebi nã
   
   <entry>
     <title type="html"><![CDATA[Livro Minority Report]]></title>
-    <link href="http://lornlab.org/blog/2007/01/23/livro-minority-report/"/>
+    <link href="http://lorn.io/blog/2007/01/23/livro-minority-report/"/>
     <updated>2007-01-23T12:11:00-02:00</updated>
-    <id>http://lornlab.org/blog/2007/01/23/livro-minority-report</id>
+    <id>http://lorn.io/blog/2007/01/23/livro-minority-report</id>
     <content type="html"><![CDATA[<p>Se você está pensando em comprar este livro para conhecer mais detalhes sobre o filme, coisas escondidas, esquece.</p>
 
 <p><img class="center" src="http://media.tumblr.com/tumblr_ljitkhfY8P1qhdaqj.jpg"></p>
@@ -860,7 +535,7 @@ está esgotada (!!) então comecei pelo 2o, Casa de Bonecas pelo que percebi nã
 <p>O livro é bem diferente do filme, tem os precogs e o personagem do Tom Cruise, mais o resto é bem diferente.</p>
 
 <p>O livro tem vários contos, o 1a é o Minority Report tem apenas 60 paginas (!!), e não é um dos melhores do livro,
-o melhor na minha opinião é o conto que originou o filme <a href="http://pt.wikipedia.org/wiki/Total_Recall">&#8220;Vingador do futuro&#8221;</a>  lembra? o conto chama-se:</p>
+o melhor na minha opinião é o conto que originou o filme <a href="http://pt.wikipedia.org/wiki/Total_Recall">&ldquo;Vingador do futuro&rdquo;</a>  lembra? o conto chama-se:</p>
 
 <p>Podemos recordar para você, por um preço razoável
 O bom de um livro com vários contos pequenos, é que você não precisa passar por 300 ~ 400 paginas para saber o final, a história é bem sucinta. Acabou um conto? leia outro livro se quiser.</p>
@@ -876,9 +551,9 @@ O bom de um livro com vários contos pequenos, é que você não precisa passar 
   
   <entry>
     <title type="html"><![CDATA[Relato Conilsi - YAPC::SA::2006]]></title>
-    <link href="http://lornlab.org/blog/2006/11/21/relato-conilsi-yapc-sa-2006/"/>
+    <link href="http://lorn.io/blog/2006/11/21/relato-conilsi-yapc-sa-2006/"/>
     <updated>2006-11-21T13:21:00-02:00</updated>
-    <id>http://lornlab.org/blog/2006/11/21/relato-conilsi-yapc-sa-2006</id>
+    <id>http://lorn.io/blog/2006/11/21/relato-conilsi-yapc-sa-2006</id>
     <content type="html"><![CDATA[<p>O Conisli desse ano, certamente foi o melhor que eu participei, e como já disse para alguns amigos
  monges para o Perl, foi melhor que o Fisl</p>
 
@@ -962,12 +637,12 @@ PL/Perl: Como fazer Procedures usando Perl, isso pode ser usado para muitas cois
   
   <entry>
     <title type="html"><![CDATA[FISL 7.0]]></title>
-    <link href="http://lornlab.org/blog/2006/04/19/fisl-7-0/"/>
+    <link href="http://lorn.io/blog/2006/04/19/fisl-7-0/"/>
     <updated>2006-04-19T13:27:00-03:00</updated>
-    <id>http://lornlab.org/blog/2006/04/19/fisl-7-0</id>
+    <id>http://lorn.io/blog/2006/04/19/fisl-7-0</id>
     <content type="html"><![CDATA[<p>ae pessoal, estou no FISL o Google esta aqui, vou atualizando esse post sempre que possivel e logo mais tem fotos</p>
 
-<p>Cheguei ontem ao FISL, não postei nada de la porque o telecentro vivia cheio de gente, e a maioria vendo o orkut -_-</p>
+<p>Cheguei ontem ao FISL, não postei nada de la porque o telecentro vivia cheio de gente, e a maioria vendo o orkut &ndash;_&ndash;</p>
 
 <p>Bom, mas eis o meu relato, chegando lá logo na entrada já dava para perceber que o Google patrocinou boa parte do fisl,
  banners logo na entrada e o crachá estava escrito Google embaixo, a parte de grupo de usuários estava menor que o ano passado,
@@ -1016,7 +691,7 @@ ficou mudando, nao sou eu mais todos os perl mongers perderam</p>
 
 <p>2a Dia – 20/06</p>
 
-<p>10:00 - Communication is Free</p>
+<p>10:00 &ndash; Communication is Free</p>
 
 <p>Quem deu essa palestra foi o Randal, ele falou dos meios de comunicacao livre, de hoje e de antigamente, desde o email ate USENET, IRC..</p>
 
@@ -1052,7 +727,7 @@ para o Postgresql, e ainda poder usar modulos perl nessas procedures.</p>
 
 <p>3a Dia – 21/06</p>
 
-<p>11:00 - O Portal do Monastério, como se tornar um Monge Perl.</p>
+<p>11:00 &ndash; O Portal do Monastério, como se tornar um Monge Perl.</p>
 
 <p>Essa palestra nos surpreendeu, todos os monges falaram “voces viram como lotou a sala?” hehe, uma palestra muito boa, com um visao de todos os principais
 sites/comunidades de Perl</p>

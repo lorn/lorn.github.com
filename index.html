@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>lornlab.</title>
+  <title>lorn.io</title>
   <meta name="author" content="Lindolfo 'Lorn' Rodrigues">
 
   
@@ -19,13 +19,13 @@ $ curl https://api. &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://lornlab.org/">
+  <link rel="canonical" href="http://lorn.io/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="lornlab." type="application/atom+xml">
+  <link href="/atom.xml" rel="alternate" title="lorn.io" type="application/atom+xml">
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -48,9 +48,9 @@ $ curl https://api. &hellip;">
 
 <body   >
   <header role="banner"><hgroup>
-  <h1><a href="/">lornlab.</a></h1>
+  <h1><a href="/">lorn.io</a></h1>
   
-    <h2>Compilando, programando e seguindo a canção...</h2>
+    <h2>inputs and ouputs from a random programmer</h2>
   
 </hgroup>
 
@@ -62,7 +62,7 @@ $ curl https://api. &hellip;">
   
 <form action="http://google.com/search" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:lornlab.org" />
+    <input type="hidden" name="q" value="site:lorn.io" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form>
@@ -154,7 +154,7 @@ $ curl https://api. &hellip;">
 </span><span class='line'>Accept: */*</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Agora ao invés de usar o curl, faça sua aplicação fazer o POST/PUT para o Netcat - localhost:9999 nesse exemplo - e veja a diferença entre o &#8216;debug&#8217; do nc, para quando a requisição vem do curl, e o &#8216;debug&#8217; do nc para quando a requisição vem da sua aplicação, no meu caso eu tinha esquecido de enviar o arquivo usando <a href="http://www.w3.org/Protocols/rfc1341/7_2_Multipart.html">HTTP Multipart</a>.</p>
+<p>Agora ao invés de usar o curl, faça sua aplicação fazer o POST/PUT para o Netcat &ndash; localhost:9999 nesse exemplo &ndash; e veja a diferença entre o &lsquo;debug&rsquo; do nc, para quando a requisição vem do curl, e o &lsquo;debug&rsquo; do nc para quando a requisição vem da sua aplicação, no meu caso eu tinha esquecido de enviar o arquivo usando <a href="http://www.w3.org/Protocols/rfc1341/7_2_Multipart.html">HTTP Multipart</a>.</p>
 
 <p>Para usar o Netcat no Mac:</p>
 
@@ -215,14 +215,14 @@ Você está lendo a Parte 3 sobre &#8220;A Busca pelo deploy contínuo&#8221; eu
 
 <p>Com um Load Balance, você consegue testar funcionalidades novas no site para uma pequena porção dos usuários do site e usar os gráficos ( que você já tem lógico ) para ver se ela é boa ou não.</p>
 
-<p>Como fazer isso? faça o deploy para apenas 1 das &#8216;n&#8217; máquinas que você tem atrás do Load Balancer e redirecione, 5% ~ 10% das suas conexões dos seus usuários para essa máquina, o resto os gráficos que você preparou da sua aplicação irão te dizer ;)</p>
+<p>Como fazer isso? faça o deploy para apenas 1 das &lsquo;n&rsquo; máquinas que você tem atrás do Load Balancer e redirecione, 5% ~ 10% das suas conexões dos seus usuários para essa máquina, o resto os gráficos que você preparou da sua aplicação irão te dizer ;)</p>
 
-<p>Falando um pouco mais de arquitetura, e especificamente de Perl, eu gosto bastante de usar o Nginx + Starman a comunicação é feita via Unix Socket o Starman foi baseado no Unicorn do Ruby, ele funciona muito bem e&#8230;</p>
+<p>Falando um pouco mais de arquitetura, e especificamente de Perl, eu gosto bastante de usar o Nginx + Starman a comunicação é feita via Unix Socket o Starman foi baseado no Unicorn do Ruby, ele funciona muito bem e&hellip;</p>
 
 <iframe width="420" height="315" src="http://www.youtube.com/embed/dFUlAQZB9Ng" frameborder="0" allowfullscreen></iframe>
 
 
-<p>&#8220;It&#8217;s a unix system I known this!&#8221; arquiteturas unix, forks, sockets e afins funcionam muito bem :)</p>
+<p>&ldquo;It&rsquo;s a unix system I known this!&rdquo; arquiteturas unix, forks, sockets e afins funcionam muito bem :)</p>
 
 <p>O seu deploy consistiria em copiar os arquivos novos e mandar um sinal de reset para o pid do Starman:</p>
 
@@ -234,240 +234,8 @@ Você está lendo a Parte 3 sobre &#8220;A Busca pelo deploy contínuo&#8221; eu
 
 <p>Abaixo uma conf de exemplo para se usar no Nginx para se conectar a um socket gerado pelo Starman:</p>
 
-<div><script src='https://gist.github.com/1126172.js?file='></script>
-<noscript><pre><code>=pod
-
-=encoding utf8
-
-=head1 Uma arquitetura de alta disponibilidade usando Starman
-
-Continuando a introdução dada pelo L&lt;nosso amigo que vence guerras|http://sao-paulo.pm.org/equinocio/2012/mar/13&gt;, falarei um pouco mais sobre o Starman e, como ele, não falarei sobre PSGI/Plack porque esses assuntos já foram muito bem explorados L&lt;em outros|http://sao-paulo.pm.org/artigo/2010/PSGI&gt; e L&lt;equinocios|http://sao-paulo.pm.org/equinocio/2011/set/11&gt;.
-
-Essa arquitetura é baseada na arquitetura que o Github usa/usava que eles explicam L&lt;nesse post|https://github.com/blog/517-unicorn&gt; eles falam sobre como eles utilizam o Unicorn, o Starman foi baseado nesse cara o Miyagawa inclusive usou o nome Unicorn como &quot;inspiração&quot; para o nome Starman:
-
-&quot;The name Starman is taken from the song (Star na Otoko) by the Japanese rock band Unicorn (yes, Unicorn!). It's also known as a song by David Bowie, a power-up from Super Mario Brothers and a character from Earthbound, all of which I love.&quot;
-
-Mais um pouco sobre a historia do nome do Starman no blog dele:
-
-L&lt;Good name for Perl UNIX forking web server?|http://bulknews.typepad.com/blog/2010/02/good-name-for-perl-unix-forking-web-server.html&gt;
-
-O fonte desse artigo, assim como todos os arquivos de configuração e inicialização estão nesse L&lt;gist|https://gist.github.com/1126172&gt; não fique copiando e colando daqui, você pode pegar o arquivo separado lá ;)
-
-=head2 Sendo amigo do seu syadmin
-
-Eu fiz uma busca no APT agora, e não vi nenhum pacote do Starman. 
-
-Mas isso não significa que você vai jogar essa bomba na mão do seu sysadmin, seja gentil com ele como diria o Bruce Lee:
-
-   &quot;Be L&lt;Devops my friend|http://devops.com/&gt;&quot;
-
-Faça scripts de inicialização, não é algo tão dificil e Shell Script é uma linguagem fácil L&lt;e que faz de você um desenvolvedor melhor|http://zachholman.com/posts/glue-languages/&gt; eu precisei subir o Starman em um CentOS e no Debian, abaixo estão os arquivos de inicialização para cada uma dessas distribuições a versão do Debian teve a revisão e ajustes do Nuba - eu tinha esquecido algum header/conf ;)
-
-Debin:
-
-    #!/bin/bash
-     
-    ### BEGIN INIT INFO
-    # starman - this script starts and stops the starman daemon
-    # Provides:          starman_sppm
-    # Required-Start:    $local_fs $remote_fs $network $syslog
-    # Required-Stop:     $local_fs $remote_fs $network $syslog
-    # Default-Start:     2 3 4 5
-    # Default-Stop:      0 1 6
-    # Short-Description: starts the starman server
-    # Description:       starts starman using start-stop-daemon
-    ### END INIT INFO
-     
-    NAME=starman
-    DESC=starman
-     
-    test -x $DAEMON || exit 0
-     
-    set -e
-     
-    . /lib/lsb/init-functions
-    ## Variáveis de conf da sua App, ALTERE ISSO ANTES DE QUALQUER COISA.
-    export starman=&quot;/usr/bin/starman&quot;
-    export myapp_path=&quot;/var/www/myapp&quot;
-    export pidfile=&quot;/var/run/starman.pid&quot;
-     
-     
-    start() {
-            echo -n $&quot;Starting Starman: &quot;
-            ## eu inicio o starman para debug na porta 8080, é bom para testar algumas coisas dando bypass no nginx e tanto o log, quando o PID são criados com o usuário do nginx, para ficar mais fácil 
-            $starman -I${myapp_path}/lib --user=nginx --listen :8080 --listen /var/run/nginx/starman.sock --daemonize --pid ${pidfile} --error-log /var/log/nginx/starman.log ${myapp_path}/${myapp}.psgi
-            RETVAL=$?
-            echo
-            [ $RETVAL = 0 ]
-            return $RETVAL
-    }
-     
-    restart() {
-            echo -n $&quot;Restarting Starman: &quot;
-            export PID=`cat ${pidfile}`
-            kill -s USR2 $PID 
-            RETVAL=$?
-            echo
-            [ $RETVAL = 0 ]
-            return $RETVAL
-    }
-     
-    stop() {
-            echo -n $&quot;Stopping Starman: &quot;
-            killproc -p ${pidfile} -d 10 $starman
-            RETVAL=$?
-            echo
-            [ $RETVAL = 0 ] &amp;&amp; rm -f ${pidfile}
-    }
-    # See how we were called.
-    case &quot;$1&quot; in
-      start)
-            start
-            ;;
-      restart)
-            restart
-             ;;
-      stop)
-            stop
-            ;;
-      *)
-            echo $&quot;Usage: starman {start|restart|stop}&quot;
-            exit 1
-    esac
-     
-    exit $RETVAL
-
-CentOS
-
-    #!/bin/bash
-     
-    # starman - this script starts and stops the starman daemon
-    #
-    # chkconfig:   - 85 15
-    # description: Starman 
-    # processname: starman
-    # pidfile :    /var/run/starman.pid
-    # www file:    /var/www/myapp
-     
-     
-    # Source function library.
-    . /etc/rc.d/init.d/functions
-     
-    ## Variáveis de conf da sua App, ALTERE ISSO ANTES DE QUALQUER COISA.
-    export starman=&quot;/usr/bin/starman&quot;
-    export myapp_path=&quot;/var/www/myapp&quot;
-    export pidfile=&quot;/var/run/starman.pid&quot;
-     
-     
-    start() {
-            echo -n $&quot;Starting Starman: &quot;
-            ## eu inicio o starman para debug na porta 8080, é bom para testar algumas coisas dando bypass no nginx e tanto o log, quando o PID são criados com o usuário do nginx, para ficar mais fácil 
-            $starman -I${myapp_path}/lib --user=nginx --listen :8080 --listen /var/run/nginx/starman.sock --daemonize --pid ${pidfile} --error-log /var/log/nginx/starman.log ${myapp_path}/${myapp}.psgi
-            RETVAL=$?
-            echo
-            [ $RETVAL = 0 ]
-            return $RETVAL
-    }
-     
-    restart() {
-            echo -n $&quot;Restarting Starman: &quot;
-            export PID=`cat ${pidfile}`
-            kill -s USR2 $PID 
-            RETVAL=$?
-            echo
-            [ $RETVAL = 0 ]
-            return $RETVAL
-    }
-     
-    stop() {
-            echo -n $&quot;Stopping Starman: &quot;
-            killproc -p ${pidfile} -d 10 $starman
-            RETVAL=$?
-            echo
-            [ $RETVAL = 0 ] &amp;&amp; rm -f ${pidfile}
-    }
-    # See how we were called.
-    case &quot;$1&quot; in
-      start)
-            start
-            ;;
-      restart)
-            restart
-             ;;
-      stop)
-            stop
-            ;;
-      *)
-            echo $&quot;Usage: starman {start|restart|stop}&quot;
-            exit 1
-    esac
-     
-    exit $RETVAL
-
-=head2 Nginx + Starman
-
-
-Como vocês leram, ou não, no post do github a arquitetura deles consistem em usar o servidor do Unicorn atrás do Nginx e a comunidação entre eles é feita via Unix Socket \,,/ 
-
-O Nginx fala diretamente com os &quot;workers&quot; do Starman atráves do Starman Master, quando o Starman inicia ele sobe 'n' workers que são controlados pelo processo principal, toda requisição é processado pelos workers.
-
-Com isso você ganha algumas funcionalidades interessantes como hotdeploy, que é o ato de você subir uma nova versão da sua aplicação com ZERO DOWNTIME!!!!111
-
-Como funciona, basta você atualizar os arquivos da sua aplicação - não irá alterar nada até você reiniciar o serviço - e na hora de reiniciar o serviço é só mandar o sinal USR2 para o PID Master do Starman, isso irá dizer para ele que a aplicação precisa ser reiniciada ele irá reiniciar os seus workers paulatinamente, assim que eles ficarem ociosos até que todos estejam rodando a nova versão da aplicação.
-
-Ah, a função restart dos arquivos de inicialização que eu falei lá em cima já faz esse trabalho :)
-
-Por padrão o Starman inicia apenas 5 workers, eles podem aguentar bastante coisa, mas dependendo da sua configuração de hardware você pode ter mais mas cuidado com swap, se a memoria está indo para swap é bom você diminuir esse número.
-
-    upstream myapp_starman {
-      server unix:/tmp/starman.sock fail_timeout=0;
-    }
-   
-    server {
-      listen 80;
-   
-    client_max_body_size 1024m;
-    client_body_buffer_size 8k;
-    proxy_read_timeout 300;
-   
-    ##
-    # basic
-    ##
-    server_name www.localhost.com;
-    root /home/user/MyApp/root;
-    keepalive_timeout 0;
-   
-    ##
-    # logging
-    ##
-    access_log /var/log/nginx/myapp.access combined;
-    error_log /var/log/nginx/myapp.error;
-    
-    location /static {
-          root  /home/user/MyApp/root/;
-          autoindex on;
-    }
-   
-    ##
-    # proxy
-    ##
-    location / {
-      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-      proxy_set_header Host $http_host;
-      proxy_redirect off;
-      proxy_buffering off;
-      if (!-f $request_filename) {
-        proxy_pass http://myapp_starman;
-      }
-    }
-   }
-
-=head1 AUTHOR 
-
-Lindolfo &quot;Lorn&quot; Rodrigues - lorn at cpan.org
-
-=cut
-</code></pre></noscript></div>
+<div><script src='https://gist.github.com/1126172.js'></script>
+<noscript><pre><code></code></pre></noscript></div>
 
 
 <p>Bom, basicamente é isso se tiver alguma duvida pergunte nos comentários :)</p>
@@ -528,7 +296,7 @@ Você está lendo a Parte 2 sobre &#8220;A Busca pelo deploy contínuo&#8221; eu
 <p>Agora que você já está convencido que precisa disso, ou não, vou começar a falar de algumas ferramentas/técnicas que você pode usar para te ajudar no processo:</p>
 
 <ul>
-<li><p>SCM - Software Configuration Management</p>
+<li><p>SCM &ndash; Software Configuration Management</p>
 
 <p>Também conhecido como VCS ( Version Control System ), você precisa disso, se você não tem <strong>há algo muito errado</strong> e se você está usando Subversion, isso não é tão ruim, mas comece a usar git a partir de hoje, sério.</p></li>
 <li><p>Testes</p>
@@ -536,7 +304,7 @@ Você está lendo a Parte 2 sobre &#8220;A Busca pelo deploy contínuo&#8221; eu
 <p>Se você acha que teste é besteira, então deploy continuo é besteira para você também. É impossível ter um deploy contínuo confiável sem testes</p></li>
 <li><p>Continuos Integration Software</p>
 
-<p>Esse tipo de software tem um papel simples, porem eficaz, ele fica fazendo &#8220;pooling&#8221; no seu SCM, a cada commit seu ele vai rodar o seu processo de &#8220;build&#8221; para ver se ele continua funcionando depois do código que você acabou de comitar, um processo de build pode conter:</p>
+<p>Esse tipo de software tem um papel simples, porem eficaz, ele fica fazendo &ldquo;pooling&rdquo; no seu SCM, a cada commit seu ele vai rodar o seu processo de &ldquo;build&rdquo; para ver se ele continua funcionando depois do código que você acabou de comitar, um processo de build pode conter:</p>
 
 <ul>
 <li>Gerar pacotes</li>
@@ -562,7 +330,7 @@ Você está lendo a Parte 2 sobre &#8220;A Busca pelo deploy contínuo&#8221; eu
 <p>Simples assim, mas tem que ser um script só que faz todo o trabalho, copiar arquivos, reinciar webserver etc</p>
 
 <p>Na Etsy quando o script ficou avançado eles evoluiram para um software web, que inclusive é opensource mais detalhes aqui: <a href="http://codeascraft.etsy.com/2010/05/20/quantum-of-deployment/">Deploynator Etsy</a></p></li>
-<li><p>Puppet/Chef - eu não sei qual o nome dessa categoria de software, o que você faz com eles é escrever &#8220;receitas&#8221; de máquinas, imagine que a empresa está crescendo e você precisa montar 10 novos webservers que incluem:</p>
+<li><p>Puppet/Chef &ndash; eu não sei qual o nome dessa categoria de software, o que você faz com eles é escrever &ldquo;receitas&rdquo; de máquinas, imagine que a empresa está crescendo e você precisa montar 10 novos webservers que incluem:</p>
 
 <ul>
 <li>Instalar SO</li>
@@ -576,7 +344,7 @@ Você está lendo a Parte 2 sobre &#8220;A Busca pelo deploy contínuo&#8221; eu
 
 <p>Tirando a instalação do Linux, todo o resto você pode automatizar com puppet ou chef você cria receitas nele dizendo como ele vai configurar seu Webserver, seu sistema e depois é só executar essa receita na máquina ele vai instalar o pacote e fazer todo o trabalho pra você.</p>
 
-<p>E você vai precisar fazer isso UMA vez para &#8216;n&#8217; maquinas, e quando precisar mudar algo e só alterar na receita ele mantém as maquinas sincronizadas com sua receitas, nada de sair editando o mesmo arquivo em várias máquinas.</p></li>
+<p>E você vai precisar fazer isso UMA vez para &lsquo;n&rsquo; maquinas, e quando precisar mudar algo e só alterar na receita ele mantém as maquinas sincronizadas com sua receitas, nada de sair editando o mesmo arquivo em várias máquinas.</p></li>
 <li><p>Monitoramento</p>
 
 <ul>
@@ -589,7 +357,7 @@ Você está lendo a Parte 2 sobre &#8220;A Busca pelo deploy contínuo&#8221; eu
 
 <p>Além desses gráficos ajudar o pessoal de Marketing/Vendas vai te ajudar quando entrar alguma funcionalidade nova no site, porque sempre tem um espertão na empresa, e muitas vezes esse espertão é o dono, que vai dizer:</p>
 
-<p><blockquote><p>Acho que depois que você colocou aquela funcionalidade no site, o site está vendendo menos, estou com esse pressentimento.<br/>     - Espertão</p></blockquote></p>
+<p><blockquote><p>Acho que depois que você colocou aquela funcionalidade no site, o site está vendendo menos, estou com esse pressentimento.<br/>     &ndash; Espertão</p></blockquote></p>
 
 <p>A Etsy liberou recentemente a ferramente que eles fizeram para fazer gráficos, vale a pena dar uma olhada <a href="http://codeascraft.etsy.com/2011/02/15/measure-anything-measure-everything/">Measure Anything, Measure Everything</a> eles contam bastante expêriencia deles com geração de gráfico para tudo, até para a quantidade de café na cozinha!</p>
 
@@ -646,14 +414,14 @@ Você está lendo a Parte 1 sobre &#8220;A Busca pelo deploy contínuo&#8221; es
 
 
 <p>No dia 05/11 apresentei  no <a href="http://www.yapcbrasil.org.br/2011/">YAPC::Brasil</a> uma palestra com o nome
-&#8220;Em busca do deploy continuo&#8221; nesse post vou tentar descrever sobre tudo o que eu falei.</p>
+&ldquo;Em busca do deploy continuo&rdquo; nesse post vou tentar descrever sobre tudo o que eu falei.</p>
 
 <div style="width:425px" id="__ss_10173611"> <strong style="display:block;margin:12px 0 4px"><a href="http://www.slideshare.net/lornlab/a-busca-pelo-deploy-continuo" title="A busca pelo deploy continuo" target="_blank">A busca pelo deploy continuo</a></strong> <iframe src="http://www.slideshare.net/slideshow/embed_code/10173611" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> <div style="padding:5px 0 12px"> View more <a href="http://www.slideshare.net/" target="_blank">presentations</a> from <a href="http://www.slideshare.net/lornlab" target="_blank">Lindolfo Rodrigues Oliveira Neto</a> </div> </div>
 
 
 <h2>Como começar?</h2>
 
-<p>Infelizmente o principal problema do &#8220;Deploy Continuo&#8221; não é técnico e sim cultural, e mudança de cultura é muito mais difícil que mudança de Banco de Dados ou de Linguagem de Programação é enraizado nas fundações da empresa, esses são alguns exemplos culturais:</p>
+<p>Infelizmente o principal problema do &ldquo;Deploy Continuo&rdquo; não é técnico e sim cultural, e mudança de cultura é muito mais difícil que mudança de Banco de Dados ou de Linguagem de Programação é enraizado nas fundações da empresa, esses são alguns exemplos culturais:</p>
 
 <ul>
 <li><p>Falta de confiança</p></li>
@@ -664,7 +432,7 @@ Você está lendo a Parte 1 sobre &#8220;A Busca pelo deploy contínuo&#8221; es
 <blockquote><p>Processo é uma reação à estupidez incorporada antes<br/> - Clay Shirky</p></blockquote>
 
 
-<p> Em português claro, esse seria o famoso &#8220;vai que&#8230;&#8221; :</p>
+<p> Em português claro, esse seria o famoso &ldquo;vai que&hellip;&rdquo; :</p>
 
 <ul>
 <li>Vai que alguém faz uma alteração errada e o site fica fora do ar</li>
@@ -701,7 +469,7 @@ Você está lendo a Parte 1 sobre &#8220;A Busca pelo deploy contínuo&#8221; es
 
 <p>A <a href="http://amazon.com">Amazon</a> chegou a divulgar em um apresentação na Velocity 2011 que faz um deploy a cada 11.6 segundos e você aí feliz por ter conseguido uma janela mais cedo para fazer seu deploy né?</p>
 
-<p>A <a href="http://etsy.com">Etsy</a>, não é muito famosa aqui no Brasil, e a conheci ela antes de me interessar sobre deploy continuo comprei um adesivo com uma frase de StarWars lá :) eles funcionam como um Mercado Livre para artesões e outras profissões &#8220;hand-made&#8221;.</p>
+<p>A <a href="http://etsy.com">Etsy</a>, não é muito famosa aqui no Brasil, e a conheci ela antes de me interessar sobre deploy continuo comprei um adesivo com uma frase de StarWars lá :) eles funcionam como um Mercado Livre para artesões e outras profissões &ldquo;hand-made&rdquo;.</p>
 
 <p>Eles tem a bagatela de 1 bilhão de pageview por mês!</p>
 
@@ -853,7 +621,7 @@ outras livros/quadrinhos famosos, mas o que eu mais gosto e li foi Sandman, e s�
 
 
   <div class="entry-content"><p>Esta série de posts é baseada na idéia do site  <a href="http://papodehomem.com.br/homens-que-voce-deveria-conhecer-homem-da-capa-preta-tenorio-cavalcante/">Papodehomem</a>
-que tem uma série parecida chamada &#8220;Homens que você devia conhecer&#8221;.</p>
+que tem uma série parecida chamada &ldquo;Homens que você devia conhecer&rdquo;.</p>
 
 <p>A ideia é falar de hackers em geral, tipo algum dia pode ter uma história de um cortador de lenha que fez uma mesa só com seu machado
 por exemplo :) Esse é um exemplo clássico de hacker.</p>
@@ -878,7 +646,7 @@ os novos servidores, em 12h ele fez a primeira versão do Memcached.</p>
 <p>Em 2005 o <a href="http://news.livejournal.com/82926.html">LiveJornal foi comprado pela Sixapart</a>, e em 2008 ele foi trabalhar no Google.</p>
 
 <p>Ele também é contribuidor ativo no <a href="http://search.cpan.org/~bradfitz/">CPAN</a> , apesar de estar trabalhando no Google focando na linguagem de programação Go, o ultimo projeto que ele
-está trabalhando é o <a href="http://camlistore.org/">Camlistore</a> - escrito em Go, que vale um post só pra ele porque é um proejto bem interessante.</p>
+está trabalhando é o <a href="http://camlistore.org/">Camlistore</a> &ndash; escrito em Go, que vale um post só pra ele porque é um proejto bem interessante.</p>
 </div>
   
   
@@ -960,17 +728,17 @@ está trabalhando é o <a href="http://camlistore.org/">Camlistore</a> - escrito
 
 <ul>
 <li><p><a href="http://lornlab.org/blog/2011/04/12/usando-zsh/">ZSH</a>, o cara é tão bom que tem um post só para ele :)</p></li>
-<li><p><a href="http://code.google.com/p/iterm2/">iTerm2</a> - Eu sempre usei o Terminal.App padrão do MacOSX, há um tempo atrás ouvi falar do iTerm, mas
+<li><p><a href="http://code.google.com/p/iterm2/">iTerm2</a> &ndash; Eu sempre usei o Terminal.App padrão do MacOSX, há um tempo atrás ouvi falar do iTerm, mas
 dado a minha pessima organização, acabei me esquecendo. Por causa dessa foto no twitter/facebook recebi a dica do
 iTerm2 e vou dizer, deixa o Terminal.App no chinelo tem fullscreen, 256 cores, busca, histórico propia, só instalando para
 você ver o que eu estou falando pena que está em alpha, mas estou atualizando a cada relase.</p></li>
-<li><p>Git - No trabalho apenas o git, em casa git e github.com/lorn onde faço minhas brincadeiras</p></li>
-<li><p><a href="http://www.virtualbox.org/">Virtualbox</a> - Para emular um Linux ou Windows quando preciso</p></li>
-<li><p><a href="http://www.irssi.org/">Irssi</a> - irc remoto ( via ssh ) 24/7 na irc.freenode.net e irc.perl.org :)</p></li>
-<li><p><a href="http://sites.google.com/site/yorufukurou/">Yorufukoru</a> - Cliente de twitter, vejo pouco o twitter, mas quando vejo é com ele.</p></li>
-<li><p>Musica - Tudo o que eu preciso/quero ouvir está no iPhone então ligo o fone de ouvido nele e já era, de vez em quando ouço uma
+<li><p>Git &ndash; No trabalho apenas o git, em casa git e github.com/lorn onde faço minhas brincadeiras</p></li>
+<li><p><a href="http://www.virtualbox.org/">Virtualbox</a> &ndash; Para emular um Linux ou Windows quando preciso</p></li>
+<li><p><a href="http://www.irssi.org/">Irssi</a> &ndash; irc remoto ( via ssh ) 24/7 na irc.freenode.net e irc.perl.org :)</p></li>
+<li><p><a href="http://sites.google.com/site/yorufukurou/">Yorufukoru</a> &ndash; Cliente de twitter, vejo pouco o twitter, mas quando vejo é com ele.</p></li>
+<li><p>Musica &ndash; Tudo o que eu preciso/quero ouvir está no iPhone então ligo o fone de ouvido nele e já era, de vez em quando ouço uma
 coisa ou outra do youtube.</p></li>
-<li><p><a href="http://www.vim.org/">Vim</a> - Por ultimo, mas não menos importante &#8220;O Editor&#8221;, minhas configurações estão <a href="https://github.com/lorn/vim_confs">aqui</a>.</p></li>
+<li><p><a href="http://www.vim.org/">Vim</a> &ndash; Por ultimo, mas não menos importante &ldquo;O Editor&rdquo;, minhas configurações estão <a href="https://github.com/lorn/vim_confs">aqui</a>.</p></li>
 </ul>
 
 
@@ -1106,23 +874,6 @@ a busca no install então brew install x<tab> pronto, já mostra para você todo
 
 
 <section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating&#8230;</li>
-  </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("lornlab", 3, false);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/lornlab" class="twitter-follow-button" data-show-count="false">Follow @lornlab</a>
-  
-</section>
-
-
-<section>
   <h1>My Pinboard</h1>
   <ul id="pinboard_linkroll">Fetching linkroll&#8230;</ul>
   <p><a href="http://pinboard.in/u:lorn">My Pinboard Bookmarks &raquo;</a></p>
@@ -1149,7 +900,7 @@ a busca no install então brew install x<tab> pronto, já mostra para você todo
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Lindolfo 'Lorn' Rodrigues -
+  Copyright &copy; 2013 - Lindolfo 'Lorn' Rodrigues -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

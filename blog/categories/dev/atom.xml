@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: dev | lornlab.]]></title>
-  <link href="http://lornlab.org/blog/categories/dev/atom.xml" rel="self"/>
-  <link href="http://lornlab.org/"/>
-  <updated>2012-07-06T16:07:27-03:00</updated>
-  <id>http://lornlab.org/</id>
+  <title><![CDATA[Category: dev | lorn.io]]></title>
+  <link href="http://lorn.io/blog/categories/dev/atom.xml" rel="self"/>
+  <link href="http://lorn.io/"/>
+  <updated>2013-08-15T11:37:47-03:00</updated>
+  <id>http://lorn.io/</id>
   <author>
     <name><![CDATA[Lindolfo 'Lorn' Rodrigues]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Debugging HTTP Request With Netcat]]></title>
-    <link href="http://lornlab.org/blog/2012/06/28/debugging-http-request-with-netcat/"/>
+    <link href="http://lorn.io/blog/2012/06/28/debugging-http-request-with-netcat/"/>
     <updated>2012-06-28T20:45:00-03:00</updated>
-    <id>http://lornlab.org/blog/2012/06/28/debugging-http-request-with-netcat</id>
+    <id>http://lorn.io/blog/2012/06/28/debugging-http-request-with-netcat</id>
     <content type="html"><![CDATA[<p>O que fazer quando você precisa usar uma API de terceiros e tudo funciona bem quando você está fazendo seus testes com curl.</p>
 
 <p><code>
@@ -27,10 +27,10 @@ $ curl https://api.github.com/repos/lorn/lwp-curl/commits
 <p>Mas quando você vai para sua linguagem botar a mão na massa, dá erro:</p>
 
 <p>```
-$ curl "https://api.github.com/repos1/lorn/lwp-curl/commits1"</p>
+$ curl &ldquo;<a href="https://api.github.com/repos1/lorn/lwp-curl/commits1">https://api.github.com/repos1/lorn/lwp-curl/commits1</a>&rdquo;</p>
 
 <p>{
-  "message": "Not Found"
+  &ldquo;message&rdquo;: &ldquo;Not Found&rdquo;
 }
 ```</p>
 
@@ -56,7 +56,7 @@ Host: localhost:9999
 Accept: */*
 </code></p>
 
-<p>Agora ao invés de usar o curl, faça sua aplicação fazer o POST/PUT para o Netcat - localhost:9999 nesse exemplo - e veja a diferença entre o 'debug' do nc, para quando a requisição vem do curl, e o 'debug' do nc para quando a requisição vem da sua aplicação, no meu caso eu tinha esquecido de enviar o arquivo usando <a href="http://www.w3.org/Protocols/rfc1341/7_2_Multipart.html">HTTP Multipart</a>.</p>
+<p>Agora ao invés de usar o curl, faça sua aplicação fazer o POST/PUT para o Netcat &ndash; localhost:9999 nesse exemplo &ndash; e veja a diferença entre o &lsquo;debug&rsquo; do nc, para quando a requisição vem do curl, e o &lsquo;debug&rsquo; do nc para quando a requisição vem da sua aplicação, no meu caso eu tinha esquecido de enviar o arquivo usando <a href="http://www.w3.org/Protocols/rfc1341/7_2_Multipart.html">HTTP Multipart</a>.</p>
 
 <p>Para usar o Netcat no Mac:</p>
 
@@ -76,16 +76,16 @@ nc -l -p 9999
   
   <entry>
     <title type="html"><![CDATA[Hackers Que Você Deveria Conhecer (1): Brad Fitzpatrick]]></title>
-    <link href="http://lornlab.org/blog/2011/05/17/hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick/"/>
+    <link href="http://lorn.io/blog/2011/05/17/hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick/"/>
     <updated>2011-05-17T22:45:00-03:00</updated>
-    <id>http://lornlab.org/blog/2011/05/17/hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick</id>
+    <id>http://lorn.io/blog/2011/05/17/hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick</id>
     <content type="html"><![CDATA[<p>Esta série de posts é baseada na idéia do site  <a href="http://papodehomem.com.br/homens-que-voce-deveria-conhecer-homem-da-capa-preta-tenorio-cavalcante/">Papodehomem</a>
-que tem uma série parecida chamada "Homens que você devia conhecer".</p>
+que tem uma série parecida chamada &ldquo;Homens que você devia conhecer&rdquo;.</p>
 
 <p>A ideia é falar de hackers em geral, tipo algum dia pode ter uma história de um cortador de lenha que fez uma mesa só com seu machado
 por exemplo :) Esse é um exemplo clássico de hacker.</p>
 
-<p><img class="center" src="http://media.tumblr.com/tumblr_ljiu9qSdTJ1qhdaqj.png"></p>
+<p><img class="center <a" src="href="http://media.tumblr.com/tumblr_ljiu9qSdTJ1qhdaqj.png">http://media.tumblr.com/tumblr_ljiu9qSdTJ1qhdaqj.png</a>"></p>
 
 <p>Brad Fitzpatrick é um dos muitos hackers programadores que você deveria conhecer ou ao menos saber o que ele já fez.</p>
 
@@ -105,30 +105,30 @@ os novos servidores, em 12h ele fez a primeira versão do Memcached.</p>
 <p>Em 2005 o <a href="http://news.livejournal.com/82926.html">LiveJornal foi comprado pela Sixapart</a>, e em 2008 ele foi trabalhar no Google.</p>
 
 <p>Ele também é contribuidor ativo no <a href="http://search.cpan.org/~bradfitz/">CPAN</a> , apesar de estar trabalhando no Google focando na linguagem de programação Go, o ultimo projeto que ele
-está trabalhando é o <a href="http://camlistore.org/">Camlistore</a> - escrito em Go, que vale um post só pra ele porque é um proejto bem interessante.</p>
+está trabalhando é o <a href="http://camlistore.org/">Camlistore</a> &ndash; escrito em Go, que vale um post só pra ele porque é um proejto bem interessante.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Meu Ambiente De Trabalho Em N Itens]]></title>
-    <link href="http://lornlab.org/blog/2011/04/12/meu-ambiente-de-trabalho-em-n-itens/"/>
+    <link href="http://lorn.io/blog/2011/04/12/meu-ambiente-de-trabalho-em-n-itens/"/>
     <updated>2011-04-12T14:59:00-03:00</updated>
-    <id>http://lornlab.org/blog/2011/04/12/meu-ambiente-de-trabalho-em-n-itens</id>
+    <id>http://lorn.io/blog/2011/04/12/meu-ambiente-de-trabalho-em-n-itens</id>
     <content type="html"><![CDATA[<p>O peka me convidou para a correntinha do bem, e ainda me intimou pelo twitter :/ aqui está como é meu ambiente de trabalho.</p>
 
 <ul>
 <li><p><a href="http://lornlab.org/blog/2011/04/12/usando-zsh/">ZSH</a>, o cara é tão bom que tem um post só para ele :)</p></li>
-<li><p><a href="http://code.google.com/p/iterm2/">iTerm2</a> - Eu sempre usei o Terminal.App padrão do MacOSX, há um tempo atrás ouvi falar do iTerm, mas
+<li><p><a href="http://code.google.com/p/iterm2/">iTerm2</a> &ndash; Eu sempre usei o Terminal.App padrão do MacOSX, há um tempo atrás ouvi falar do iTerm, mas
 dado a minha pessima organização, acabei me esquecendo. Por causa dessa foto no twitter/facebook recebi a dica do
 iTerm2 e vou dizer, deixa o Terminal.App no chinelo tem fullscreen, 256 cores, busca, histórico propia, só instalando para
 você ver o que eu estou falando pena que está em alpha, mas estou atualizando a cada relase.</p></li>
-<li><p>Git - No trabalho apenas o git, em casa git e github.com/lorn onde faço minhas brincadeiras</p></li>
-<li><p><a href="http://www.virtualbox.org/">Virtualbox</a> - Para emular um Linux ou Windows quando preciso</p></li>
-<li><p><a href="http://www.irssi.org/">Irssi</a> - irc remoto ( via ssh ) 24/7 na irc.freenode.net e irc.perl.org :)</p></li>
-<li><p><a href="http://sites.google.com/site/yorufukurou/">Yorufukoru</a> - Cliente de twitter, vejo pouco o twitter, mas quando vejo é com ele.</p></li>
-<li><p>Musica - Tudo o que eu preciso/quero ouvir está no iPhone então ligo o fone de ouvido nele e já era, de vez em quando ouço uma
+<li><p>Git &ndash; No trabalho apenas o git, em casa git e github.com/lorn onde faço minhas brincadeiras</p></li>
+<li><p><a href="http://www.virtualbox.org/">Virtualbox</a> &ndash; Para emular um Linux ou Windows quando preciso</p></li>
+<li><p><a href="http://www.irssi.org/">Irssi</a> &ndash; irc remoto ( via ssh ) 24/7 na irc.freenode.net e irc.perl.org :)</p></li>
+<li><p><a href="http://sites.google.com/site/yorufukurou/">Yorufukoru</a> &ndash; Cliente de twitter, vejo pouco o twitter, mas quando vejo é com ele.</p></li>
+<li><p>Musica &ndash; Tudo o que eu preciso/quero ouvir está no iPhone então ligo o fone de ouvido nele e já era, de vez em quando ouço uma
 coisa ou outra do youtube.</p></li>
-<li><p><a href="http://www.vim.org/">Vim</a> - Por ultimo, mas não menos importante "O Editor", minhas configurações estão <a href="https://github.com/lorn/vim_confs">aqui</a>.</p></li>
+<li><p><a href="http://www.vim.org/">Vim</a> &ndash; Por ultimo, mas não menos importante &ldquo;O Editor&rdquo;, minhas configurações estão <a href="https://github.com/lorn/vim_confs">aqui</a>.</p></li>
 </ul>
 
 
@@ -138,9 +138,9 @@ coisa ou outra do youtube.</p></li>
   
   <entry>
     <title type="html"><![CDATA[Usando ZSH]]></title>
-    <link href="http://lornlab.org/blog/2011/04/12/usando-zsh/"/>
+    <link href="http://lorn.io/blog/2011/04/12/usando-zsh/"/>
     <updated>2011-04-12T13:31:00-03:00</updated>
-    <id>http://lornlab.org/blog/2011/04/12/usando-zsh</id>
+    <id>http://lorn.io/blog/2011/04/12/usando-zsh</id>
     <content type="html"><![CDATA[<p>Esses dias re-descobri o zsh, já havia testado a um tempo atrás mas agora foi pra valer :)</p>
 
 <p>E vou dizer, não há shell melhor :) muito melhor que o Bash</p>

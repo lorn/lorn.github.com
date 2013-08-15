@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: workspace | lornlab.]]></title>
-  <link href="http://lornlab.org/blog/categories/workspace/atom.xml" rel="self"/>
-  <link href="http://lornlab.org/"/>
-  <updated>2012-07-06T16:07:27-03:00</updated>
-  <id>http://lornlab.org/</id>
+  <title><![CDATA[Category: workspace | lorn.io]]></title>
+  <link href="http://lorn.io/blog/categories/workspace/atom.xml" rel="self"/>
+  <link href="http://lorn.io/"/>
+  <updated>2013-08-15T11:37:47-03:00</updated>
+  <id>http://lorn.io/</id>
   <author>
     <name><![CDATA[Lindolfo 'Lorn' Rodrigues]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[A Biblioteca Pessoal De Neil Gaiman]]></title>
-    <link href="http://lornlab.org/blog/2011/05/19/a-biblioteca-pessoal-de-neil-gaiman/"/>
+    <link href="http://lorn.io/blog/2011/05/19/a-biblioteca-pessoal-de-neil-gaiman/"/>
     <updated>2011-05-19T00:03:00-03:00</updated>
-    <id>http://lornlab.org/blog/2011/05/19/a-biblioteca-pessoal-de-neil-gaiman</id>
+    <id>http://lorn.io/blog/2011/05/19/a-biblioteca-pessoal-de-neil-gaiman</id>
     <content type="html"><![CDATA[<p>Quando vi esse site pela primeira vez, e como eu já tinha lido alguma entrevista do Donald Knuth em que ele falava que tinha
 a mesma poltrona desde 1960 e só trocava o forro externo, eu percebi que precisava comprar uma poltrona para ler livros  :)</p>
 
@@ -28,30 +28,30 @@ outras livros/quadrinhos famosos, mas o que eu mais gosto e li foi Sandman, e s�
 
 <p><a href="http://blog.shelfari.com/my_weblog/2009/09/neil.html">http://blog.shelfari.com/my_weblog/2009/09/neil.html</a></p>
 
-<p><img class="center" src="http://blog.shelfari.com/.a/6a00d8341e478253ef0120a53fe68a970c-800wi"></p>
+<p><img class="center <a" src="href="http://blog.shelfari.com/.a/6a00d8341e478253ef0120a53fe68a970c-800wi">http://blog.shelfari.com/.a/6a00d8341e478253ef0120a53fe68a970c-800wi</a>"></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Meu Ambiente De Trabalho Em N Itens]]></title>
-    <link href="http://lornlab.org/blog/2011/04/12/meu-ambiente-de-trabalho-em-n-itens/"/>
+    <link href="http://lorn.io/blog/2011/04/12/meu-ambiente-de-trabalho-em-n-itens/"/>
     <updated>2011-04-12T14:59:00-03:00</updated>
-    <id>http://lornlab.org/blog/2011/04/12/meu-ambiente-de-trabalho-em-n-itens</id>
+    <id>http://lorn.io/blog/2011/04/12/meu-ambiente-de-trabalho-em-n-itens</id>
     <content type="html"><![CDATA[<p>O peka me convidou para a correntinha do bem, e ainda me intimou pelo twitter :/ aqui está como é meu ambiente de trabalho.</p>
 
 <ul>
 <li><p><a href="http://lornlab.org/blog/2011/04/12/usando-zsh/">ZSH</a>, o cara é tão bom que tem um post só para ele :)</p></li>
-<li><p><a href="http://code.google.com/p/iterm2/">iTerm2</a> - Eu sempre usei o Terminal.App padrão do MacOSX, há um tempo atrás ouvi falar do iTerm, mas
+<li><p><a href="http://code.google.com/p/iterm2/">iTerm2</a> &ndash; Eu sempre usei o Terminal.App padrão do MacOSX, há um tempo atrás ouvi falar do iTerm, mas
 dado a minha pessima organização, acabei me esquecendo. Por causa dessa foto no twitter/facebook recebi a dica do
 iTerm2 e vou dizer, deixa o Terminal.App no chinelo tem fullscreen, 256 cores, busca, histórico propia, só instalando para
 você ver o que eu estou falando pena que está em alpha, mas estou atualizando a cada relase.</p></li>
-<li><p>Git - No trabalho apenas o git, em casa git e github.com/lorn onde faço minhas brincadeiras</p></li>
-<li><p><a href="http://www.virtualbox.org/">Virtualbox</a> - Para emular um Linux ou Windows quando preciso</p></li>
-<li><p><a href="http://www.irssi.org/">Irssi</a> - irc remoto ( via ssh ) 24/7 na irc.freenode.net e irc.perl.org :)</p></li>
-<li><p><a href="http://sites.google.com/site/yorufukurou/">Yorufukoru</a> - Cliente de twitter, vejo pouco o twitter, mas quando vejo é com ele.</p></li>
-<li><p>Musica - Tudo o que eu preciso/quero ouvir está no iPhone então ligo o fone de ouvido nele e já era, de vez em quando ouço uma
+<li><p>Git &ndash; No trabalho apenas o git, em casa git e github.com/lorn onde faço minhas brincadeiras</p></li>
+<li><p><a href="http://www.virtualbox.org/">Virtualbox</a> &ndash; Para emular um Linux ou Windows quando preciso</p></li>
+<li><p><a href="http://www.irssi.org/">Irssi</a> &ndash; irc remoto ( via ssh ) 24/7 na irc.freenode.net e irc.perl.org :)</p></li>
+<li><p><a href="http://sites.google.com/site/yorufukurou/">Yorufukoru</a> &ndash; Cliente de twitter, vejo pouco o twitter, mas quando vejo é com ele.</p></li>
+<li><p>Musica &ndash; Tudo o que eu preciso/quero ouvir está no iPhone então ligo o fone de ouvido nele e já era, de vez em quando ouço uma
 coisa ou outra do youtube.</p></li>
-<li><p><a href="http://www.vim.org/">Vim</a> - Por ultimo, mas não menos importante "O Editor", minhas configurações estão <a href="https://github.com/lorn/vim_confs">aqui</a>.</p></li>
+<li><p><a href="http://www.vim.org/">Vim</a> &ndash; Por ultimo, mas não menos importante &ldquo;O Editor&rdquo;, minhas configurações estão <a href="https://github.com/lorn/vim_confs">aqui</a>.</p></li>
 </ul>
 
 
@@ -61,9 +61,9 @@ coisa ou outra do youtube.</p></li>
   
   <entry>
     <title type="html"><![CDATA[Usando ZSH]]></title>
-    <link href="http://lornlab.org/blog/2011/04/12/usando-zsh/"/>
+    <link href="http://lorn.io/blog/2011/04/12/usando-zsh/"/>
     <updated>2011-04-12T13:31:00-03:00</updated>
-    <id>http://lornlab.org/blog/2011/04/12/usando-zsh</id>
+    <id>http://lorn.io/blog/2011/04/12/usando-zsh</id>
     <content type="html"><![CDATA[<p>Esses dias re-descobri o zsh, já havia testado a um tempo atrás mas agora foi pra valer :)</p>
 
 <p>E vou dizer, não há shell melhor :) muito melhor que o Bash</p>
