@@ -4,7 +4,7 @@
   <title><![CDATA[Category: fisl | lorn.io]]></title>
   <link href="http://lorn.io/blog/categories/fisl/atom.xml" rel="self"/>
   <link href="http://lorn.io/"/>
-  <updated>2013-08-15T14:06:42-03:00</updated>
+  <updated>2013-12-12T01:52:06-02:00</updated>
   <id>http://lorn.io/</id>
   <author>
     <name><![CDATA[Lindolfo 'Lorn' Rodrigues]]></name>
@@ -36,9 +36,7 @@
 
 <p>Update 3: Agora quem trata o gist é o octopress \,,/</p>
 
-<p><div><script src='https://gist.github.com/760136.js'></script>
-<noscript><pre><code></code></pre></noscript></div>
-</p>
+<p>{% gist 760136 %}</p>
 
 <iframe scrolling="no" marginheight="0" marginwidth="0" frameborder="0" height="355" width="425" src="http://www.slideshare.net/slideshow/embed_code/7618654"></iframe>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: linux | lorn.io]]></title>
   <link href="http://lorn.io/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://lorn.io/"/>
-  <updated>2013-08-15T14:06:42-03:00</updated>
+  <updated>2013-12-12T01:52:06-02:00</updated>
   <id>http://lorn.io/</id>
   <author>
     <name><![CDATA[Lindolfo 'Lorn' Rodrigues]]></name>
@@ -36,7 +36,9 @@ $ curl &ldquo;<a href="https://api.github.com/repos1/lorn/lwp-curl/commits1">htt
 
 <p>é claro que nem sempre o erro será tão claro, e principalmente quando você está fazendo POST/PUT com arquivos, como debugar? porque funciona no curl e não funciona na minha linguagem preferida?</p>
 
-<p><blockquote><p>Netcat for the rescue!</p></blockquote></p>
+<p>{% blockquote %}
+Netcat for the rescue!
+{% endblockquote %}</p>
 
 <p>Netcat é o canivete suiço do mundo unix, se você nunca ouviu falar e quer aprender até a transferir arquivos via Netcat (!!) veja esse post do <a href="http://www.catonmat.net/blog/unix-utilities-netcat/">pkrumins</a> nesse caso especifico, vamos usar Netcat para debugar requisições HTTP e isso ele não mostra lá ;)</p>
 
