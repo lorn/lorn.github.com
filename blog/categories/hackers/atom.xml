@@ -4,7 +4,7 @@
   <title><![CDATA[Category: hackers | lorn.io]]></title>
   <link href="http://lorn.io/blog/categories/hackers/atom.xml" rel="self"/>
   <link href="http://lorn.io/"/>
-  <updated>2013-12-12T01:52:06-02:00</updated>
+  <updated>2013-12-12T01:57:19-02:00</updated>
   <id>http://lorn.io/</id>
   <author>
     <name><![CDATA[Lindolfo 'Lorn' Rodrigues]]></name>
@@ -24,7 +24,7 @@ que tem uma série parecida chamada &ldquo;Homens que você devia conhecer&rdquo
 <p>A ideia é falar de hackers em geral, tipo algum dia pode ter uma história de um cortador de lenha que fez uma mesa só com seu machado
 por exemplo :) Esse é um exemplo clássico de hacker.</p>
 
-<p>{% img center <a href="http://media.tumblr.com/tumblr_ljiu9qSdTJ1qhdaqj.png">http://media.tumblr.com/tumblr_ljiu9qSdTJ1qhdaqj.png</a> %}</p>
+<p><img class="center <a" src="href="http://media.tumblr.com/tumblr_ljiu9qSdTJ1qhdaqj.png">http://media.tumblr.com/tumblr_ljiu9qSdTJ1qhdaqj.png</a>"></p>
 
 <p>Brad Fitzpatrick é um dos muitos hackers programadores que você deveria conhecer ou ao menos saber o que ele já fez.</p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: workspace | lorn.io]]></title>
   <link href="http://lorn.io/blog/categories/workspace/atom.xml" rel="self"/>
   <link href="http://lorn.io/"/>
-  <updated>2013-12-12T01:52:06-02:00</updated>
+  <updated>2013-12-12T01:57:19-02:00</updated>
   <id>http://lorn.io/</id>
   <author>
     <name><![CDATA[Lindolfo 'Lorn' Rodrigues]]></name>
@@ -28,7 +28,7 @@ outras livros/quadrinhos famosos, mas o que eu mais gosto e li foi Sandman, e s√
 
 <p><a href="http://blog.shelfari.com/my_weblog/2009/09/neil.html">http://blog.shelfari.com/my_weblog/2009/09/neil.html</a></p>
 
-<p>{% img center <a href="http://blog.shelfari.com/.a/6a00d8341e478253ef0120a53fe68a970c-800wi">http://blog.shelfari.com/.a/6a00d8341e478253ef0120a53fe68a970c-800wi</a> %}</p>
+<p><img class="center <a" src="href="http://blog.shelfari.com/.a/6a00d8341e478253ef0120a53fe68a970c-800wi">http://blog.shelfari.com/.a/6a00d8341e478253ef0120a53fe68a970c-800wi</a>"></p>
 ]]></content>
   </entry>
   

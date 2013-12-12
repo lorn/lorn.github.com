@@ -4,7 +4,7 @@
   <title><![CDATA[Category: yapc | lorn.io]]></title>
   <link href="http://lorn.io/blog/categories/yapc/atom.xml" rel="self"/>
   <link href="http://lorn.io/"/>
-  <updated>2013-12-12T01:52:06-02:00</updated>
+  <updated>2013-12-12T01:57:19-02:00</updated>
   <id>http://lorn.io/</id>
   <author>
     <name><![CDATA[Lindolfo 'Lorn' Rodrigues]]></name>
@@ -40,15 +40,16 @@ Você está lendo a Parte 3 sobre "A Busca pelo deploy contínuo" eu recomendo v
 
 <p>O seu deploy consistiria em copiar os arquivos novos e mandar um sinal de reset para o pid do Starman:</p>
 
-<p>{% codeblock %}
-$ kill -s USR2 1337
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ kill -s USR2 1337</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Ele vai recarregar o código, e vai reiniciar todos os seus fork assim que eles forem ficando sem conexões ou seja para seus usuários a percepção de downtime será <strong>ZERO!</strong></p>
 
 <p>Abaixo uma conf de exemplo para se usar no Nginx para se conectar a um socket gerado pelo Starman:</p>
 
-<p>{% gist 1126172 %}</p>
+<p><div><script src='https://gist.github.com/1126172.js'></script>
+<noscript><pre><code></code></pre></noscript></div>
+</p>
 
 <p>Bom, basicamente é isso se tiver alguma duvida pergunte nos comentários :)</p>
 
@@ -142,12 +143,7 @@ Você está lendo a Parte 2 sobre "A Busca pelo deploy contínuo" eu recomendo v
 
 <p>Além desses gráficos ajudar o pessoal de Marketing/Vendas vai te ajudar quando entrar alguma funcionalidade nova no site, porque sempre tem um espertão na empresa, e muitas vezes esse espertão é o dono, que vai dizer:</p>
 
-<p>{% blockquote %}
-Acho que depois que você colocou aquela funcionalidade no site, o site está vendendo menos, estou com esse pressentimento.</p>
-
-<ul>
-<li>Espertão
-{% endblockquote %}</li>
+<p><blockquote><p>Acho que depois que você colocou aquela funcionalidade no site, o site está vendendo menos, estou com esse pressentimento.</p></p><p><ul><br/><li>Espertão</p></blockquote></li>
 </ul>
 
 
@@ -194,10 +190,7 @@ Você está lendo a Parte 1 sobre "A Busca pelo deploy contínuo" esse post tem 
 </ul>
 
 
-<p>{% blockquote %}
-Processo é uma reação à estupidez incorporada antes
- &ndash; Clay Shirky
-{% endblockquote %}</p>
+<p><blockquote><p>Processo é uma reação à estupidez incorporada antes<br/> &ndash; Clay Shirky</p></blockquote></p>
 
 <p> Em português claro, esse seria o famoso &ldquo;vai que&hellip;&rdquo; :</p>
 
@@ -223,10 +216,7 @@ Processo é uma reação à estupidez incorporada antes
 
 <p>Mas até agora, eu sou falei de empresinhas pequenas, por mais que elas ganhem algum dinheiro não tem um nome a zelar.</p>
 
-<p>{% blockquote %}
-Quero ver isso funcionar em uma empresa grande!
- &ndash; Cara de processo
-{% endblockquote %}</p>
+<p><blockquote><p>Quero ver isso funcionar em uma empresa grande!<br/> &ndash; Cara de processo</p></blockquote></p>
 
 <p>Funciona, vou te dizer dois exemplos:</p>
 
