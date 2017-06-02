@@ -1,0 +1,127 @@
+---
+title: "FISL 7.0"
+date: "2006-04-19T13:27:00-03:00"
+tags: ["fisl","evento"]
+---
+
+ae pessoal, estou no FISL o Google esta aqui, vou atualizando esse post sempre que possivel e logo mais tem fotos 
+
+Cheguei ontem ao FISL, não postei nada de la porque o telecentro vivia cheio de gente, e a maioria vendo o orkut -_-
+
+Bom, mas eis o meu relato, chegando lá logo na entrada já dava para perceber que o Google patrocinou boa parte do fisl,
+ banners logo na entrada e o crachá estava escrito Google embaixo, a parte de grupo de usuários estava menor que o ano passado,
+ estava bom, rever velhos amigos, e adquirir mais uns novos 
+
+Bom antes de mais nada, esse e o MEU relato do evento, o computador que eu estou digitando está com problemas no assento e eu 
+estou com preguica de arrumar, essa foi minha visão das palestrar, se eu errei alguma coisa, ou entedi mal, adoraria que alguém me
+ mandasse um email dizendo isso lorn dot br at gmail dot com, eu arrumarei o mais rápido possivel.
+
+1a Dia – 19/06
+
+11:00 – Comparando PostgreSQL e MySQL: Desempenho de Aplicações Transacionais
+
+Uma palestra bem interessante, apesar de eu desconfiar dos resultados, hehe, os palestrantes ( Carlos Eduardo Santos, Rilson Oscar do Nascimento )
+ tinham muito conhecimento sobre SGBDs.
+
+O Resultado dessa briga foi que ate 1100 warehouse, eles tinham o mesmo desempenho, acima disso o pgsql foi ganhando exponencialmente do mysql devo 
+lembrar que os 2 estavam “tunados”.
+
+12:00 – The Filesystem namespace past and present
+
+A 1a palestra em inglês que eu vi no evento, boa tambem, o palestrante e um dos desenvolvedores do kernel, e explicou muito bem tudo, 
+o Filesystem namespace quando sair, vai substituir o chroot, porque?
+
+Porque para usuarios diferente eu vou poder ter pastas iguais com conteudos diferente  , deixa eu explicar melhor
+
+no caso do apache
+
+o /var/www/htdocs/ tem todas as paginas do seu servidor, isso hoje em dia estaria em chroot pra poder proteger o sistema em si, com o
+ Filesystem namespace o /var/www/htdocs/ so teria aquivos para o usuario apache, se eu desse um `ls` la como meu usuario, nao iria mostrar nada, interessante nao?
+
+16:00 -The X Community — History and Directions
+
+Essa palestra e o tipo de palestra historica, um dos criadores do X!!, sim, o cara explicou todas historia como tudo comecou, o que aconteceu com o Xfree86 versus X.org,
+bem legal, eu nao sabia mais o X de inicio era um software 100% comercial ai um pessoal de Berkley se nao me engano comecou fazer sua versao do X, baseada na que ja existia,
+logico que o pessoal do comercial nem ligou, encurtando a historia alguns anos depois o X comercial quase faliu, diz o palestrante que ele existe ate hoje, alguem ja ouviu falar dele?
+
+Bom esse dia eu perdi 2 palestras importantes 
+
+Migrando de Oracle para PostgreSQL
+
+DBI-Link: A Universal Database Connector
+
+A 1a foi porque eu perdi o horario quando fui ver ja estava acabando e a segunda, foi porque teve um problema na organizacao e o horario
+ficou mudando, nao sou eu mais todos os perl mongers perderam 
+
+2a Dia – 20/06
+
+10:00 - Communication is Free
+
+Quem deu essa palestra foi o Randal, ele falou dos meios de comunicacao livre, de hoje e de antigamente, desde o email ate USENET, IRC..
+
+11:00 – 13:00
+
+Nesse horario comecou “oficialmente” o YAPC::Brasil ( Yet Another Perl Conference )
+
+A primeira palestra foi sobre Perl6, o novo perl realmente esta muito bom, esta seguindo um novo lema um linguagem para todas as linguagens, 
+hehe isso me lembra LOTR  com ela voce vai poder programar em perl6, e gerar o bytecode em Java, JavaScript, Flash ( fizeram pra brincar ) 
+entrei outras, foras os novos recursos de gramatica, ah, ainda ganhei um livro nessa palestra Perl6 & Parrot.
+
+A Segunda foi do Randal explicando inside-out objects uma coisa meio complicada que eu não entendi muito bem, hehe.
+
+14:00 – Open Source at Google
+
+Essa foi a palestra do Eric. Pollman, basicamente explicando o summer of code uma palestra muito legal que de certo modo me insentivou a participar, 
+o palestrante comentou que no ano passado teve 3 participantes brasileiros 1 deles estava aqui no FISL e inclusive vai palestrar sobre a ferramente 
+que ele fez para o summer of code, parabens ao Adriano Monteiro Marques pelo seu frontend do nmap, vou testa-lo logo que puder, não pude ver a palestra.
+
+15:00 – C Minimal Perfect Hash – hashing large ammounts of data
+
+Essa palestra apesar do titulo em ingles foi em portugues, foi de um dos empregados do google em BH, o pessoal de la e super gente fina e nessa
+ palestra ele explicou como seria uma hash minimamente perfeito, sem “colisoes” ele baseou esse projeto numa tese de um amigo dele bem legal
+
+Logo depois dessa apesar de nao estar na programacao outro cara de BH falou sobre o seu ftpfs, que ele fez em cima da libcurl, bem legal.
+
+18:00 – PL/Perl em Postgresql
+
+Essa palestra foi do David Better, inicialmente seria no YAPC, mais depois foi passada pro Stand do Governo Federal bem legal fazer procedures em Perl 
+para o Postgresql, e ainda poder usar modulos perl nessas procedures.
+
+Depois escrevo dos outros dias e mais detalhes, estou realmente cansado 
+
+3a Dia – 21/06
+
+11:00 - O Portal do Monastério, como se tornar um Monge Perl.
+
+Essa palestra nos surpreendeu, todos os monges falaram “voces viram como lotou a sala?” hehe, uma palestra muito boa, com um visao de todos os principais 
+sites/comunidades de Perl
+
+15:00 -Ferramentas de software livre ou código aberto para bioinformática
+
+Fui ver essa palestra porque e um assunto que me interessa, mais particularmente por causa do Perl, e nao deu outra o palestrante, falou muito de Perl, 
+mas e uma coisa meio complicada principalmente a parte da Biologia, hehe, mas valeu pra conhecer.
+
+16:00 – Software livre no Nintendo DS
+
+Sem comentarios, essas foi uma das melhores palestras do FISL, o palestrante, Ricardo Bittencourt transformou um assunto massantes, em uma coisa engracada 
+contando muitas curiosidades sobre os videogames antigos , deu ate vontade de comprar um Nintendo DS 
+
+18:00 -Deixe o gerenciamento do anti-spam com os usuários
+
+Uma solucao estilo gmail, muito interessantes, pois pode ser implementada por usuario ou por grupo de usuarios, foi explicado muito bem o conceito e o 
+interessante e que do jeito que foi apresentado voce nao precisa usar as mesmas ferramentas do palestrante.
+
+Esse dia perdi a palestra de XUL  , fiquei preocupado com a carona e nao lembrei da palestra
+
+Infelizmente nao pude ficar no ultimo dia, logo nao tenho um relato sobre o “leilao”. 
+
+Nesse meu relato eu nao disse, mesmo porque nao iria lembrar mais as “rodas” formadas na parte de grupo de usuario, as trocas de ideias, foi quase 
+tao bom quanto qualquer palestra, que venha o Conisli, ah! para os amantes de Perl, estao confirmados:
+
+- Larry Wall ( Criado do Perl, arquiteto do Perl6 )
+
+- Audrey Tang ( chefe do desenvolvimento do Pugs/Perl 6 )
+
+E esta prevista a vinda do Theo de Raadt, ja ouviram falar? 
+
+Ate mais.. ( post longo nao?)

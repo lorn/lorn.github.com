@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Talk on lornlab.</title>
+    <link>https://lornlab.org/categories/talk/</link>
+    <description>Recent content in Talk on lornlab.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 03 Dec 2011 10:03:00 -0300</lastBuildDate>
+    
+	<atom:link href="https://lornlab.org/categories/talk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Busca Pelo Deploy Contínuo - Parte 3</title>
+      <link>https://lornlab.org/post/2011-12-03-a-busca-pelo-deploy-continuo-parte-3/</link>
+      <pubDate>Sat, 03 Dec 2011 10:03:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2011-12-03-a-busca-pelo-deploy-continuo-parte-3/</guid>
+      <description>Você está lendo a Parte 3 sobre &#34;A Busca pelo deploy contínuo&#34; eu recomendo você a começar pela Parte 1 e depois ler a Parte 2 se você já o fez, continue ;)  Agora um exemplo de arquitetura para facilitar o uso do deploy continuo usando um Load Balancer.
+Você não precisa de applicances milionários para fazer isso o github, serve 2500 conexões TCP por SEGUNDO usando o ldirectord em uma máquina Xen com 128mb.</description>
+    </item>
+    
+    <item>
+      <title>A Busca Pelo Deploy Contínuo - Parte 1</title>
+      <link>https://lornlab.org/post/2011-12-02-a-busca-pelo-deploy-continuo-parte-1/</link>
+      <pubDate>Fri, 02 Dec 2011 11:23:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2011-12-02-a-busca-pelo-deploy-continuo-parte-1/</guid>
+      <description>Você está lendo a Parte 1 sobre &#34;A Busca pelo deploy contínuo&#34; esse post tem mais duas continuações: Parte 2 e Parte 3.  No dia 05/11 apresentei no YAPC::Brasil uma palestra com o nome &amp;ldquo;Em busca do deploy continuo&amp;rdquo; nesse post vou tentar descrever sobre tudo o que eu falei.
+A busca pelo deploy continuo  View more presentations from Lindolfo Rodrigues Oliveira Neto   Como começar? Infelizmente o principal problema do &amp;ldquo;Deploy Continuo&amp;rdquo; não é técnico e sim cultural, e mudança de cultura é muito mais difícil que mudança de Banco de Dados ou de Linguagem de Programação é enraizado nas fundações da empresa, esses são alguns exemplos culturais:</description>
+    </item>
+    
+    <item>
+      <title>A Busca Pelo Deploy Contínuo - Parte 2</title>
+      <link>https://lornlab.org/post/2011-12-03-a-busca-pelo-deploy-continuo-parte-2/</link>
+      <pubDate>Fri, 02 Dec 2011 11:23:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2011-12-03-a-busca-pelo-deploy-continuo-parte-2/</guid>
+      <description>Você está lendo a Parte 2 sobre &#34;A Busca pelo deploy contínuo&#34; eu recomendo você a começar pela Parte 1 mas se já leu as duas partes, leia a Parte 3.  Agora que você já está convencido que precisa disso, ou não, vou começar a falar de algumas ferramentas/técnicas que você pode usar para te ajudar no processo:
+ SCM - Software Configuration Management
+  Também conhecido como VCS ( Version Control System ), você precisa disso, se você não tem há algo muito errado e se você está usando Subversion, isso não é tão ruim, mas comece a usar git a partir de hoje, sério.</description>
+    </item>
+    
+  </channel>
+</rss>

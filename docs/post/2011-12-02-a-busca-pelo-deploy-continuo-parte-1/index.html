@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.20.6" />
+
+  <title>A Busca Pelo Deploy Contínuo - Parte 1 &middot; lornlab.</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  
+
+  
+
+  <link rel="shortcut icon" href="https://lornlab.org/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>A Busca Pelo Deploy Contínuo - Parte 1</h1>
+  <h2></h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>02 Dec 2011, 11:23</time>
+  </div>
+
+  
+
+  
+
+  
+
+</div>
+
+  
+
+<div id="litlebox">
+Você está lendo a Parte 1 sobre "A Busca pelo deploy contínuo" esse post tem mais duas continuações: <a href="/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/">Parte 2</a> e <a href="/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/">Parte 3.</a>
+</div>
+
+<p>No dia 05/11 apresentei  no <a href="https://www.yapcbrasil.org.br/2011/">YAPC::Brasil</a> uma palestra com o nome
+&ldquo;Em busca do deploy continuo&rdquo; nesse post vou tentar descrever sobre tudo o que eu falei.</p>
+
+<div style="width:425px" id="__ss_10173611"> <strong style="display:block;margin:12px 0 4px"><a href="https://www.slideshare.net/lornlab/a-busca-pelo-deploy-continuo" title="A busca pelo deploy continuo" target="_blank">A busca pelo deploy continuo</a></strong> <iframe src="https://www.slideshare.net/slideshow/embed_code/10173611" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> <div style="padding:5px 0 12px"> View more <a href="https://www.slideshare.net/" target="_blank">presentations</a> from <a href="https://www.slideshare.net/lornlab" target="_blank">Lindolfo Rodrigues Oliveira Neto</a> </div> </div>
+
+<h2 id="como-começar">Como começar?</h2>
+
+<p>Infelizmente o principal problema do &ldquo;Deploy Continuo&rdquo; não é técnico e sim cultural, e mudança de cultura é muito mais difícil que mudança de Banco de Dados ou de Linguagem de Programação é enraizado nas fundações da empresa, esses são alguns exemplos culturais:</p>
+
+<ul>
+<li><p>Falta de confiança</p></li>
+
+<li><p>Processos complicado/complexos para tudo</p></li>
+</ul>
+
+<p>{% blockquote %}
+Processo é uma reação à estupidez incorporada antes
+ - Clay Shirky
+{% endblockquote %}</p>
+
+<p>Em português claro, esse seria o famoso &ldquo;vai que&hellip;&rdquo; :</p>
+
+<ul>
+<li>Vai que alguém faz uma alteração errada e o site fica fora do ar</li>
+<li>Vai que alguém cria uma tabela nova e o site fica fora do ar.</li>
+</ul>
+
+<p>Ainda bem que esse pessoal de processo não conhece o <a href="https://pt.wikipedia.org/wiki/Efeito_borboleta">Efeito Borboleta</a> se não eles iam criar coisas bem piores.</p>
+
+<p>Em Startups esse tipo de coisa não acontece porque, geralmente, se tem pouco recurso e é necessário já pensar em Deploy/Integração continua desde o início, pois você precisa entregar valor para seu usuário para continuar vivo, você não tem uma receita fixa.</p>
+
+<p>Então, se você for esperar a próxima madrugada para subir a funcionalidade que já está pronta, , fica dificil pivotear talvez essa funcionalidade não seja bem vista por seus usuários, eles entenderam errado, então é necessário não só coloca-la rápida em produção como tirar rápido também :)</p>
+
+<p>Imagine demorar 48h para concluir esse fluxo todo, você pode perder usuários preciosos.</p>
+
+<p>O <a href="https://github.com">github.com</a> que é era uma startup e agora, mesmo depois de passar dos 40 funcionários, continua com as mesmas idéias de desenvolvimento baseado em software livre e deploy contínuo.</p>
+
+<p>Caso você queira conhecer como funciona o processo de desenvolvimento/trabalho no github, eu recomendo a lida desse <a href="https://zachholman.com/posts/how-github-works/">post do Zach Holman</a> que é um dos funcionário mais antigos por lá e caso você não queira conhecer :)</p>
+
+<p>Recentemente <a href="https://zachholman.com/talk/how-github-uses-github-to-build-github">ele deu uma palestra</a> falando um pouco mais sobre isso e como se usar o github como plataforma para esse processo ser aplicado em qualquer empresa.</p>
+
+<p>Mas até agora, eu sou falei de empresinhas pequenas, por mais que elas ganhem algum dinheiro não tem um nome a zelar.</p>
+
+<p>{% blockquote %}
+Quero ver isso funcionar em uma empresa grande!
+ - Cara de processo
+{% endblockquote %}</p>
+
+<p>Funciona, vou te dizer dois exemplos:</p>
+
+<ul>
+<li><p>Amazon</p></li>
+
+<li><p>Etsy</p></li>
+</ul>
+
+<p>A <a href="https://amazon.com">Amazon</a> chegou a divulgar em um apresentação na Velocity 2011 que faz um deploy a cada 11.6 segundos e você aí feliz por ter conseguido uma janela mais cedo para fazer seu deploy né?</p>
+
+<p>A <a href="https://etsy.com">Etsy</a>, não é muito famosa aqui no Brasil, e a conheci ela antes de me interessar sobre deploy continuo comprei um adesivo com uma frase de StarWars lá :) eles funcionam como um Mercado Livre para artesões e outras profissões &ldquo;hand-made&rdquo;.</p>
+
+<p>Eles tem a bagatela de 1 bilhão de pageview por mês!</p>
+
+<p>Caso você queira entender como funciona o deploy continuo na Etsy, e como era a vida deles antes do deploy continuo veja essa palestra:</p>
+
+<p><iframe width="560" height="340" src="https://cdn.livestream.com/embed/etsy?layout=4&amp;clip=pla_adbab6e2-c629-4bfe-b1fd-21c898693282&amp;height=340&amp;width=560&amp;autoplay=false" style="border:0;outline:0" frameborder="0" scrolling="no"></iframe><div style="font-size: 11px;padding-top:10px;text-align:center;width:560px">Watch <a href="https://www.livestream.com/?utm_source=lsplayer&amp;utm_medium=embed&amp;utm_campaign=footerlinks" title="live streaming video">live streaming video</a> from <a href="https://www.livestream.com/etsy?utm_source=lsplayer&amp;utm_medium=embed&amp;utm_campaign=footerlinks" title="Watch etsy at livestream.com">etsy</a> at livestream.com</div></p>
+
+<p>Tudo isso começou na Etsy, porque um ex-flickr foi contratado para ser o CTO lá e o flickr foi bem pioneiro nesse negócio de deploy contínuo, você pode ver um pouco mais sobre isso nessa outra palestra:</p>
+
+<p><iframe src="https://blip.tv/play/AYGMoH8C.html" width="480" height="300" frameborder="0" allowfullscreen></iframe><embed type="application/x-shockwave-flash" src="https://a.blip.tv/api.swf#AYGMoH8C" style="display:none"></embed></p>
+
+<h2 id="continua">Continua ..</h2>
+
+<div id="litlebox">
+Você está lendo a Parte 1 sobre "A Busca pelo deploy contínuo" esse post tem mais duas continuações: <a href="/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/">Parte 2</a> e <a href="blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/">Parte 3.</a>
+</div>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://lornlab.org/post/2011-12-03-a-busca-pelo-deploy-continuo-parte-2/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://lornlab.org/post/2011-12-03-a-busca-pelo-deploy-continuo-parte-2/">A Busca Pelo Deploy Contínuo - Parte 2</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://lornlab.org/post/2011-12-03-a-busca-pelo-deploy-continuo-parte-3/">A Busca Pelo Deploy Contínuo - Parte 3</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://lornlab.org/post/2011-12-03-a-busca-pelo-deploy-continuo-parte-3/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+
+</div>
+
+</div>
+</div>
+<script src="https://lornlab.org/js/ui.js"></script>
+
+
+
+
+</body>
+</html>
+

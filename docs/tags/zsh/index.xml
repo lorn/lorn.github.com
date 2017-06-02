@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zsh on lornlab.</title>
+    <link>https://lornlab.org/tags/zsh/</link>
+    <description>Recent content in Zsh on lornlab.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 12 Apr 2011 13:31:00 -0300</lastBuildDate>
+    
+	<atom:link href="https://lornlab.org/tags/zsh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Usando ZSH</title>
+      <link>https://lornlab.org/post/2011-04-12-usando-zsh/</link>
+      <pubDate>Tue, 12 Apr 2011 13:31:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2011-04-12-usando-zsh/</guid>
+      <description>Esses dias re-descobri o zsh, já havia testado a um tempo atrás mas agora foi pra valer :)
+E vou dizer, não há shell melhor :) muito melhor que o Bash
+ O historico do ZSH é compartilhado por TODAS sessões dele, diferente do bash que cada sessão tem seu histórico ( e você tem que ficar procurando onde foi que digitou aquele comando para recuperar ele do histórico ).</description>
+    </item>
+    
+  </channel>
+</rss>

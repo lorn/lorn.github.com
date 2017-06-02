@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on lornlab.</title>
+    <link>https://lornlab.org/tags/linux/</link>
+    <description>Recent content in Linux on lornlab.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 28 Jun 2012 20:45:00 -0300</lastBuildDate>
+    
+	<atom:link href="https://lornlab.org/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Debugging HTTP Request With Netcat</title>
+      <link>https://lornlab.org/post/2012-06-28-debugging-http-request-with-netcat/</link>
+      <pubDate>Thu, 28 Jun 2012 20:45:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2012-06-28-debugging-http-request-with-netcat/</guid>
+      <description>O que fazer quando você precisa usar uma API de terceiros e tudo funciona bem quando você está fazendo seus testes com curl.
+$ curl https://api.github.com/repos/lorn/lwp-curl/commits  Mas quando você vai para sua linguagem botar a mão na massa, dá erro:
+$ curl &amp;quot;https://api.github.com/repos1/lorn/lwp-curl/commits1&amp;quot; { &amp;quot;message&amp;quot;: &amp;quot;Not Found&amp;quot; }  é claro que nem sempre o erro será tão claro, e principalmente quando você está fazendo POST/PUT com arquivos, como debugar?</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Books on lornlab.</title>
+    <link>https://lornlab.org/tags/books/</link>
+    <description>Recent content in Books on lornlab.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 23 Jan 2007 12:11:00 -0300</lastBuildDate>
+    
+	<atom:link href="https://lornlab.org/tags/books/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Livro Minority Report</title>
+      <link>https://lornlab.org/post/2007-01-23-livro-minority-report/</link>
+      <pubDate>Tue, 23 Jan 2007 12:11:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2007-01-23-livro-minority-report/</guid>
+      <description>Se você está pensando em comprar este livro para conhecer mais detalhes sobre o filme, coisas escondidas, esquece.
+{% img center http://media.tumblr.com/tumblr_ljitkhfY8P1qhdaqj.jpg %}
+O livro é bem diferente do filme, tem os precogs e o personagem do Tom Cruise, mais o resto é bem diferente.
+O livro tem vários contos, o 1a é o Minority Report tem apenas 60 paginas (!!), e não é um dos melhores do livro, o melhor na minha opinião é o conto que originou o filme &amp;ldquo;Vingador do futuro&amp;rdquo; lembra?</description>
+    </item>
+    
+  </channel>
+</rss>

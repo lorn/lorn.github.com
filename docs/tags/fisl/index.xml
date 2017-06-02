@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fisl on lornlab.</title>
+    <link>https://lornlab.org/tags/fisl/</link>
+    <description>Recent content in Fisl on lornlab.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 20 Jan 2009 15:08:00 -0300</lastBuildDate>
+    
+	<atom:link href="https://lornlab.org/tags/fisl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Perl Para Sysadmins E DBAs</title>
+      <link>https://lornlab.org/post/2009-01-20-perl-para-sysadmins-e-dbas/</link>
+      <pubDate>Tue, 20 Jan 2009 15:08:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2009-01-20-perl-para-sysadmins-e-dbas/</guid>
+      <description>Rau!
+Depois de séculos sem posts, apenas um post para linkar para o material da minha palestra no fisl ( que não foi das melhores porque não terminei a palestra antes e fiquei BEM doente em POA :/ )
+https://lornlab.org/palestra_fisl/
+Agradecimentos para o Claudemir Ivan, que disse que não estava conseguindo acessar os arquivos.
+Falow, algum dia meu blog em Catalyst sai
+Update: O problema era que o Dreamhost estava interpretando os .</description>
+    </item>
+    
+    <item>
+      <title>FISL 7.0</title>
+      <link>https://lornlab.org/post/2006-04-19-fisl-7-0/</link>
+      <pubDate>Wed, 19 Apr 2006 13:27:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2006-04-19-fisl-7-0/</guid>
+      <description>ae pessoal, estou no FISL o Google esta aqui, vou atualizando esse post sempre que possivel e logo mais tem fotos
+Cheguei ontem ao FISL, não postei nada de la porque o telecentro vivia cheio de gente, e a maioria vendo o orkut -_-
+Bom, mas eis o meu relato, chegando lá logo na entrada já dava para perceber que o Google patrocinou boa parte do fisl, banners logo na entrada e o crachá estava escrito Google embaixo, a parte de grupo de usuários estava menor que o ano passado, estava bom, rever velhos amigos, e adquirir mais uns novos</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Workspace on lornlab.</title>
+    <link>https://lornlab.org/tags/workspace/</link>
+    <description>Recent content in Workspace on lornlab.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 12 Apr 2011 14:59:00 -0300</lastBuildDate>
+    
+	<atom:link href="https://lornlab.org/tags/workspace/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Meu Ambiente De Trabalho Em N Itens</title>
+      <link>https://lornlab.org/post/2011-04-12-meu-ambiente-de-trabalho-em-n-itens/</link>
+      <pubDate>Tue, 12 Apr 2011 14:59:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2011-04-12-meu-ambiente-de-trabalho-em-n-itens/</guid>
+      <description>O peka me convidou para a correntinha do bem, e ainda me intimou pelo twitter :/ aqui está como é meu ambiente de trabalho.
+ ZSH, o cara é tão bom que tem um post só para ele :)
+ iTerm2 - Eu sempre usei o Terminal.App padrão do MacOSX, há um tempo atrás ouvi falar do iTerm, mas dado a minha pessima organização, acabei me esquecendo. Por causa dessa foto no twitter/facebook recebi a dica do iTerm2 e vou dizer, deixa o Terminal.</description>
+    </item>
+    
+    <item>
+      <title>Usando ZSH</title>
+      <link>https://lornlab.org/post/2011-04-12-usando-zsh/</link>
+      <pubDate>Tue, 12 Apr 2011 13:31:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2011-04-12-usando-zsh/</guid>
+      <description>Esses dias re-descobri o zsh, já havia testado a um tempo atrás mas agora foi pra valer :)
+E vou dizer, não há shell melhor :) muito melhor que o Bash
+ O historico do ZSH é compartilhado por TODAS sessões dele, diferente do bash que cada sessão tem seu histórico ( e você tem que ficar procurando onde foi que digitou aquele comando para recuperar ele do histórico ).</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dev on lornlab.</title>
+    <link>https://lornlab.org/tags/dev/</link>
+    <description>Recent content in Dev on lornlab.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 28 Jun 2012 20:45:00 -0300</lastBuildDate>
+    
+	<atom:link href="https://lornlab.org/tags/dev/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Debugging HTTP Request With Netcat</title>
+      <link>https://lornlab.org/post/2012-06-28-debugging-http-request-with-netcat/</link>
+      <pubDate>Thu, 28 Jun 2012 20:45:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2012-06-28-debugging-http-request-with-netcat/</guid>
+      <description>O que fazer quando você precisa usar uma API de terceiros e tudo funciona bem quando você está fazendo seus testes com curl.
+$ curl https://api.github.com/repos/lorn/lwp-curl/commits  Mas quando você vai para sua linguagem botar a mão na massa, dá erro:
+$ curl &amp;quot;https://api.github.com/repos1/lorn/lwp-curl/commits1&amp;quot; { &amp;quot;message&amp;quot;: &amp;quot;Not Found&amp;quot; }  é claro que nem sempre o erro será tão claro, e principalmente quando você está fazendo POST/PUT com arquivos, como debugar?</description>
+    </item>
+    
+    <item>
+      <title>Hackers Que Você Deveria Conhecer (1): Brad Fitzpatrick</title>
+      <link>https://lornlab.org/post/2011-05-17-hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick/</link>
+      <pubDate>Tue, 17 May 2011 22:45:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2011-05-17-hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick/</guid>
+      <description>Esta série de posts é baseada na idéia do site Papodehomem que tem uma série parecida chamada &amp;ldquo;Homens que você devia conhecer&amp;rdquo;.
+A ideia é falar de hackers em geral, tipo algum dia pode ter uma história de um cortador de lenha que fez uma mesa só com seu machado por exemplo :) Esse é um exemplo clássico de hacker.
+{% img center http://media.tumblr.com/tumblr_ljiu9qSdTJ1qhdaqj.png %}
+Brad Fitzpatrick é um dos muitos hackers programadores que você deveria conhecer ou ao menos saber o que ele já fez.</description>
+    </item>
+    
+    <item>
+      <title>Meu Ambiente De Trabalho Em N Itens</title>
+      <link>https://lornlab.org/post/2011-04-12-meu-ambiente-de-trabalho-em-n-itens/</link>
+      <pubDate>Tue, 12 Apr 2011 14:59:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2011-04-12-meu-ambiente-de-trabalho-em-n-itens/</guid>
+      <description>O peka me convidou para a correntinha do bem, e ainda me intimou pelo twitter :/ aqui está como é meu ambiente de trabalho.
+ ZSH, o cara é tão bom que tem um post só para ele :)
+ iTerm2 - Eu sempre usei o Terminal.App padrão do MacOSX, há um tempo atrás ouvi falar do iTerm, mas dado a minha pessima organização, acabei me esquecendo. Por causa dessa foto no twitter/facebook recebi a dica do iTerm2 e vou dizer, deixa o Terminal.</description>
+    </item>
+    
+    <item>
+      <title>Usando ZSH</title>
+      <link>https://lornlab.org/post/2011-04-12-usando-zsh/</link>
+      <pubDate>Tue, 12 Apr 2011 13:31:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2011-04-12-usando-zsh/</guid>
+      <description>Esses dias re-descobri o zsh, já havia testado a um tempo atrás mas agora foi pra valer :)
+E vou dizer, não há shell melhor :) muito melhor que o Bash
+ O historico do ZSH é compartilhado por TODAS sessões dele, diferente do bash que cada sessão tem seu histórico ( e você tem que ficar procurando onde foi que digitou aquele comando para recuperar ele do histórico ).</description>
+    </item>
+    
+  </channel>
+</rss>

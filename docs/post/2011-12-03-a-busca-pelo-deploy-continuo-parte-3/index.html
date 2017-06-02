@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.20.6" />
+
+  <title>A Busca Pelo Deploy Contínuo - Parte 3 &middot; lornlab.</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  
+
+  
+
+  <link rel="shortcut icon" href="https://lornlab.org/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>A Busca Pelo Deploy Contínuo - Parte 3</h1>
+  <h2></h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>03 Dec 2011, 10:03</time>
+  </div>
+
+  
+
+  
+
+  
+
+</div>
+
+  
+
+<div id="litlebox">
+Você está lendo a Parte 3 sobre "A Busca pelo deploy contínuo" eu recomendo você a começar pela <a href="/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/">Parte 1</a> e depois ler a <a href="/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/">Parte 2</a> se você já o fez, continue ;)
+</div>
+
+<p>Agora um exemplo de arquitetura para facilitar o uso do deploy continuo usando um <a href="http://en.wikipedia.org/wiki/Load_balancing_(computing)">Load Balancer</a>.</p>
+
+<p>Você não precisa de applicances milionários para fazer isso <a href="http://www.anchor.com.au/blog/2009/10/load-balancing-at-github-why-ldirectord/">o github</a>, serve 2500 conexões TCP por <strong>SEGUNDO</strong> usando o <a href="http://horms.net/projects/ldirectord/">ldirectord</a> em uma máquina Xen com 128mb.</p>
+
+<p>Com um Load Balance, você consegue testar funcionalidades novas no site para uma pequena porção dos usuários do site e usar os gráficos ( que você já tem lógico ) para ver se ela é boa ou não.</p>
+
+<p>Como fazer isso? faça o deploy para apenas 1 das &lsquo;n&rsquo; máquinas que você tem atrás do Load Balancer e redirecione, 5% ~ 10% das suas conexões dos seus usuários para essa máquina, o resto os gráficos que você preparou da sua aplicação irão te dizer ;)</p>
+
+<p>Falando um pouco mais de arquitetura, e especificamente de Perl, eu gosto bastante de usar o Nginx + Starman a comunicação é feita via Unix Socket o Starman foi baseado no Unicorn do Ruby, ele funciona muito bem e&hellip;</p>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/dFUlAQZB9Ng" frameborder="0" allowfullscreen></iframe>
+
+<p>&ldquo;It&rsquo;s a unix system I known this!&rdquo; arquiteturas unix, forks, sockets e afins funcionam muito bem :)</p>
+
+<p>O seu deploy consistiria em copiar os arquivos novos e mandar um sinal de reset para o pid do Starman:</p>
+
+<p>{% codeblock %}
+$ kill -s USR2 1337
+{% endcodeblock %}</p>
+
+<p>Ele vai recarregar o código, e vai reiniciar todos os seus fork assim que eles forem ficando sem conexões ou seja para seus usuários a percepção de downtime será <strong>ZERO!</strong></p>
+
+<p>Abaixo uma conf de exemplo para se usar no Nginx para se conectar a um socket gerado pelo Starman:</p>
+
+<p>{% gist 1126172 %}</p>
+
+<p>Bom, basicamente é isso se tiver alguma duvida pergunte nos comentários :)</p>
+
+<h2 id="bibliografia">Bibliografia</h2>
+
+<p>Alguns slides foram copiados dessa palestra da etsy:</p>
+
+<div style="width:425px" id="__ss_8727786"> <strong style="display:block;margin:12px 0 4px"><a href="https://www.slideshare.net/OReillyOSCON/put-a-button-on-it-removing-barriers-to-going-fast" title="Put a Button on It: Removing Barriers to Going Fast" target="_blank">Put a Button on It: Removing Barriers to Going Fast</a></strong> <iframe src="https://www.slideshare.net/slideshow/embed_code/8727786" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> <div style="padding:5px 0 12px"> View more presentations from <a href="https://www.slideshare.net/OReillyOSCON" target="_blank">OSCON </a> </div> </div>
+
+<p>E outros foram copiados dessa palestra da AOE Media</p>
+
+<div style="width:425px" id="__ss_5345889"> <strong style="display:block;margin:12px 0 4px"><a href="https://www.slideshare.net/typo3media/continuous-deployment-5345889" title="Continuous deployment" target="_blank">Continuous deployment</a></strong> <iframe src="https://www.slideshare.net/slideshow/embed_code/5345889" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> <div style="padding:5px 0 12px"> View more <a href="https://www.slideshare.net/" target="_blank">presentations</a> from <a href="https://www.slideshare.net/typo3media" target="_blank">Daniel</a> </div> </div>
+
+<p>Obrigado :) qualquer dúvida estou a disposição nos comentários.</p>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://lornlab.org/post/2011-12-02-a-busca-pelo-deploy-continuo-parte-1/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://lornlab.org/post/2011-12-02-a-busca-pelo-deploy-continuo-parte-1/">A Busca Pelo Deploy Contínuo - Parte 1</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://lornlab.org/post/2012-06-28-debugging-http-request-with-netcat/">Debugging HTTP Request With Netcat</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://lornlab.org/post/2012-06-28-debugging-http-request-with-netcat/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+
+</div>
+
+</div>
+</div>
+<script src="https://lornlab.org/js/ui.js"></script>
+
+
+
+
+</body>
+</html>
+

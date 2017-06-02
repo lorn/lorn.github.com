@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Music on lornlab.</title>
+    <link>https://lornlab.org/tags/music/</link>
+    <description>Recent content in Music on lornlab.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Fri, 15 Apr 2011 23:59:00 -0300</lastBuildDate>
+    
+	<atom:link href="https://lornlab.org/tags/music/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Como Funciona a Escala Pentatonica</title>
+      <link>https://lornlab.org/post/2011-04-15-como-funciona-a-escala-pentatonica/</link>
+      <pubDate>Fri, 15 Apr 2011 23:59:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2011-04-15-como-funciona-a-escala-pentatonica/</guid>
+      <description>World Science Festival 2009: Bobby McFerrin Demonstrates the Power of the Pentatonic Scale from World Science Festival on Vimeo.
+Como funciona a escala pentatonica e sua ligação com o cérebro</description>
+    </item>
+    
+  </channel>
+</rss>

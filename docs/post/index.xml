@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on lornlab.</title>
+    <link>https://lornlab.org/post/</link>
+    <description>Recent content in Posts on lornlab.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 28 Jun 2012 20:45:00 -0300</lastBuildDate>
+    
+	<atom:link href="https://lornlab.org/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Debugging HTTP Request With Netcat</title>
+      <link>https://lornlab.org/post/2012-06-28-debugging-http-request-with-netcat/</link>
+      <pubDate>Thu, 28 Jun 2012 20:45:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2012-06-28-debugging-http-request-with-netcat/</guid>
+      <description>O que fazer quando você precisa usar uma API de terceiros e tudo funciona bem quando você está fazendo seus testes com curl.
+$ curl https://api.github.com/repos/lorn/lwp-curl/commits  Mas quando você vai para sua linguagem botar a mão na massa, dá erro:
+$ curl &amp;quot;https://api.github.com/repos1/lorn/lwp-curl/commits1&amp;quot; { &amp;quot;message&amp;quot;: &amp;quot;Not Found&amp;quot; }  é claro que nem sempre o erro será tão claro, e principalmente quando você está fazendo POST/PUT com arquivos, como debugar?</description>
+    </item>
+    
+    <item>
+      <title>A Busca Pelo Deploy Contínuo - Parte 3</title>
+      <link>https://lornlab.org/post/2011-12-03-a-busca-pelo-deploy-continuo-parte-3/</link>
+      <pubDate>Sat, 03 Dec 2011 10:03:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2011-12-03-a-busca-pelo-deploy-continuo-parte-3/</guid>
+      <description>Você está lendo a Parte 3 sobre &#34;A Busca pelo deploy contínuo&#34; eu recomendo você a começar pela Parte 1 e depois ler a Parte 2 se você já o fez, continue ;)  Agora um exemplo de arquitetura para facilitar o uso do deploy continuo usando um Load Balancer.
+Você não precisa de applicances milionários para fazer isso o github, serve 2500 conexões TCP por SEGUNDO usando o ldirectord em uma máquina Xen com 128mb.</description>
+    </item>
+    
+    <item>
+      <title>A Busca Pelo Deploy Contínuo - Parte 1</title>
+      <link>https://lornlab.org/post/2011-12-02-a-busca-pelo-deploy-continuo-parte-1/</link>
+      <pubDate>Fri, 02 Dec 2011 11:23:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2011-12-02-a-busca-pelo-deploy-continuo-parte-1/</guid>
+      <description>Você está lendo a Parte 1 sobre &#34;A Busca pelo deploy contínuo&#34; esse post tem mais duas continuações: Parte 2 e Parte 3.  No dia 05/11 apresentei no YAPC::Brasil uma palestra com o nome &amp;ldquo;Em busca do deploy continuo&amp;rdquo; nesse post vou tentar descrever sobre tudo o que eu falei.
+A busca pelo deploy continuo  View more presentations from Lindolfo Rodrigues Oliveira Neto   Como começar? Infelizmente o principal problema do &amp;ldquo;Deploy Continuo&amp;rdquo; não é técnico e sim cultural, e mudança de cultura é muito mais difícil que mudança de Banco de Dados ou de Linguagem de Programação é enraizado nas fundações da empresa, esses são alguns exemplos culturais:</description>
+    </item>
+    
+    <item>
+      <title>A Busca Pelo Deploy Contínuo - Parte 2</title>
+      <link>https://lornlab.org/post/2011-12-03-a-busca-pelo-deploy-continuo-parte-2/</link>
+      <pubDate>Fri, 02 Dec 2011 11:23:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2011-12-03-a-busca-pelo-deploy-continuo-parte-2/</guid>
+      <description>Você está lendo a Parte 2 sobre &#34;A Busca pelo deploy contínuo&#34; eu recomendo você a começar pela Parte 1 mas se já leu as duas partes, leia a Parte 3.  Agora que você já está convencido que precisa disso, ou não, vou começar a falar de algumas ferramentas/técnicas que você pode usar para te ajudar no processo:
+ SCM - Software Configuration Management
+  Também conhecido como VCS ( Version Control System ), você precisa disso, se você não tem há algo muito errado e se você está usando Subversion, isso não é tão ruim, mas comece a usar git a partir de hoje, sério.</description>
+    </item>
+    
+    <item>
+      <title>Lá E Devolta Outra Vez</title>
+      <link>https://lornlab.org/post/2011-09-26-la-e-devolta-outra-vez/</link>
+      <pubDate>Mon, 26 Sep 2011 15:05:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2011-09-26-la-e-devolta-outra-vez/</guid>
+      <description>Depois de muito pensar, e a preguiça dominar, resolvi continuar no bom e velho wordpress até fiz o tão prometido blog em catalyst, mas a parte de design css/html e afins deu um trabalhinho e não está do jeito que eu quero e o wordpress tem tantos temas legais. Pelo menos aprendi bastante fazendo o blog, inclusive tem um branch ativo agora porque estou migrando a parte de persistencia para CouchDB.</description>
+    </item>
+    
+    <item>
+      <title>A Biblioteca Pessoal De Neil Gaiman</title>
+      <link>https://lornlab.org/post/2011-05-19-a-biblioteca-pessoal-de-neil-gaiman/</link>
+      <pubDate>Thu, 19 May 2011 00:03:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2011-05-19-a-biblioteca-pessoal-de-neil-gaiman/</guid>
+      <description>Quando vi esse site pela primeira vez, e como eu já tinha lido alguma entrevista do Donald Knuth em que ele falava que tinha a mesma poltrona desde 1960 e só trocava o forro externo, eu percebi que precisava comprar uma poltrona para ler livros :)
+Ainda estou a procura, aquelas que tem na Starbucks é tudo importada :/ estou procurando algum clone brasileiro delas, mas acho que não vai ser fácil achar.</description>
+    </item>
+    
+    <item>
+      <title>Hackers Que Você Deveria Conhecer (1): Brad Fitzpatrick</title>
+      <link>https://lornlab.org/post/2011-05-17-hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick/</link>
+      <pubDate>Tue, 17 May 2011 22:45:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2011-05-17-hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick/</guid>
+      <description>Esta série de posts é baseada na idéia do site Papodehomem que tem uma série parecida chamada &amp;ldquo;Homens que você devia conhecer&amp;rdquo;.
+A ideia é falar de hackers em geral, tipo algum dia pode ter uma história de um cortador de lenha que fez uma mesa só com seu machado por exemplo :) Esse é um exemplo clássico de hacker.
+{% img center http://media.tumblr.com/tumblr_ljiu9qSdTJ1qhdaqj.png %}
+Brad Fitzpatrick é um dos muitos hackers programadores que você deveria conhecer ou ao menos saber o que ele já fez.</description>
+    </item>
+    
+    <item>
+      <title>Como Funciona a Escala Pentatonica</title>
+      <link>https://lornlab.org/post/2011-04-15-como-funciona-a-escala-pentatonica/</link>
+      <pubDate>Fri, 15 Apr 2011 23:59:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2011-04-15-como-funciona-a-escala-pentatonica/</guid>
+      <description>World Science Festival 2009: Bobby McFerrin Demonstrates the Power of the Pentatonic Scale from World Science Festival on Vimeo.
+Como funciona a escala pentatonica e sua ligação com o cérebro</description>
+    </item>
+    
+    <item>
+      <title>Meu Ambiente De Trabalho Em N Itens</title>
+      <link>https://lornlab.org/post/2011-04-12-meu-ambiente-de-trabalho-em-n-itens/</link>
+      <pubDate>Tue, 12 Apr 2011 14:59:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2011-04-12-meu-ambiente-de-trabalho-em-n-itens/</guid>
+      <description>O peka me convidou para a correntinha do bem, e ainda me intimou pelo twitter :/ aqui está como é meu ambiente de trabalho.
+ ZSH, o cara é tão bom que tem um post só para ele :)
+ iTerm2 - Eu sempre usei o Terminal.App padrão do MacOSX, há um tempo atrás ouvi falar do iTerm, mas dado a minha pessima organização, acabei me esquecendo. Por causa dessa foto no twitter/facebook recebi a dica do iTerm2 e vou dizer, deixa o Terminal.</description>
+    </item>
+    
+    <item>
+      <title>Usando ZSH</title>
+      <link>https://lornlab.org/post/2011-04-12-usando-zsh/</link>
+      <pubDate>Tue, 12 Apr 2011 13:31:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2011-04-12-usando-zsh/</guid>
+      <description>Esses dias re-descobri o zsh, já havia testado a um tempo atrás mas agora foi pra valer :)
+E vou dizer, não há shell melhor :) muito melhor que o Bash
+ O historico do ZSH é compartilhado por TODAS sessões dele, diferente do bash que cada sessão tem seu histórico ( e você tem que ficar procurando onde foi que digitou aquele comando para recuperar ele do histórico ).</description>
+    </item>
+    
+    <item>
+      <title>Perl Para Sysadmins E DBAs</title>
+      <link>https://lornlab.org/post/2009-01-20-perl-para-sysadmins-e-dbas/</link>
+      <pubDate>Tue, 20 Jan 2009 15:08:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2009-01-20-perl-para-sysadmins-e-dbas/</guid>
+      <description>Rau!
+Depois de séculos sem posts, apenas um post para linkar para o material da minha palestra no fisl ( que não foi das melhores porque não terminei a palestra antes e fiquei BEM doente em POA :/ )
+https://lornlab.org/palestra_fisl/
+Agradecimentos para o Claudemir Ivan, que disse que não estava conseguindo acessar os arquivos.
+Falow, algum dia meu blog em Catalyst sai
+Update: O problema era que o Dreamhost estava interpretando os .</description>
+    </item>
+    
+    <item>
+      <title>Sandman - Casa De Bonecas</title>
+      <link>https://lornlab.org/post/2007-02-14-sandman-casa-de-bonecas/</link>
+      <pubDate>Sat, 17 Feb 2007 13:06:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2007-02-14-sandman-casa-de-bonecas/</guid>
+      <description>Como Sandman é tão famoso e eu nunca tinha lido, não resisti, e comecei a ler a queria começar pelo 1o mas a edição está esgotada (!!) então comecei pelo 2o, Casa de Bonecas pelo que percebi não há nenhum problema com isso você não perde nada.
+{% img center http://media.tumblr.com/tumblr_ljitlep23m1qhdaqj.jpg %}
+O titulo é estranho e você só entende o porque dele nas ultimas 10 páginas.
+Sandman é muito legal, eu nunca tinha lido nada do Neil Gaiman ok, outro erro, mas depois de Sandman, fiquei animado a comprar alguns livros dele, agora preciso comprar outro “livro” de Sandman mas, só 1 por mês então, o próximo só no mês que vem é muito caro.</description>
+    </item>
+    
+    <item>
+      <title>Livro Minority Report</title>
+      <link>https://lornlab.org/post/2007-01-23-livro-minority-report/</link>
+      <pubDate>Tue, 23 Jan 2007 12:11:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2007-01-23-livro-minority-report/</guid>
+      <description>Se você está pensando em comprar este livro para conhecer mais detalhes sobre o filme, coisas escondidas, esquece.
+{% img center http://media.tumblr.com/tumblr_ljitkhfY8P1qhdaqj.jpg %}
+O livro é bem diferente do filme, tem os precogs e o personagem do Tom Cruise, mais o resto é bem diferente.
+O livro tem vários contos, o 1a é o Minority Report tem apenas 60 paginas (!!), e não é um dos melhores do livro, o melhor na minha opinião é o conto que originou o filme &amp;ldquo;Vingador do futuro&amp;rdquo; lembra?</description>
+    </item>
+    
+    <item>
+      <title>Relato Conilsi - YAPC::SA::2006</title>
+      <link>https://lornlab.org/post/2006-11-21-relato-conilsi-yapc-sa-2006/</link>
+      <pubDate>Tue, 21 Nov 2006 13:21:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2006-11-21-relato-conilsi-yapc-sa-2006/</guid>
+      <description>O Conisli desse ano, certamente foi o melhor que eu participei, e como já disse para alguns amigos monges para o Perl, foi melhor que o Fisl
+Infelizmente não podemos contar com a presença do Larry Wall, ele ficou doente aos 45 do 2a tempo e não pode vir, mas a Hacker Audrey Tang deu conta do recado, dando palestrar muito boas.
+PS: vocês precisam ver ela programando, é meio insano, as vezes parece que ela está escrevendo um texto normal, sem contar que ela digita muito rápido.</description>
+    </item>
+    
+    <item>
+      <title>FISL 7.0</title>
+      <link>https://lornlab.org/post/2006-04-19-fisl-7-0/</link>
+      <pubDate>Wed, 19 Apr 2006 13:27:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2006-04-19-fisl-7-0/</guid>
+      <description>ae pessoal, estou no FISL o Google esta aqui, vou atualizando esse post sempre que possivel e logo mais tem fotos
+Cheguei ontem ao FISL, não postei nada de la porque o telecentro vivia cheio de gente, e a maioria vendo o orkut -_-
+Bom, mas eis o meu relato, chegando lá logo na entrada já dava para perceber que o Google patrocinou boa parte do fisl, banners logo na entrada e o crachá estava escrito Google embaixo, a parte de grupo de usuários estava menor que o ano passado, estava bom, rever velhos amigos, e adquirir mais uns novos</description>
+    </item>
+    
+  </channel>
+</rss>

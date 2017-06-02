@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on lornlab.</title>
+    <link>https://lornlab.org/categories/</link>
+    <description>Recent content in Categories on lornlab.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    
+	<atom:link href="https://lornlab.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Deploy</title>
+      <link>https://lornlab.org/categories/deploy/</link>
+      <pubDate>Sat, 03 Dec 2011 10:03:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/categories/deploy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Livros</title>
+      <link>https://lornlab.org/categories/livros/</link>
+      <pubDate>Thu, 19 May 2011 00:03:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/categories/livros/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Perl</title>
+      <link>https://lornlab.org/categories/perl/</link>
+      <pubDate>Sat, 03 Dec 2011 10:03:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/categories/perl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Talk</title>
+      <link>https://lornlab.org/categories/talk/</link>
+      <pubDate>Sat, 03 Dec 2011 10:03:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/categories/talk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Workspace</title>
+      <link>https://lornlab.org/categories/workspace/</link>
+      <pubDate>Thu, 19 May 2011 00:03:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/categories/workspace/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Yapc</title>
+      <link>https://lornlab.org/categories/yapc/</link>
+      <pubDate>Sat, 03 Dec 2011 10:03:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/categories/yapc/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

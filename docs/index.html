@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blog Description">
+  <meta name="generator" content="Hugo 0.20.6" />
+
+  <title>lornlab.</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  
+  <link rel="alternate" type="application/rss+xml" title="lornlab." href="https://lornlab.org/index.xml" />
+  
+
+  
+
+  <link rel="shortcut icon" href="https://lornlab.org/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://lornlab.org/index.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>lornlab.</h1>
+  <h2></h2>
+</div>
+
+<div class="content">
+  
+    <article>
+  <header>
+    <h2><a href="https://lornlab.org/post/2012-06-28-debugging-http-request-with-netcat/">Debugging HTTP Request With Netcat</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>28 Jun 2012, 20:45</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://lornlab.org/tags/linux">linux</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://lornlab.org/tags/dev">dev</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  O que fazer quando você precisa usar uma API de terceiros e tudo funciona bem quando você está fazendo seus testes com curl.
+$ curl https://api.github.com/repos/lorn/lwp-curl/commits  Mas quando você vai para sua linguagem botar a mão na massa, dá erro:
+$ curl &quot;https://api.github.com/repos1/lorn/lwp-curl/commits1&quot; { &quot;message&quot;: &quot;Not Found&quot; }  é claro que nem sempre o erro será tão claro, e principalmente quando você está fazendo POST/PUT com arquivos, como debugar?
+  </p>
+
+  
+  <footer>
+    <a href="/post/2012-06-28-debugging-http-request-with-netcat/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://lornlab.org/post/2011-12-03-a-busca-pelo-deploy-continuo-parte-3/">A Busca Pelo Deploy Contínuo - Parte 3</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>03 Dec 2011, 10:03</time>
+  </div>
+
+  
+
+  
+
+  
+
+</div>
+
+  </header>
+
+  <p>
+  Você está lendo a Parte 3 sobre "A Busca pelo deploy contínuo" eu recomendo você a começar pela Parte 1 e depois ler a Parte 2 se você já o fez, continue ;)  Agora um exemplo de arquitetura para facilitar o uso do deploy continuo usando um Load Balancer.
+Você não precisa de applicances milionários para fazer isso o github, serve 2500 conexões TCP por SEGUNDO usando o ldirectord em uma máquina Xen com 128mb.
+  </p>
+
+  
+  <footer>
+    <a href="/post/2011-12-03-a-busca-pelo-deploy-continuo-parte-3/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://lornlab.org/post/2011-12-02-a-busca-pelo-deploy-continuo-parte-1/">A Busca Pelo Deploy Contínuo - Parte 1</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>02 Dec 2011, 11:23</time>
+  </div>
+
+  
+
+  
+
+  
+
+</div>
+
+  </header>
+
+  <p>
+  Você está lendo a Parte 1 sobre "A Busca pelo deploy contínuo" esse post tem mais duas continuações: Parte 2 e Parte 3.  No dia 05/11 apresentei no YAPC::Brasil uma palestra com o nome &ldquo;Em busca do deploy continuo&rdquo; nesse post vou tentar descrever sobre tudo o que eu falei.
+A busca pelo deploy continuo  View more presentations from Lindolfo Rodrigues Oliveira Neto   Como começar? Infelizmente o principal problema do &ldquo;Deploy Continuo&rdquo; não é técnico e sim cultural, e mudança de cultura é muito mais difícil que mudança de Banco de Dados ou de Linguagem de Programação é enraizado nas fundações da empresa, esses são alguns exemplos culturais:
+  </p>
+
+  
+  <footer>
+    <a href="/post/2011-12-02-a-busca-pelo-deploy-continuo-parte-1/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://lornlab.org/post/2011-12-03-a-busca-pelo-deploy-continuo-parte-2/">A Busca Pelo Deploy Contínuo - Parte 2</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>02 Dec 2011, 11:23</time>
+  </div>
+
+  
+
+  
+
+  
+
+</div>
+
+  </header>
+
+  <p>
+  Você está lendo a Parte 2 sobre "A Busca pelo deploy contínuo" eu recomendo você a começar pela Parte 1 mas se já leu as duas partes, leia a Parte 3.  Agora que você já está convencido que precisa disso, ou não, vou começar a falar de algumas ferramentas/técnicas que você pode usar para te ajudar no processo:
+ SCM - Software Configuration Management
+  Também conhecido como VCS ( Version Control System ), você precisa disso, se você não tem há algo muito errado e se você está usando Subversion, isso não é tão ruim, mas comece a usar git a partir de hoje, sério.
+  </p>
+
+  
+  <footer>
+    <a href="/post/2011-12-03-a-busca-pelo-deploy-continuo-parte-2/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://lornlab.org/post/2011-09-26-la-e-devolta-outra-vez/">Lá E Devolta Outra Vez</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>26 Sep 2011, 15:05</time>
+  </div>
+
+  
+
+  
+
+  
+
+</div>
+
+  </header>
+
+  <p>
+  Depois de muito pensar, e a preguiça dominar, resolvi continuar no bom e velho wordpress até fiz o tão prometido blog em catalyst, mas a parte de design css/html e afins deu um trabalhinho e não está do jeito que eu quero e o wordpress tem tantos temas legais. Pelo menos aprendi bastante fazendo o blog, inclusive tem um branch ativo agora porque estou migrando a parte de persistencia para CouchDB.
+  </p>
+
+  
+  <footer>
+    <a href="/post/2011-09-26-la-e-devolta-outra-vez/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://lornlab.org/post/2011-05-19-a-biblioteca-pessoal-de-neil-gaiman/">A Biblioteca Pessoal De Neil Gaiman</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>19 May 2011, 00:03</time>
+  </div>
+
+  
+
+  
+
+  
+
+</div>
+
+  </header>
+
+  <p>
+  Quando vi esse site pela primeira vez, e como eu já tinha lido alguma entrevista do Donald Knuth em que ele falava que tinha a mesma poltrona desde 1960 e só trocava o forro externo, eu percebi que precisava comprar uma poltrona para ler livros :)
+Ainda estou a procura, aquelas que tem na Starbucks é tudo importada :/ estou procurando algum clone brasileiro delas, mas acho que não vai ser fácil achar.
+  </p>
+
+  
+  <footer>
+    <a href="/post/2011-05-19-a-biblioteca-pessoal-de-neil-gaiman/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://lornlab.org/post/2011-05-17-hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick/">Hackers Que Você Deveria Conhecer (1): Brad Fitzpatrick</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>17 May 2011, 22:45</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://lornlab.org/tags/dev">dev</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://lornlab.org/tags/perl">perl</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://lornlab.org/tags/hackers">hackers</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  Esta série de posts é baseada na idéia do site Papodehomem que tem uma série parecida chamada &ldquo;Homens que você devia conhecer&rdquo;.
+A ideia é falar de hackers em geral, tipo algum dia pode ter uma história de um cortador de lenha que fez uma mesa só com seu machado por exemplo :) Esse é um exemplo clássico de hacker.
+{% img center http://media.tumblr.com/tumblr_ljiu9qSdTJ1qhdaqj.png %}
+Brad Fitzpatrick é um dos muitos hackers programadores que você deveria conhecer ou ao menos saber o que ele já fez.
+  </p>
+
+  
+  <footer>
+    <a href="/post/2011-05-17-hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://lornlab.org/post/2011-04-15-como-funciona-a-escala-pentatonica/">Como Funciona a Escala Pentatonica</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>15 Apr 2011, 23:59</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://lornlab.org/tags/music">music</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://lornlab.org/tags/science">science</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  World Science Festival 2009: Bobby McFerrin Demonstrates the Power of the Pentatonic Scale from World Science Festival on Vimeo.
+Como funciona a escala pentatonica e sua ligação com o cérebro
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://lornlab.org/post/2011-04-12-meu-ambiente-de-trabalho-em-n-itens/">Meu Ambiente De Trabalho Em N Itens</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>12 Apr 2011, 14:59</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://lornlab.org/tags/dev">dev</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://lornlab.org/tags/workspace">workspace</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  O peka me convidou para a correntinha do bem, e ainda me intimou pelo twitter :/ aqui está como é meu ambiente de trabalho.
+ ZSH, o cara é tão bom que tem um post só para ele :)
+ iTerm2 - Eu sempre usei o Terminal.App padrão do MacOSX, há um tempo atrás ouvi falar do iTerm, mas dado a minha pessima organização, acabei me esquecendo. Por causa dessa foto no twitter/facebook recebi a dica do iTerm2 e vou dizer, deixa o Terminal.
+  </p>
+
+  
+  <footer>
+    <a href="/post/2011-04-12-meu-ambiente-de-trabalho-em-n-itens/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://lornlab.org/post/2011-04-12-usando-zsh/">Usando ZSH</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>12 Apr 2011, 13:31</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://lornlab.org/tags/zsh">zsh</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://lornlab.org/tags/dev">dev</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://lornlab.org/tags/workspace">workspace</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  Esses dias re-descobri o zsh, já havia testado a um tempo atrás mas agora foi pra valer :)
+E vou dizer, não há shell melhor :) muito melhor que o Bash
+ O historico do ZSH é compartilhado por TODAS sessões dele, diferente do bash que cada sessão tem seu histórico ( e você tem que ficar procurando onde foi que digitou aquele comando para recuperar ele do histórico ).
+  </p>
+
+  
+  <footer>
+    <a href="/post/2011-04-12-usando-zsh/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+
+  
+
+
+<nav class="pagination" role="pagination">
+  
+  <i class="fa fa-chevron-left"></i>
+  
+  <span>&nbsp;1 / 2&nbsp;</span>
+  
+  <a href="/page/2/"><i class="fa fa-chevron-right"></i></a>
+  
+</nav>
+
+
+
+</div>
+
+</div>
+</div>
+<script src="https://lornlab.org/js/ui.js"></script>
+
+
+
+
+</body>
+</html>
+

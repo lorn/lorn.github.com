@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hackers on lornlab.</title>
+    <link>https://lornlab.org/tags/hackers/</link>
+    <description>Recent content in Hackers on lornlab.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 17 May 2011 22:45:00 -0300</lastBuildDate>
+    
+	<atom:link href="https://lornlab.org/tags/hackers/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hackers Que Você Deveria Conhecer (1): Brad Fitzpatrick</title>
+      <link>https://lornlab.org/post/2011-05-17-hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick/</link>
+      <pubDate>Tue, 17 May 2011 22:45:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/post/2011-05-17-hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick/</guid>
+      <description>Esta série de posts é baseada na idéia do site Papodehomem que tem uma série parecida chamada &amp;ldquo;Homens que você devia conhecer&amp;rdquo;.
+A ideia é falar de hackers em geral, tipo algum dia pode ter uma história de um cortador de lenha que fez uma mesa só com seu machado por exemplo :) Esse é um exemplo clássico de hacker.
+{% img center http://media.tumblr.com/tumblr_ljiu9qSdTJ1qhdaqj.png %}
+Brad Fitzpatrick é um dos muitos hackers programadores que você deveria conhecer ou ao menos saber o que ele já fez.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on lornlab.</title>
+    <link>https://lornlab.org/tags/</link>
+    <description>Recent content in Tags on lornlab.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 23 Jan 2007 12:11:00 -0300</lastBuildDate>
+    
+	<atom:link href="https://lornlab.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Books</title>
+      <link>https://lornlab.org/tags/books/</link>
+      <pubDate>Tue, 23 Jan 2007 12:11:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/tags/books/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dev</title>
+      <link>https://lornlab.org/tags/dev/</link>
+      <pubDate>Thu, 28 Jun 2012 20:45:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/tags/dev/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Evento</title>
+      <link>https://lornlab.org/tags/evento/</link>
+      <pubDate>Wed, 19 Apr 2006 13:27:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/tags/evento/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fisl</title>
+      <link>https://lornlab.org/tags/fisl/</link>
+      <pubDate>Tue, 20 Jan 2009 15:08:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/tags/fisl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hackers</title>
+      <link>https://lornlab.org/tags/hackers/</link>
+      <pubDate>Tue, 17 May 2011 22:45:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/tags/hackers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://lornlab.org/tags/linux/</link>
+      <pubDate>Thu, 28 Jun 2012 20:45:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Music</title>
+      <link>https://lornlab.org/tags/music/</link>
+      <pubDate>Fri, 15 Apr 2011 23:59:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/tags/music/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Perl</title>
+      <link>https://lornlab.org/tags/perl/</link>
+      <pubDate>Tue, 17 May 2011 22:45:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/tags/perl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Science</title>
+      <link>https://lornlab.org/tags/science/</link>
+      <pubDate>Fri, 15 Apr 2011 23:59:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/tags/science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Talk</title>
+      <link>https://lornlab.org/tags/talk/</link>
+      <pubDate>Tue, 20 Jan 2009 15:08:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/tags/talk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Workspace</title>
+      <link>https://lornlab.org/tags/workspace/</link>
+      <pubDate>Tue, 12 Apr 2011 14:59:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/tags/workspace/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Zsh</title>
+      <link>https://lornlab.org/tags/zsh/</link>
+      <pubDate>Tue, 12 Apr 2011 13:31:00 -0300</pubDate>
+      
+      <guid>https://lornlab.org/tags/zsh/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
