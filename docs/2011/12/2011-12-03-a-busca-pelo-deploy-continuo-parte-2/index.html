@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.21" />
+
+  <title>A Busca Pelo Deploy Contínuo - Parte 2 &middot; lornlab.</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  
+
+  
+
+  <link rel="shortcut icon" href="https://lornlab.org/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="/">lab.</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/contact/"><i class='fa fa-phone fa-fw'></i>Contact</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/@lorn" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>A Busca Pelo Deploy Contínuo - Parte 2</h1>
+  <h2></h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>02 Dec 2011, 11:23</time>
+  </div>
+
+  
+
+  
+
+  
+
+</div>
+
+  
+
+<div id="litlebox">
+Você está lendo a Parte 2 sobre "A Busca pelo deploy contínuo" eu recomendo você a começar pela <a href="/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/">Parte 1</a> mas se já leu as duas partes, leia a <a href="/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/">Parte 3</a>.
+</div>
+
+<p>Agora que você já está convencido que precisa disso, ou não, vou começar a falar de algumas ferramentas/técnicas que você pode usar para te ajudar no processo:</p>
+
+<ul>
+<li>SCM - Software Configuration Management<br /></li>
+</ul>
+
+<p>Também conhecido como VCS ( Version Control System ), você precisa disso, se você não tem <strong>há algo muito errado</strong> e se você está usando Subversion, isso não é tão ruim, mas comece a usar git a partir de hoje, sério.</p>
+
+<ul>
+<li>Testes
+<br /></li>
+</ul>
+
+<p>Se você acha que teste é besteira, então deploy continuo é besteira para você também. É impossível ter um deploy contínuo confiável sem testes</p>
+
+<ul>
+<li>Continuos Integration Software</li>
+</ul>
+
+<p>Esse tipo de software tem um papel simples, porem eficaz, ele fica fazendo &ldquo;pooling&rdquo; no seu SCM, a cada commit seu ele vai rodar o seu processo de &ldquo;build&rdquo; para ver se ele continua funcionando depois do código que você acabou de comitar, um processo de build pode conter:</p>
+
+<ul>
+<li>Gerar pacotes</li>
+<li>Verificar códigos/dependências</li>
+<li>Testes Unitários</li>
+<li>Testes de Integração</li>
+<li>Testes de Segurança</li>
+<li>Testes funcionais
+<br /></li>
+</ul>
+
+<p>E caso algum teste tenha parado de funcionar, ele vai te enviar um email avisando que o build está quebrado.</p>
+
+<p>Eu uso e gosto bastante do <a href="http://jenkins-ci.org/">Jenkins</a>, conhecido antes como Hudson. Mas há muitos outros por ai, você só precisa escolher um.</p>
+
+<ul>
+<li><p>Script de Deploy/Rollback para você começar, depois de ter todas essas coisas acima, você já pode a pensar em automatizar seu processo de deploy/rollback.</p>
+
+<ul>
+<li>./deploy.sh    # faz o deploy</li>
+<li>./rollback.sh  # faz o rollback do ultimo deploy
+<br /></li>
+</ul></li>
+</ul>
+
+<p>Simples assim, mas tem que ser um script só que faz todo o trabalho, copiar arquivos, reinciar webserver etc</p>
+
+<p>Na Etsy quando o script ficou avançado eles evoluiram para um software web, que inclusive é opensource mais detalhes aqui: <a href="http://codeascraft.etsy.com/2010/05/20/quantum-of-deployment/">Deploynator Etsy</a></p>
+
+<ul>
+<li><p>Puppet/Chef - eu não sei qual o nome dessa categoria de software, o que você faz com eles é escrever &ldquo;receitas&rdquo; de máquinas, imagine que a empresa está crescendo e você precisa montar 10 novos webservers que incluem:</p>
+
+<ul>
+<li>Instalar SO</li>
+<li>Configurar SO</li>
+<li>Configurar Firewall</li>
+<li>Configurar Webserver</li>
+<li>Configurar seu sistema</li>
+<li>Colocar ela no pool de webservers
+<br /></li>
+</ul></li>
+</ul>
+
+<p>Tirando a instalação do Linux, todo o resto você pode automatizar com puppet ou chef você cria receitas nele dizendo como ele vai configurar seu Webserver, seu sistema e depois é só executar essa receita na máquina ele vai instalar o pacote e fazer todo o trabalho pra você.</p>
+
+<p>E você vai precisar fazer isso UMA vez para &lsquo;n&rsquo; maquinas, e quando precisar mudar algo e só alterar na receita ele mantém as maquinas sincronizadas com sua receitas, nada de sair editando o mesmo arquivo em várias máquinas.</p>
+
+<ul>
+<li><p>Monitoramento</p>
+
+<ul>
+<li>Sistema Base/Nagios
+<br /></li>
+</ul>
+
+<p>Você precisa monitorar o estado do seu sistema, vê se o Apache tá de pé se o disco tá cheio isso é bem comum, no minímo você já ouviu falar.</p>
+
+<ul>
+<li>Seu negócio
+<br /></li>
+</ul>
+
+<p>Você precisa também monitorar o seu negócio, você precisa saber que horas que acontecem mais vendas e precisa saber agora, nada de rodar aquela query no banco de dados <strong>faça gráfico de toda informação que você puder monitorar</strong>.</p>
+
+<p>Além desses gráficos ajudar o pessoal de Marketing/Vendas vai te ajudar quando entrar alguma funcionalidade nova no site, porque sempre tem um espertão na empresa, e muitas vezes esse espertão é o dono, que vai dizer:</p>
+
+<p>{% blockquote %}
+Acho que depois que você colocou aquela funcionalidade no site, o site está vendendo menos, estou com esse pressentimento.
+ - Espertão
+{% endblockquote %}</p>
+
+<p>A Etsy liberou recentemente a ferramente que eles fizeram para fazer gráficos, vale a pena dar uma olhada <a href="http://codeascraft.etsy.com/2011/02/15/measure-anything-measure-everything/">Measure Anything, Measure Everything</a> eles contam bastante expêriencia deles com geração de gráfico para tudo, até para a quantidade de café na cozinha!</p>
+
+<p>Então tenha gráficos de tudo e mostre para ele no melhor sentido <a href="https://twitter.com/opachefe">Opa chefe! tranquilo chefe!</a>.</p></li>
+</ul>
+
+<h2 id="continua">Continua ..</h2>
+
+<div id="litlebox">
+Você está lendo a Parte 2 sobre "A Busca pelo deploy contínuo" eu recomendo você a começar pela <a href="/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/">Parte 1</a> mas se já leu as duas partes, leia a <a href="/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/">Parte 3</a>.
+</div>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://lornlab.org/2011/09/2011-09-26-la-e-devolta-outra-vez/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://lornlab.org/2011/09/2011-09-26-la-e-devolta-outra-vez/">Lá E Devolta Outra Vez</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://lornlab.org/2011/12/2011-12-02-a-busca-pelo-deploy-continuo-parte-1/">A Busca Pelo Deploy Contínuo - Parte 1</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://lornlab.org/2011/12/2011-12-02-a-busca-pelo-deploy-continuo-parte-1/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+
+</div>
+
+</div>
+</div>
+<script src="https://lornlab.org/js/ui.js"></script>
+
+
+
+
+</body>
+</html>
+

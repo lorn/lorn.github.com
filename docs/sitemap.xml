@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
     <loc>https://lornlab.org/post/2012-06-28-debugging-http-request-with-netcat/</loc>
@@ -77,19 +78,16 @@
   </url>
   
   <url>
+    <loc>https://lornlab.org/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://lornlab.org/contact/</loc>
+  </url>
+  
+  <url>
     <loc>https://lornlab.org/tags/books/</loc>
     <lastmod>2007-01-23T12:11:00-03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lornlab.org/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lornlab.org/categories/deploy/</loc>
-    <lastmod>2011-12-03T10:03:00-03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -124,12 +122,6 @@
   </url>
   
   <url>
-    <loc>https://lornlab.org/categories/livros/</loc>
-    <lastmod>2011-05-19T00:03:00-03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://lornlab.org/tags/music/</loc>
     <lastmod>2011-04-15T23:59:00-03:00</lastmod>
     <priority>0</priority>
@@ -138,12 +130,6 @@
   <url>
     <loc>https://lornlab.org/tags/perl/</loc>
     <lastmod>2011-05-17T22:45:00-03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lornlab.org/categories/perl/</loc>
-    <lastmod>2011-12-03T10:03:00-03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -172,26 +158,13 @@
   </url>
   
   <url>
-    <loc>https://lornlab.org/categories/talk/</loc>
-    <lastmod>2011-12-03T10:03:00-03:00</lastmod>
+    <loc>https://lornlab.org/topics/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://lornlab.org/tags/workspace/</loc>
     <lastmod>2011-04-12T14:59:00-03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lornlab.org/categories/workspace/</loc>
-    <lastmod>2011-05-19T00:03:00-03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lornlab.org/categories/yapc/</loc>
-    <lastmod>2011-12-03T10:03:00-03:00</lastmod>
     <priority>0</priority>
   </url>
   
